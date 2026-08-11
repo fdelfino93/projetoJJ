@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Receitas' if tipo == 'receita' else 'Despesas' }} — {{ sistema_nome }}{% endblock %}
+{% block content %}
+{% set titulo = 'Receitas' if tipo == 'receita' else 'Despesas' %}
+<header class="top">
+  <h2>{{ titulo }}</h2>
+  <div style="display:flex; gap:10px; align-items:flex-end;">
+    <form class="filtro" method="get">
+      <select name="mes" onchange="this.form.submit()">
+        <option value="">Todos os meses</option>
+        {% for m in meses_disponiveis %}
+        <option value="{{ m }}" {{ 'selected' if mes == m else '' }}>{{ m|mes_nome }}</option>
+        {% endfor %}
+      </select>
+    </form>
+    <a class="btn" href="{{ url_for('nova_movimentacao', tipo=tipo) }}">+ Novo lançamento</a>
+    <a class="btn gray" href="{{ url_for('download_csv', tipo=tipo, mes=mes if mes else '') }}">Exportar CSV</a>
+  </div>
+</header>
+
+{% set total = 0 %}
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Categoria</th>
+        <th>Descrição</th>
+        <th class="right">Valor</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for m in movimentacoes %}
+      <tr>
+        <td>{{ m.data }}</td>
+        <td>{{ m.categoria }}</td>
+        <td>{{ m.descricao or '—' }}</td>
+        <td class="right {{ 'verde' if tipo == 'receita' else 'vermelho' }}">{{ m.valor|moeda }}</td>
+        <td class="right">
+          <form class="inline" method="post"
+                action="{{ url_for('excluir_movimentacao', tipo=tipo, mov_id=m.id) }}"
+                onsubmit="return confirm('Excluir este lançamento?');">
+            <button class="btn danger small" type="submit">Excluir</button>
+          </form>
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="5" class="muted">Nenhum lançamento encontrado.</td></tr>
+      {% endfor %}
+    </tbody>
+    {% if movimentacoes %}
+    <tfoot>
+      <tr>
+        <td colspan="3" class="right"><strong>Total:</strong></td>
+        <td class="right"><strong>{{ movimentacoes|sum(attribute='valor')|moeda }}</strong></td>
+        <td></td>
+      </tr>
+    </tfoot>
+    {% endif %}
+  </table>
+</div>
+{% endblock %}
