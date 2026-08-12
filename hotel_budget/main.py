@@ -126,6 +126,9 @@ def excluir_movimentacao(tipo, mov_id):
 def pagina_relatorio():
     mes = request.args.get("mes", "")
     if not mes:
+        meses = budget.meses_disponiveis()
+        mes = meses[0] if meses else ""
+    if not mes:
         return redirect(url_for("pagina_dashboard"))
     validar_mes(mes)
     return render_template("relatorio.html", relatorio=reports.relatorio_mensal(mes))
