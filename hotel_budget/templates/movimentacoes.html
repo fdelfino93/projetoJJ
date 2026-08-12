@@ -15,6 +15,7 @@
     </form>
     <a class="btn" href="{{ url_for('nova_movimentacao', tipo=tipo) }}">+ Novo lançamento</a>
     <a class="btn gray" href="{{ url_for('download_csv', tipo=tipo, mes=mes if mes else '') }}">Exportar CSV</a>
+    <a class="btn gray" href="{{ url_for('download_pdf', tipo=tipo, mes=mes if mes else '') }}">Exportar PDF</a>
   </div>
 </header>
 

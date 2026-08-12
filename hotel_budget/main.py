@@ -8,6 +8,7 @@ from flask import Flask, redirect, render_template, request, Response, url_for
 
 import budget
 import dashboard
+import exports
 import models
 import reports
 from config import (
@@ -139,6 +140,61 @@ def download_csv(tipo):
     return Response(
         buf.getvalue(),
         mimetype="text/csv",
+        headers={"Content-Disposition": f"attachment; filename={nome}"},
+    )
+
+
+@app.route("/pdf/<tipo>")
+def download_pdf(tipo):
+    tipo = validar_tipo(tipo)
+    mes = _mes_selecionado()
+    buf = exports.gerar_pdf_movimentacoes(tipo, mes)
+    nome = f"{tipo}_{mes or 'todos'}.pdf"
+    return Response(
+        buf,
+        mimetype="application/pdf",
+        headers={"Content-Disposition": f"attachment; filename={nome}"},
+    )
+
+
+@app.route("/relatorio/csv")
+def download_relatorio_csv():
+    mes = request.args.get("mes", "")
+    validar_mes(mes)
+    return Response(
+        exports.gerar_csv_relatorio(mes),
+        mimetype="text/csv",
+        headers={"Content-Disposition": f"attachment; filename=relatorio_{mes}.csv"},
+    )
+
+
+@app.route("/relatorio/pdf")
+def download_relatorio_pdf():
+    mes = request.args.get("mes", "")
+    validar_mes(mes)
+    return Response(
+        exports.gerar_pdf_relatorio(mes),
+        mimetype="application/pdf",
+        headers={"Content-Disposition": f"attachment; filename=relatorio_{mes}.pdf"},
+    )
+
+
+@app.route("/relatorio/slide")
+def download_relatorio_slide():
+    mes = request.args.get("mes", "")
+    validar_mes(mes)
+    tipo = request.args.get("tipo", "mensal")
+    geradores = {
+        "mensal": exports.gerar_pptx_relatorio,
+        "executivo": exports.gerar_pptx_executivo,
+        "comparativo": exports.gerar_pptx_comparativo,
+    }
+    gerar = geradores.get(tipo, exports.gerar_pptx_relatorio)
+    buf = gerar(mes)
+    nome = f"{tipo}_relatorio_{mes}.pptx"
+    return Response(
+        buf,
+        mimetype="application/vnd.openxmlformats-officedocument.presentationml.presentation",
         headers={"Content-Disposition": f"attachment; filename={nome}"},
     )
 

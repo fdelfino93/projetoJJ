@@ -13,6 +13,17 @@
       </select>
     </form>
     <button class="btn gray" onclick="window.print()">Imprimir</button>
+    <a class="btn gray" href="{{ url_for('download_relatorio_csv', mes=r.mes) }}">CSV</a>
+    <a class="btn gray" href="{{ url_for('download_relatorio_pdf', mes=r.mes) }}">PDF</a>
+    <form class="filtro" method="get" action="{{ url_for('download_relatorio_slide') }}">
+      <input type="hidden" name="mes" value="{{ r.mes }}">
+      <select name="tipo" onchange="this.form.submit()">
+        <option value="">Slide...</option>
+        <option value="mensal">Slide Mensal</option>
+        <option value="executivo">Slide Executivo</option>
+        <option value="comparativo">Slide Comparativo</option>
+      </select>
+    </form>
   </div>
 </header>
 

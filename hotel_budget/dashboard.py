@@ -26,13 +26,13 @@ def _img_b64(fig) -> str:
     return base64.b64encode(buf.read()).decode("utf-8")
 
 
-def grafico_planejado_x_realizado(tipo: str, mes: Optional[str] = None) -> str:
+def fig_planejado_x_realizado(tipo: str, mes: Optional[str] = None):
     categorias = budget.comparativo_categorias(tipo, mes)
     nomes = [c["categoria"] for c in categorias if c["planejado"] or c["realizado"]]
     planejado = [c["planejado"] for c in categorias if c["planejado"] or c["realizado"]]
     realizado = [c["realizado"] for c in categorias if c["planejado"] or c["realizado"]]
     if not nomes:
-        return ""
+        return None
     x = range(len(nomes))
     largura = 0.38
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -44,14 +44,19 @@ def grafico_planejado_x_realizado(tipo: str, mes: Optional[str] = None) -> str:
     ax.legend()
     ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}"))
     fig.tight_layout()
-    return _img_b64(fig)
+    return fig
 
 
-def grafico_distribuicao(tipo: str, mes: Optional[str] = None) -> str:
+def grafico_planejado_x_realizado(tipo: str, mes: Optional[str] = None) -> str:
+    fig = fig_planejado_x_realizado(tipo, mes)
+    return _img_b64(fig) if fig else ""
+
+
+def fig_distribuicao(tipo: str, mes: Optional[str] = None):
     categorias = budget.comparativo_categorias(tipo, mes)
     dados = [(c["categoria"], c["realizado"]) for c in categorias if c["realizado"] > 0]
     if not dados:
-        return ""
+        return None
     nomes, valores = zip(*dados)
     fig, ax = plt.subplots(figsize=(7, 7))
     ax.pie(
@@ -63,10 +68,15 @@ def grafico_distribuicao(tipo: str, mes: Optional[str] = None) -> str:
     )
     ax.set_title(f"Distribuição de {'Receitas' if tipo == 'receita' else 'Despesas'} — {mes_nome(mes) if mes else 'Tudo'}")
     fig.tight_layout()
-    return _img_b64(fig)
+    return fig
 
 
-def serie_mensal(ultimos_meses: int = 12) -> str:
+def grafico_distribuicao(tipo: str, mes: Optional[str] = None) -> str:
+    fig = fig_distribuicao(tipo, mes)
+    return _img_b64(fig) if fig else ""
+
+
+def fig_serie_mensal(ultimos_meses: int = 12):
     conn = models.get_connection()
     try:
         receitas = pd.read_sql_query(
@@ -80,7 +90,7 @@ def serie_mensal(ultimos_meses: int = 12) -> str:
     finally:
         conn.close()
     if receitas.empty and despesas.empty:
-        return ""
+        return None
     dados = pd.concat(
         [
             receitas.assign(tipo="receita"),
@@ -104,4 +114,9 @@ def serie_mensal(ultimos_meses: int = 12) -> str:
     ax.legend()
     ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}"))
     fig.tight_layout()
-    return _img_b64(fig)
+    return fig
+
+
+def serie_mensal(ultimos_meses: int = 12) -> str:
+    fig = fig_serie_mensal(ultimos_meses)
+    return _img_b64(fig) if fig else ""
