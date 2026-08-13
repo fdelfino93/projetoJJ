@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Banco legado da versão anterior (o sistema atual usa CSV)
+hotel_budget/data/_legacy/
+
+# Arquivos gerados nas exportações
+*.pdf
+*.pptx
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,618 @@
+﻿id,data,categoria,descricao,valor
+1,2026-01-19,Diárias de Apartamentos,Grupo/convênio,97136.26
+2,2026-01-02,Diárias de Apartamentos,Diárias balcão,58278.75
+3,2026-01-03,Diárias de Apartamentos,Reserva corporativa,50036.08
+4,2026-01-08,Diárias de Apartamentos,Diárias balcão,47137.94
+5,2026-01-18,Diárias de Apartamentos,Reserva corporativa,97067.20
+6,2026-01-23,Diárias de Apartamentos,Grupo/convênio,81787.25
+7,2026-01-28,Restaurante e Bar,Consumo do bar,9208.87
+8,2026-01-20,Restaurante e Bar,Consumo do bar,3562.07
+9,2026-01-26,Restaurante e Bar,Café da manhã,9183.47
+10,2026-01-24,Restaurante e Bar,Room service,8426.19
+11,2026-01-18,Restaurante e Bar,Café da manhã,5909.25
+12,2026-01-30,Restaurante e Bar,Room service,4609.81
+13,2026-01-03,Restaurante e Bar,Consumo do bar,10248.18
+14,2026-01-27,Restaurante e Bar,Consumo do bar,5883.54
+15,2026-01-19,Restaurante e Bar,Almoço executivo,4168.62
+16,2026-01-23,Restaurante e Bar,Café da manhã,4196.54
+17,2026-01-22,Eventos,Evento corporativo,3424.71
+18,2026-01-23,Eventos,Sala de reunião,3995.43
+19,2026-01-20,Eventos,Coffee break,3645.98
+20,2026-01-18,Eventos,Coffee break,3676.01
+21,2026-01-06,Eventos,Locação de auditório,2367.65
+22,2026-01-13,Eventos,Evento corporativo,2564.79
+23,2026-01-30,Eventos,Coffee break,3588.92
+24,2026-01-22,Eventos,Evento corporativo,1782.62
+25,2026-01-27,Eventos,Sala de reunião,2300.79
+26,2026-01-07,Estacionamento,Rotativo,2204.69
+27,2026-01-16,Estacionamento,Mensalista,1522.39
+28,2026-01-29,Estacionamento,Rotativo,956.49
+29,2026-01-15,Estacionamento,Diária de garagem,2387.29
+30,2026-01-09,Estacionamento,Diária de garagem,1802.85
+31,2026-01-08,Estacionamento,Rotativo,2057.49
+32,2026-01-06,Outras Receitas,Frigobar,480.38
+33,2026-01-20,Outras Receitas,Lavanderia de hóspede,357.65
+34,2026-01-13,Outras Receitas,Frigobar,417.40
+35,2026-01-20,Outras Receitas,Frigobar,332.06
+36,2026-01-17,Outras Receitas,Late check-out,576.80
+37,2026-01-18,Outras Receitas,Lavanderia de hóspede,245.90
+38,2026-01-22,Outras Receitas,Lavanderia de hóspede,382.72
+39,2026-01-22,Outras Receitas,Late check-out,483.75
+40,2026-01-25,Outras Receitas,Late check-out,524.33
+41,2026-01-04,Outras Receitas,Late check-out,251.49
+42,2026-02-07,Diárias de Apartamentos,Grupo/convênio,31723.43
+43,2026-02-26,Diárias de Apartamentos,Reserva OTA,45969.91
+44,2026-02-15,Diárias de Apartamentos,Grupo/convênio,40486.90
+45,2026-02-15,Diárias de Apartamentos,Reserva corporativa,26564.99
+46,2026-02-17,Diárias de Apartamentos,Grupo/convênio,44730.48
+47,2026-02-26,Diárias de Apartamentos,Reserva corporativa,33757.06
+48,2026-02-22,Diárias de Apartamentos,Diárias balcão,47925.36
+49,2026-02-10,Diárias de Apartamentos,Reserva OTA,25881.02
+50,2026-02-03,Diárias de Apartamentos,Reserva corporativa,41051.06
+51,2026-02-22,Diárias de Apartamentos,Reserva OTA,34791.10
+52,2026-02-08,Diárias de Apartamentos,Reserva corporativa,51211.83
+53,2026-02-05,Diárias de Apartamentos,Diárias balcão,30866.86
+54,2026-02-25,Restaurante e Bar,Room service,5080.90
+55,2026-02-08,Restaurante e Bar,Almoço executivo,5799.71
+56,2026-02-26,Restaurante e Bar,Room service,4368.30
+57,2026-02-02,Restaurante e Bar,Almoço executivo,6337.61
+58,2026-02-28,Restaurante e Bar,Café da manhã,4918.12
+59,2026-02-15,Restaurante e Bar,Almoço executivo,5570.45
+60,2026-02-26,Restaurante e Bar,Room service,4041.68
+61,2026-02-22,Restaurante e Bar,Consumo do bar,4113.34
+62,2026-02-25,Restaurante e Bar,Room service,2960.79
+63,2026-02-20,Restaurante e Bar,Room service,5429.98
+64,2026-02-27,Restaurante e Bar,Room service,6367.44
+65,2026-02-06,Restaurante e Bar,Room service,6220.13
+66,2026-02-15,Restaurante e Bar,Consumo do bar,6334.54
+67,2026-02-08,Eventos,Locação de auditório,5400.84
+68,2026-02-23,Eventos,Coffee break,4357.58
+69,2026-02-23,Eventos,Coffee break,4807.49
+70,2026-02-03,Eventos,Locação de auditório,3304.97
+71,2026-02-14,Eventos,Evento corporativo,2463.95
+72,2026-02-18,Eventos,Locação de auditório,3352.46
+73,2026-02-14,Eventos,Sala de reunião,3292.67
+74,2026-02-07,Eventos,Locação de auditório,3497.45
+75,2026-02-13,Eventos,Sala de reunião,4438.01
+76,2026-02-28,Eventos,Locação de auditório,2723.75
+77,2026-02-13,Estacionamento,Mensalista,855.77
+78,2026-02-22,Estacionamento,Rotativo,953.69
+79,2026-02-26,Estacionamento,Mensalista,1491.25
+80,2026-02-24,Estacionamento,Diária de garagem,1431.34
+81,2026-02-27,Estacionamento,Mensalista,1112.53
+82,2026-02-05,Estacionamento,Rotativo,1323.00
+83,2026-02-18,Estacionamento,Diária de garagem,1392.91
+84,2026-02-13,Estacionamento,Rotativo,1497.86
+85,2026-02-19,Estacionamento,Rotativo,1058.96
+86,2026-02-01,Estacionamento,Diária de garagem,828.26
+87,2026-02-21,Estacionamento,Mensalista,1056.19
+88,2026-02-12,Outras Receitas,Pet fee,207.94
+89,2026-02-21,Outras Receitas,Lavanderia de hóspede,231.86
+90,2026-02-25,Outras Receitas,Lavanderia de hóspede,252.35
+91,2026-02-25,Outras Receitas,Lavanderia de hóspede,291.20
+92,2026-02-08,Outras Receitas,Pet fee,255.45
+93,2026-02-27,Outras Receitas,Lavanderia de hóspede,420.81
+94,2026-02-20,Outras Receitas,Pet fee,237.38
+95,2026-02-08,Outras Receitas,Pet fee,442.64
+96,2026-02-16,Outras Receitas,Lavanderia de hóspede,281.09
+97,2026-02-19,Outras Receitas,Pet fee,407.17
+98,2026-02-15,Outras Receitas,Late check-out,295.96
+99,2026-02-25,Outras Receitas,Late check-out,380.97
+100,2026-02-06,Outras Receitas,Lavanderia de hóspede,168.39
+101,2026-03-28,Diárias de Apartamentos,Reserva corporativa,60259.44
+102,2026-03-23,Diárias de Apartamentos,Reserva corporativa,48655.52
+103,2026-03-19,Diárias de Apartamentos,Grupo/convênio,52260.67
+104,2026-03-08,Diárias de Apartamentos,Grupo/convênio,61511.27
+105,2026-03-02,Diárias de Apartamentos,Reserva OTA,42646.31
+106,2026-03-24,Diárias de Apartamentos,Grupo/convênio,44349.11
+107,2026-03-23,Diárias de Apartamentos,Grupo/convênio,37505.25
+108,2026-03-13,Diárias de Apartamentos,Reserva corporativa,56898.22
+109,2026-03-16,Diárias de Apartamentos,Diárias balcão,39522.35
+110,2026-03-05,Diárias de Apartamentos,Reserva OTA,64556.58
+111,2026-03-22,Restaurante e Bar,Room service,5223.91
+112,2026-03-31,Restaurante e Bar,Consumo do bar,12285.93
+113,2026-03-21,Restaurante e Bar,Room service,4489.04
+114,2026-03-28,Restaurante e Bar,Café da manhã,5611.04
+115,2026-03-20,Restaurante e Bar,Café da manhã,11941.78
+116,2026-03-08,Restaurante e Bar,Consumo do bar,12804.35
+117,2026-03-08,Restaurante e Bar,Café da manhã,5007.15
+118,2026-03-14,Restaurante e Bar,Café da manhã,11162.98
+119,2026-03-25,Restaurante e Bar,Café da manhã,6663.88
+120,2026-03-15,Restaurante e Bar,Almoço executivo,9784.37
+121,2026-03-23,Restaurante e Bar,Consumo do bar,7817.70
+122,2026-03-29,Restaurante e Bar,Café da manhã,5054.95
+123,2026-03-02,Restaurante e Bar,Consumo do bar,7217.38
+124,2026-03-16,Eventos,Coffee break,4288.05
+125,2026-03-08,Eventos,Locação de auditório,4648.81
+126,2026-03-21,Eventos,Evento corporativo,3717.29
+127,2026-03-15,Eventos,Evento corporativo,4555.73
+128,2026-03-22,Eventos,Sala de reunião,5903.13
+129,2026-03-29,Eventos,Locação de auditório,3396.91
+130,2026-03-29,Eventos,Evento corporativo,3372.00
+131,2026-03-22,Eventos,Coffee break,5541.95
+132,2026-03-03,Eventos,Locação de auditório,4408.34
+133,2026-03-31,Eventos,Evento corporativo,5909.80
+134,2026-03-23,Estacionamento,Mensalista,2143.31
+135,2026-03-01,Estacionamento,Rotativo,1739.41
+136,2026-03-13,Estacionamento,Mensalista,1411.57
+137,2026-03-01,Estacionamento,Rotativo,2531.65
+138,2026-03-28,Estacionamento,Rotativo,1315.82
+139,2026-03-25,Estacionamento,Rotativo,1664.86
+140,2026-03-02,Estacionamento,Rotativo,1850.25
+141,2026-03-24,Estacionamento,Mensalista,1387.31
+142,2026-03-27,Estacionamento,Mensalista,2017.19
+143,2026-03-25,Estacionamento,Diária de garagem,2022.63
+144,2026-03-02,Outras Receitas,Late check-out,387.03
+145,2026-03-24,Outras Receitas,Pet fee,371.49
+146,2026-03-03,Outras Receitas,Late check-out,404.05
+147,2026-03-11,Outras Receitas,Frigobar,675.86
+148,2026-03-06,Outras Receitas,Pet fee,682.26
+149,2026-03-05,Outras Receitas,Late check-out,635.64
+150,2026-03-17,Outras Receitas,Late check-out,342.77
+151,2026-03-27,Outras Receitas,Pet fee,321.45
+152,2026-03-09,Outras Receitas,Frigobar,606.90
+153,2026-03-31,Outras Receitas,Late check-out,290.36
+154,2026-03-24,Outras Receitas,Late check-out,693.64
+155,2026-04-20,Diárias de Apartamentos,Grupo/convênio,26105.13
+156,2026-04-15,Diárias de Apartamentos,Diárias balcão,43281.82
+157,2026-04-15,Diárias de Apartamentos,Reserva corporativa,36878.83
+158,2026-04-11,Diárias de Apartamentos,Grupo/convênio,35585.86
+159,2026-04-17,Diárias de Apartamentos,Reserva corporativa,25548.65
+160,2026-04-02,Diárias de Apartamentos,Grupo/convênio,46273.62
+161,2026-04-04,Diárias de Apartamentos,Reserva OTA,37227.37
+162,2026-04-23,Diárias de Apartamentos,Diárias balcão,43727.67
+163,2026-04-17,Diárias de Apartamentos,Reserva corporativa,25581.63
+164,2026-04-02,Diárias de Apartamentos,Reserva corporativa,61173.60
+165,2026-04-23,Diárias de Apartamentos,Grupo/convênio,26493.05
+166,2026-04-15,Diárias de Apartamentos,Reserva corporativa,62668.99
+167,2026-04-12,Diárias de Apartamentos,Reserva OTA,62257.55
+168,2026-04-28,Restaurante e Bar,Almoço executivo,8230.67
+169,2026-04-11,Restaurante e Bar,Café da manhã,7593.04
+170,2026-04-19,Restaurante e Bar,Almoço executivo,9943.49
+171,2026-04-30,Restaurante e Bar,Consumo do bar,11676.45
+172,2026-04-10,Restaurante e Bar,Room service,10391.08
+173,2026-04-05,Restaurante e Bar,Café da manhã,5125.43
+174,2026-04-10,Restaurante e Bar,Room service,5384.40
+175,2026-04-21,Restaurante e Bar,Consumo do bar,10672.51
+176,2026-04-27,Restaurante e Bar,Almoço executivo,7101.97
+177,2026-04-22,Restaurante e Bar,Café da manhã,11083.28
+178,2026-04-21,Restaurante e Bar,Room service,10474.93
+179,2026-04-17,Restaurante e Bar,Consumo do bar,12737.16
+180,2026-04-27,Eventos,Sala de reunião,2799.52
+181,2026-04-22,Eventos,Evento corporativo,2939.15
+182,2026-04-29,Eventos,Coffee break,5957.67
+183,2026-04-20,Eventos,Locação de auditório,4058.85
+184,2026-04-05,Eventos,Coffee break,2989.98
+185,2026-04-06,Eventos,Coffee break,2623.81
+186,2026-04-24,Eventos,Locação de auditório,2375.24
+187,2026-04-02,Eventos,Locação de auditório,5532.80
+188,2026-04-12,Eventos,Coffee break,2473.91
+189,2026-04-15,Eventos,Evento corporativo,5230.10
+190,2026-04-06,Estacionamento,Diária de garagem,922.42
+191,2026-04-26,Estacionamento,Rotativo,928.91
+192,2026-04-05,Estacionamento,Mensalista,1841.81
+193,2026-04-02,Estacionamento,Rotativo,1614.06
+194,2026-04-16,Estacionamento,Mensalista,1764.37
+195,2026-04-18,Estacionamento,Diária de garagem,872.17
+196,2026-04-23,Estacionamento,Rotativo,1480.77
+197,2026-04-28,Estacionamento,Diária de garagem,1345.19
+198,2026-04-10,Estacionamento,Diária de garagem,1182.04
+199,2026-04-25,Estacionamento,Diária de garagem,1595.30
+200,2026-04-09,Estacionamento,Mensalista,1606.21
+201,2026-04-29,Estacionamento,Rotativo,1260.35
+202,2026-04-05,Estacionamento,Mensalista,1154.48
+203,2026-04-11,Outras Receitas,Lavanderia de hóspede,693.63
+204,2026-04-27,Outras Receitas,Late check-out,729.41
+205,2026-04-26,Outras Receitas,Pet fee,753.56
+206,2026-04-05,Outras Receitas,Lavanderia de hóspede,481.96
+207,2026-04-10,Outras Receitas,Frigobar,472.24
+208,2026-04-23,Outras Receitas,Pet fee,460.39
+209,2026-04-25,Outras Receitas,Frigobar,466.82
+210,2026-04-15,Outras Receitas,Lavanderia de hóspede,306.38
+211,2026-04-29,Outras Receitas,Lavanderia de hóspede,381.68
+212,2026-05-11,Diárias de Apartamentos,Reserva OTA,58326.05
+213,2026-05-24,Diárias de Apartamentos,Reserva OTA,77417.68
+214,2026-05-13,Diárias de Apartamentos,Reserva corporativa,70315.08
+215,2026-05-25,Diárias de Apartamentos,Reserva OTA,47318.19
+216,2026-05-17,Diárias de Apartamentos,Diárias balcão,33999.12
+217,2026-05-11,Diárias de Apartamentos,Reserva corporativa,33224.16
+218,2026-05-15,Diárias de Apartamentos,Diárias balcão,55754.38
+219,2026-05-09,Diárias de Apartamentos,Grupo/convênio,58403.57
+220,2026-05-08,Diárias de Apartamentos,Reserva corporativa,41775.37
+221,2026-05-04,Diárias de Apartamentos,Diárias balcão,65667.09
+222,2026-05-16,Restaurante e Bar,Café da manhã,8251.13
+223,2026-05-03,Restaurante e Bar,Room service,5553.33
+224,2026-05-17,Restaurante e Bar,Room service,8847.04
+225,2026-05-31,Restaurante e Bar,Almoço executivo,8481.86
+226,2026-05-07,Restaurante e Bar,Consumo do bar,7944.56
+227,2026-05-02,Restaurante e Bar,Café da manhã,8672.03
+228,2026-05-10,Restaurante e Bar,Room service,7385.98
+229,2026-05-20,Restaurante e Bar,Room service,4172.45
+230,2026-05-10,Restaurante e Bar,Café da manhã,3988.03
+231,2026-05-28,Restaurante e Bar,Café da manhã,9048.36
+232,2026-05-14,Restaurante e Bar,Almoço executivo,5847.77
+233,2026-05-29,Restaurante e Bar,Consumo do bar,8341.33
+234,2026-05-04,Eventos,Locação de auditório,3316.27
+235,2026-05-12,Eventos,Evento corporativo,3448.95
+236,2026-05-18,Eventos,Evento corporativo,4098.85
+237,2026-05-25,Eventos,Coffee break,2660.32
+238,2026-05-07,Eventos,Locação de auditório,4033.52
+239,2026-05-17,Eventos,Sala de reunião,2196.45
+240,2026-05-02,Eventos,Sala de reunião,3845.99
+241,2026-05-05,Eventos,Evento corporativo,4842.28
+242,2026-05-26,Eventos,Locação de auditório,2986.09
+243,2026-05-17,Eventos,Locação de auditório,5702.76
+244,2026-05-05,Eventos,Coffee break,4520.56
+245,2026-05-11,Eventos,Evento corporativo,2369.86
+246,2026-05-10,Estacionamento,Rotativo,1676.32
+247,2026-05-28,Estacionamento,Rotativo,1543.89
+248,2026-05-21,Estacionamento,Diária de garagem,1547.56
+249,2026-05-20,Estacionamento,Mensalista,1517.11
+250,2026-05-09,Estacionamento,Rotativo,1629.12
+251,2026-05-26,Estacionamento,Rotativo,1494.19
+252,2026-05-19,Estacionamento,Diária de garagem,791.84
+253,2026-05-24,Estacionamento,Diária de garagem,1274.02
+254,2026-05-19,Estacionamento,Mensalista,934.33
+255,2026-05-06,Estacionamento,Rotativo,1404.76
+256,2026-05-28,Outras Receitas,Lavanderia de hóspede,309.24
+257,2026-05-23,Outras Receitas,Pet fee,563.67
+258,2026-05-17,Outras Receitas,Pet fee,253.77
+259,2026-05-18,Outras Receitas,Late check-out,691.36
+260,2026-05-22,Outras Receitas,Frigobar,291.16
+261,2026-05-17,Outras Receitas,Frigobar,247.74
+262,2026-05-11,Outras Receitas,Pet fee,388.45
+263,2026-05-15,Outras Receitas,Late check-out,310.99
+264,2026-05-18,Outras Receitas,Late check-out,568.34
+265,2026-05-22,Outras Receitas,Late check-out,434.61
+266,2026-05-20,Outras Receitas,Frigobar,608.66
+267,2026-05-07,Outras Receitas,Pet fee,678.15
+268,2026-06-28,Diárias de Apartamentos,Reserva OTA,96143.88
+269,2026-06-10,Diárias de Apartamentos,Diárias balcão,48166.64
+270,2026-06-07,Diárias de Apartamentos,Reserva corporativa,88309.97
+271,2026-06-24,Diárias de Apartamentos,Diárias balcão,85692.85
+272,2026-06-24,Diárias de Apartamentos,Grupo/convênio,74112.17
+273,2026-06-30,Diárias de Apartamentos,Reserva corporativa,68550.78
+274,2026-06-15,Restaurante e Bar,Café da manhã,9381.01
+275,2026-06-26,Restaurante e Bar,Room service,7735.24
+276,2026-06-25,Restaurante e Bar,Consumo do bar,8596.14
+277,2026-06-30,Restaurante e Bar,Almoço executivo,8192.75
+278,2026-06-12,Restaurante e Bar,Consumo do bar,10109.39
+279,2026-06-14,Restaurante e Bar,Café da manhã,12018.49
+280,2026-06-19,Restaurante e Bar,Almoço executivo,8458.11
+281,2026-06-24,Restaurante e Bar,Almoço executivo,8994.03
+282,2026-06-01,Restaurante e Bar,Consumo do bar,14467.66
+283,2026-06-15,Eventos,Coffee break,2465.64
+284,2026-06-24,Eventos,Evento corporativo,2158.67
+285,2026-06-06,Eventos,Coffee break,2263.55
+286,2026-06-24,Eventos,Locação de auditório,3317.07
+287,2026-06-06,Eventos,Sala de reunião,2312.27
+288,2026-06-17,Eventos,Sala de reunião,3257.70
+289,2026-06-27,Eventos,Sala de reunião,4475.72
+290,2026-06-27,Eventos,Sala de reunião,2597.02
+291,2026-06-25,Eventos,Sala de reunião,3917.27
+292,2026-06-14,Eventos,Coffee break,3065.40
+293,2026-06-27,Eventos,Coffee break,3793.86
+294,2026-06-03,Eventos,Coffee break,3843.58
+295,2026-06-23,Estacionamento,Rotativo,819.14
+296,2026-06-14,Estacionamento,Diária de garagem,480.21
+297,2026-06-04,Estacionamento,Diária de garagem,974.85
+298,2026-06-17,Estacionamento,Diária de garagem,1228.62
+299,2026-06-08,Estacionamento,Diária de garagem,1210.50
+300,2026-06-20,Estacionamento,Rotativo,993.32
+301,2026-06-09,Estacionamento,Mensalista,441.90
+302,2026-06-09,Estacionamento,Mensalista,884.44
+303,2026-06-03,Estacionamento,Mensalista,780.87
+304,2026-06-13,Estacionamento,Mensalista,442.75
+305,2026-06-19,Estacionamento,Diária de garagem,1047.22
+306,2026-06-23,Estacionamento,Diária de garagem,887.46
+307,2026-06-10,Estacionamento,Rotativo,674.06
+308,2026-06-27,Estacionamento,Diária de garagem,858.74
+309,2026-06-16,Outras Receitas,Frigobar,672.05
+310,2026-06-21,Outras Receitas,Late check-out,995.64
+311,2026-06-19,Outras Receitas,Lavanderia de hóspede,1192.03
+312,2026-06-29,Outras Receitas,Lavanderia de hóspede,629.72
+313,2026-06-08,Outras Receitas,Pet fee,576.88
+314,2026-06-29,Outras Receitas,Frigobar,760.25
+315,2026-07-19,Diárias de Apartamentos,Grupo/convênio,73890.22
+316,2026-07-14,Diárias de Apartamentos,Reserva corporativa,56779.99
+317,2026-07-16,Diárias de Apartamentos,Reserva corporativa,61047.82
+318,2026-07-18,Diárias de Apartamentos,Reserva corporativa,42353.71
+319,2026-07-16,Diárias de Apartamentos,Reserva OTA,38467.59
+320,2026-07-05,Diárias de Apartamentos,Reserva corporativa,32132.98
+321,2026-07-11,Diárias de Apartamentos,Grupo/convênio,45485.00
+322,2026-07-20,Diárias de Apartamentos,Diárias balcão,33404.32
+323,2026-07-28,Diárias de Apartamentos,Reserva OTA,46274.45
+324,2026-07-31,Diárias de Apartamentos,Diárias balcão,57105.90
+325,2026-07-01,Restaurante e Bar,Almoço executivo,10270.53
+326,2026-07-10,Restaurante e Bar,Café da manhã,11431.05
+327,2026-07-09,Restaurante e Bar,Almoço executivo,7851.47
+328,2026-07-18,Restaurante e Bar,Consumo do bar,7769.73
+329,2026-07-06,Restaurante e Bar,Room service,9251.30
+330,2026-07-19,Restaurante e Bar,Room service,7150.16
+331,2026-07-18,Restaurante e Bar,Café da manhã,10463.22
+332,2026-07-19,Restaurante e Bar,Café da manhã,7720.76
+333,2026-07-09,Restaurante e Bar,Consumo do bar,4550.08
+334,2026-07-08,Eventos,Evento corporativo,6990.04
+335,2026-07-28,Eventos,Sala de reunião,5222.36
+336,2026-07-15,Eventos,Evento corporativo,3986.21
+337,2026-07-12,Eventos,Sala de reunião,5132.42
+338,2026-07-15,Eventos,Sala de reunião,6856.81
+339,2026-07-25,Eventos,Coffee break,6400.15
+340,2026-07-23,Estacionamento,Mensalista,1291.05
+341,2026-07-10,Estacionamento,Rotativo,1053.16
+342,2026-07-09,Estacionamento,Rotativo,880.43
+343,2026-07-29,Estacionamento,Rotativo,1058.75
+344,2026-07-27,Estacionamento,Diária de garagem,1218.77
+345,2026-07-05,Estacionamento,Mensalista,1245.98
+346,2026-07-30,Estacionamento,Diária de garagem,1238.30
+347,2026-07-09,Estacionamento,Rotativo,1015.04
+348,2026-07-05,Estacionamento,Rotativo,979.19
+349,2026-07-28,Estacionamento,Diária de garagem,1040.45
+350,2026-07-08,Estacionamento,Diária de garagem,634.00
+351,2026-07-03,Outras Receitas,Frigobar,594.20
+352,2026-07-17,Outras Receitas,Late check-out,554.05
+353,2026-07-23,Outras Receitas,Late check-out,466.07
+354,2026-07-15,Outras Receitas,Frigobar,507.51
+355,2026-07-11,Outras Receitas,Lavanderia de hóspede,362.09
+356,2026-07-28,Outras Receitas,Lavanderia de hóspede,430.63
+357,2026-07-24,Outras Receitas,Frigobar,448.42
+358,2026-07-21,Outras Receitas,Late check-out,533.98
+359,2026-07-28,Outras Receitas,Lavanderia de hóspede,650.09
+360,2026-08-25,Diárias de Apartamentos,Grupo/convênio,54070.21
+361,2026-08-28,Diárias de Apartamentos,Reserva OTA,46059.56
+362,2026-08-04,Diárias de Apartamentos,Reserva corporativa,44492.00
+363,2026-08-17,Diárias de Apartamentos,Reserva corporativa,37780.86
+364,2026-08-14,Diárias de Apartamentos,Grupo/convênio,46784.73
+365,2026-08-31,Diárias de Apartamentos,Diárias balcão,23485.49
+366,2026-08-05,Diárias de Apartamentos,Reserva OTA,51709.64
+367,2026-08-03,Diárias de Apartamentos,Diárias balcão,18913.19
+368,2026-08-30,Diárias de Apartamentos,Reserva corporativa,37599.85
+369,2026-08-29,Diárias de Apartamentos,Grupo/convênio,41007.57
+370,2026-08-23,Diárias de Apartamentos,Reserva OTA,43084.01
+371,2026-08-15,Diárias de Apartamentos,Diárias balcão,18396.41
+372,2026-08-19,Diárias de Apartamentos,Diárias balcão,30144.18
+373,2026-08-03,Restaurante e Bar,Almoço executivo,4389.17
+374,2026-08-05,Restaurante e Bar,Café da manhã,8153.45
+375,2026-08-05,Restaurante e Bar,Café da manhã,7139.15
+376,2026-08-06,Restaurante e Bar,Room service,11180.18
+377,2026-08-15,Restaurante e Bar,Consumo do bar,5625.69
+378,2026-08-14,Restaurante e Bar,Café da manhã,5810.62
+379,2026-08-18,Restaurante e Bar,Consumo do bar,6223.08
+380,2026-08-31,Restaurante e Bar,Almoço executivo,9932.51
+381,2026-08-15,Restaurante e Bar,Consumo do bar,9168.26
+382,2026-08-15,Restaurante e Bar,Consumo do bar,9432.66
+383,2026-08-28,Restaurante e Bar,Café da manhã,6246.36
+384,2026-08-03,Restaurante e Bar,Almoço executivo,5894.34
+385,2026-08-09,Eventos,Coffee break,5980.04
+386,2026-08-01,Eventos,Locação de auditório,5396.15
+387,2026-08-28,Eventos,Locação de auditório,2436.09
+388,2026-08-18,Eventos,Coffee break,6023.04
+389,2026-08-04,Eventos,Locação de auditório,3732.12
+390,2026-08-04,Eventos,Coffee break,2665.49
+391,2026-08-04,Eventos,Sala de reunião,3373.36
+392,2026-08-02,Eventos,Coffee break,3858.13
+393,2026-08-05,Eventos,Coffee break,4569.20
+394,2026-08-27,Eventos,Locação de auditório,5307.35
+395,2026-08-05,Estacionamento,Diária de garagem,2342.52
+396,2026-08-29,Estacionamento,Mensalista,1642.35
+397,2026-08-04,Estacionamento,Diária de garagem,2841.24
+398,2026-08-31,Estacionamento,Mensalista,1129.36
+399,2026-08-02,Estacionamento,Diária de garagem,1221.71
+400,2026-08-30,Estacionamento,Rotativo,3035.49
+401,2026-08-14,Estacionamento,Rotativo,2041.91
+402,2026-08-05,Outras Receitas,Lavanderia de hóspede,729.38
+403,2026-08-20,Outras Receitas,Pet fee,765.69
+404,2026-08-21,Outras Receitas,Late check-out,705.60
+405,2026-08-16,Outras Receitas,Frigobar,1163.66
+406,2026-08-29,Outras Receitas,Frigobar,640.35
+407,2026-08-02,Outras Receitas,Lavanderia de hóspede,781.67
+408,2026-09-04,Diárias de Apartamentos,Reserva corporativa,59183.85
+409,2026-09-05,Diárias de Apartamentos,Reserva OTA,35414.46
+410,2026-09-24,Diárias de Apartamentos,Grupo/convênio,31414.50
+411,2026-09-25,Diárias de Apartamentos,Reserva OTA,53058.18
+412,2026-09-09,Diárias de Apartamentos,Grupo/convênio,60515.29
+413,2026-09-20,Diárias de Apartamentos,Diárias balcão,59501.46
+414,2026-09-07,Diárias de Apartamentos,Grupo/convênio,22157.43
+415,2026-09-07,Diárias de Apartamentos,Grupo/convênio,56109.26
+416,2026-09-24,Diárias de Apartamentos,Grupo/convênio,34203.20
+417,2026-09-25,Diárias de Apartamentos,Reserva OTA,33236.02
+418,2026-09-27,Diárias de Apartamentos,Diárias balcão,42234.41
+419,2026-09-17,Diárias de Apartamentos,Reserva corporativa,50947.05
+420,2026-09-13,Restaurante e Bar,Café da manhã,6227.07
+421,2026-09-22,Restaurante e Bar,Café da manhã,8826.65
+422,2026-09-08,Restaurante e Bar,Consumo do bar,7060.45
+423,2026-09-16,Restaurante e Bar,Room service,7366.40
+424,2026-09-06,Restaurante e Bar,Room service,4644.10
+425,2026-09-19,Restaurante e Bar,Consumo do bar,9479.18
+426,2026-09-12,Restaurante e Bar,Almoço executivo,4830.14
+427,2026-09-27,Restaurante e Bar,Consumo do bar,3843.75
+428,2026-09-24,Restaurante e Bar,Café da manhã,3674.48
+429,2026-09-10,Restaurante e Bar,Café da manhã,3795.03
+430,2026-09-13,Restaurante e Bar,Café da manhã,5930.60
+431,2026-09-06,Restaurante e Bar,Almoço executivo,4818.99
+432,2026-09-28,Restaurante e Bar,Almoço executivo,5985.59
+433,2026-09-21,Restaurante e Bar,Almoço executivo,6646.40
+434,2026-09-20,Eventos,Evento corporativo,4946.15
+435,2026-09-23,Eventos,Evento corporativo,4352.11
+436,2026-09-14,Eventos,Locação de auditório,5861.18
+437,2026-09-28,Eventos,Evento corporativo,6301.46
+438,2026-09-15,Eventos,Evento corporativo,5077.63
+439,2026-09-07,Eventos,Locação de auditório,4183.82
+440,2026-09-10,Eventos,Locação de auditório,2715.83
+441,2026-09-19,Eventos,Sala de reunião,2891.44
+442,2026-09-01,Eventos,Evento corporativo,5587.31
+443,2026-09-18,Eventos,Evento corporativo,3108.64
+444,2026-09-21,Estacionamento,Mensalista,2165.14
+445,2026-09-07,Estacionamento,Diária de garagem,1844.35
+446,2026-09-17,Estacionamento,Diária de garagem,1712.46
+447,2026-09-29,Estacionamento,Diária de garagem,1819.77
+448,2026-09-26,Estacionamento,Rotativo,1713.35
+449,2026-09-13,Estacionamento,Rotativo,2549.72
+450,2026-09-11,Estacionamento,Rotativo,3202.67
+451,2026-09-23,Outras Receitas,Pet fee,951.89
+452,2026-09-11,Outras Receitas,Pet fee,1233.71
+453,2026-09-22,Outras Receitas,Frigobar,625.66
+454,2026-09-30,Outras Receitas,Late check-out,756.77
+455,2026-09-17,Outras Receitas,Late check-out,731.82
+456,2026-09-28,Outras Receitas,Pet fee,441.03
+457,2026-10-16,Diárias de Apartamentos,Reserva OTA,37732.78
+458,2026-10-08,Diárias de Apartamentos,Reserva OTA,52479.96
+459,2026-10-09,Diárias de Apartamentos,Diárias balcão,39478.42
+460,2026-10-17,Diárias de Apartamentos,Reserva corporativa,59740.43
+461,2026-10-18,Diárias de Apartamentos,Grupo/convênio,47217.61
+462,2026-10-13,Diárias de Apartamentos,Reserva corporativa,66377.24
+463,2026-10-03,Diárias de Apartamentos,Grupo/convênio,24741.75
+464,2026-10-15,Diárias de Apartamentos,Grupo/convênio,51012.28
+465,2026-10-03,Diárias de Apartamentos,Grupo/convênio,29308.56
+466,2026-10-15,Diárias de Apartamentos,Reserva OTA,60178.22
+467,2026-10-04,Diárias de Apartamentos,Grupo/convênio,60313.20
+468,2026-10-24,Diárias de Apartamentos,Diárias balcão,61095.94
+469,2026-10-04,Diárias de Apartamentos,Grupo/convênio,25647.39
+470,2026-10-25,Restaurante e Bar,Room service,6160.04
+471,2026-10-23,Restaurante e Bar,Consumo do bar,7785.39
+472,2026-10-23,Restaurante e Bar,Room service,7585.02
+473,2026-10-04,Restaurante e Bar,Café da manhã,8591.36
+474,2026-10-25,Restaurante e Bar,Almoço executivo,6679.33
+475,2026-10-01,Restaurante e Bar,Consumo do bar,8162.37
+476,2026-10-12,Restaurante e Bar,Consumo do bar,6237.74
+477,2026-10-18,Restaurante e Bar,Consumo do bar,6779.49
+478,2026-10-23,Restaurante e Bar,Café da manhã,5614.61
+479,2026-10-02,Restaurante e Bar,Almoço executivo,4937.28
+480,2026-10-16,Restaurante e Bar,Almoço executivo,7781.88
+481,2026-10-27,Restaurante e Bar,Room service,7730.67
+482,2026-10-04,Restaurante e Bar,Consumo do bar,7893.48
+483,2026-10-20,Restaurante e Bar,Almoço executivo,4885.13
+484,2026-10-17,Eventos,Coffee break,2435.67
+485,2026-10-31,Eventos,Locação de auditório,4508.42
+486,2026-10-01,Eventos,Sala de reunião,2350.54
+487,2026-10-18,Eventos,Locação de auditório,2852.10
+488,2026-10-27,Eventos,Locação de auditório,4278.99
+489,2026-10-30,Eventos,Coffee break,1860.14
+490,2026-10-23,Eventos,Coffee break,3857.24
+491,2026-10-24,Eventos,Coffee break,3989.65
+492,2026-10-04,Eventos,Locação de auditório,2121.27
+493,2026-10-22,Eventos,Evento corporativo,4737.15
+494,2026-10-17,Eventos,Locação de auditório,3258.69
+495,2026-10-14,Eventos,Coffee break,3707.73
+496,2026-10-21,Estacionamento,Diária de garagem,1825.40
+497,2026-10-07,Estacionamento,Diária de garagem,1182.82
+498,2026-10-20,Estacionamento,Rotativo,786.24
+499,2026-10-10,Estacionamento,Rotativo,1133.04
+500,2026-10-12,Estacionamento,Rotativo,1489.64
+501,2026-10-05,Estacionamento,Rotativo,1549.74
+502,2026-10-21,Estacionamento,Diária de garagem,991.73
+503,2026-10-17,Estacionamento,Rotativo,1491.48
+504,2026-10-23,Estacionamento,Rotativo,1689.12
+505,2026-10-11,Estacionamento,Rotativo,1504.36
+506,2026-10-04,Estacionamento,Mensalista,1781.98
+507,2026-10-10,Outras Receitas,Late check-out,598.10
+508,2026-10-05,Outras Receitas,Lavanderia de hóspede,709.96
+509,2026-10-23,Outras Receitas,Late check-out,526.62
+510,2026-10-07,Outras Receitas,Lavanderia de hóspede,701.61
+511,2026-10-12,Outras Receitas,Frigobar,469.81
+512,2026-10-04,Outras Receitas,Pet fee,261.18
+513,2026-10-24,Outras Receitas,Frigobar,308.90
+514,2026-10-08,Outras Receitas,Late check-out,448.67
+515,2026-10-23,Outras Receitas,Lavanderia de hóspede,281.70
+516,2026-10-30,Outras Receitas,Frigobar,283.50
+517,2026-10-13,Outras Receitas,Frigobar,390.66
+518,2026-10-31,Outras Receitas,Late check-out,654.78
+519,2026-11-21,Diárias de Apartamentos,Reserva OTA,50706.77
+520,2026-11-27,Diárias de Apartamentos,Reserva OTA,64335.14
+521,2026-11-19,Diárias de Apartamentos,Reserva corporativa,44241.07
+522,2026-11-13,Diárias de Apartamentos,Grupo/convênio,70633.93
+523,2026-11-12,Diárias de Apartamentos,Diárias balcão,68823.13
+524,2026-11-17,Diárias de Apartamentos,Reserva OTA,26895.79
+525,2026-11-13,Diárias de Apartamentos,Reserva corporativa,57214.69
+526,2026-11-17,Diárias de Apartamentos,Grupo/convênio,30050.14
+527,2026-11-12,Diárias de Apartamentos,Reserva OTA,73151.59
+528,2026-11-11,Restaurante e Bar,Café da manhã,10096.07
+529,2026-11-16,Restaurante e Bar,Room service,3687.10
+530,2026-11-16,Restaurante e Bar,Almoço executivo,10058.68
+531,2026-11-19,Restaurante e Bar,Almoço executivo,6840.74
+532,2026-11-21,Restaurante e Bar,Room service,5312.99
+533,2026-11-01,Restaurante e Bar,Almoço executivo,7384.00
+534,2026-11-02,Restaurante e Bar,Almoço executivo,5682.86
+535,2026-11-19,Restaurante e Bar,Almoço executivo,4732.56
+536,2026-11-05,Restaurante e Bar,Café da manhã,4784.36
+537,2026-11-29,Restaurante e Bar,Almoço executivo,8020.69
+538,2026-11-02,Restaurante e Bar,Almoço executivo,9585.02
+539,2026-11-09,Restaurante e Bar,Almoço executivo,8450.75
+540,2026-11-17,Restaurante e Bar,Room service,6656.71
+541,2026-11-16,Eventos,Locação de auditório,8041.81
+542,2026-11-06,Eventos,Coffee break,7163.63
+543,2026-11-27,Eventos,Locação de auditório,7708.09
+544,2026-11-20,Eventos,Coffee break,8442.84
+545,2026-11-26,Eventos,Coffee break,4180.39
+546,2026-11-20,Eventos,Evento corporativo,6455.14
+547,2026-11-06,Estacionamento,Mensalista,1746.54
+548,2026-11-29,Estacionamento,Rotativo,1346.46
+549,2026-11-20,Estacionamento,Diária de garagem,698.49
+550,2026-11-29,Estacionamento,Rotativo,1078.37
+551,2026-11-17,Estacionamento,Diária de garagem,776.31
+552,2026-11-03,Estacionamento,Mensalista,634.30
+553,2026-11-22,Estacionamento,Diária de garagem,1255.81
+554,2026-11-29,Estacionamento,Rotativo,1730.56
+555,2026-11-18,Estacionamento,Diária de garagem,1454.31
+556,2026-11-29,Estacionamento,Rotativo,1628.86
+557,2026-11-21,Estacionamento,Mensalista,1357.48
+558,2026-11-14,Outras Receitas,Pet fee,535.36
+559,2026-11-09,Outras Receitas,Frigobar,466.36
+560,2026-11-25,Outras Receitas,Pet fee,361.74
+561,2026-11-30,Outras Receitas,Lavanderia de hóspede,560.12
+562,2026-11-10,Outras Receitas,Frigobar,382.44
+563,2026-11-09,Outras Receitas,Pet fee,494.02
+564,2026-11-01,Outras Receitas,Lavanderia de hóspede,331.19
+565,2026-11-19,Outras Receitas,Lavanderia de hóspede,508.02
+566,2026-11-17,Outras Receitas,Lavanderia de hóspede,548.22
+567,2026-11-13,Outras Receitas,Pet fee,520.70
+568,2026-11-23,Outras Receitas,Late check-out,419.04
+569,2026-12-04,Diárias de Apartamentos,Reserva OTA,31526.38
+570,2026-12-20,Diárias de Apartamentos,Reserva corporativa,76058.46
+571,2026-12-03,Diárias de Apartamentos,Grupo/convênio,51516.80
+572,2026-12-10,Diárias de Apartamentos,Reserva corporativa,29317.44
+573,2026-12-08,Diárias de Apartamentos,Reserva OTA,67278.46
+574,2026-12-15,Diárias de Apartamentos,Reserva corporativa,54205.81
+575,2026-12-05,Diárias de Apartamentos,Reserva corporativa,79193.35
+576,2026-12-21,Restaurante e Bar,Room service,7370.73
+577,2026-12-17,Restaurante e Bar,Consumo do bar,4471.09
+578,2026-12-30,Restaurante e Bar,Consumo do bar,5288.98
+579,2026-12-16,Restaurante e Bar,Almoço executivo,7991.72
+580,2026-12-26,Restaurante e Bar,Café da manhã,5638.07
+581,2026-12-15,Restaurante e Bar,Consumo do bar,4185.08
+582,2026-12-12,Restaurante e Bar,Room service,5119.34
+583,2026-12-09,Restaurante e Bar,Almoço executivo,7962.25
+584,2026-12-10,Restaurante e Bar,Café da manhã,6488.94
+585,2026-12-01,Restaurante e Bar,Almoço executivo,3668.31
+586,2026-12-12,Restaurante e Bar,Consumo do bar,5946.91
+587,2026-12-20,Eventos,Coffee break,5774.11
+588,2026-12-26,Eventos,Sala de reunião,4822.08
+589,2026-12-18,Eventos,Evento corporativo,6103.23
+590,2026-12-07,Eventos,Locação de auditório,3887.15
+591,2026-12-29,Eventos,Locação de auditório,6153.77
+592,2026-12-13,Eventos,Coffee break,6309.80
+593,2026-12-07,Estacionamento,Diária de garagem,1230.87
+594,2026-12-06,Estacionamento,Diária de garagem,667.67
+595,2026-12-10,Estacionamento,Diária de garagem,536.67
+596,2026-12-21,Estacionamento,Mensalista,1042.68
+597,2026-12-20,Estacionamento,Mensalista,941.95
+598,2026-12-09,Estacionamento,Rotativo,1204.49
+599,2026-12-20,Estacionamento,Mensalista,1031.46
+600,2026-12-07,Estacionamento,Mensalista,1106.24
+601,2026-12-01,Estacionamento,Diária de garagem,715.18
+602,2026-12-02,Estacionamento,Rotativo,1064.11
+603,2026-12-01,Estacionamento,Diária de garagem,956.16
+604,2026-12-04,Estacionamento,Mensalista,712.36
+605,2026-12-02,Outras Receitas,Late check-out,341.06
+606,2026-12-25,Outras Receitas,Frigobar,203.68
+607,2026-12-03,Outras Receitas,Frigobar,180.85
+608,2026-12-06,Outras Receitas,Pet fee,276.15
+609,2026-12-29,Outras Receitas,Late check-out,234.00
+610,2026-12-27,Outras Receitas,Frigobar,225.57
+611,2026-12-27,Outras Receitas,Lavanderia de hóspede,361.17
+612,2026-12-04,Outras Receitas,Pet fee,416.34
+613,2026-12-13,Outras Receitas,Frigobar,267.85
+614,2026-12-08,Outras Receitas,Lavanderia de hóspede,358.94
+615,2026-12-07,Outras Receitas,Frigobar,230.76
+616,2026-12-24,Outras Receitas,Lavanderia de hóspede,373.42
+617,2026-12-17,Outras Receitas,Pet fee,403.47

@@ -1,0 +1,1177 @@
+﻿id,data,categoria,descricao,valor
+1,2026-01-31,Folha de Pagamento,Salários,6621.60
+2,2026-01-20,Folha de Pagamento,Horas extras,16080.05
+3,2026-01-16,Folha de Pagamento,Salários,16048.32
+4,2026-01-04,Folha de Pagamento,Horas extras,19366.81
+5,2026-01-29,Folha de Pagamento,Horas extras,16604.65
+6,2026-01-08,Folha de Pagamento,Salários,13258.88
+7,2026-01-08,Folha de Pagamento,Salários,7979.03
+8,2026-01-03,Folha de Pagamento,Vale-transporte,14806.48
+9,2026-01-27,Folha de Pagamento,Salários,17653.42
+10,2026-01-25,Folha de Pagamento,Encargos sociais,13258.63
+11,2026-01-05,Folha de Pagamento,Vale-transporte,9196.13
+12,2026-01-31,Folha de Pagamento,Encargos sociais,11498.79
+13,2026-01-09,Folha de Pagamento,Vale-transporte,8704.53
+14,2026-01-23,Energia Elétrica,Fatura Copel,3824.29
+15,2026-01-08,Energia Elétrica,Fatura Copel,3625.05
+16,2026-01-29,Energia Elétrica,Fatura Copel,3695.37
+17,2026-01-28,Energia Elétrica,Demanda contratada,2738.87
+18,2026-01-03,Energia Elétrica,Fatura Copel,3569.66
+19,2026-01-09,Energia Elétrica,Demanda contratada,2660.96
+20,2026-01-07,Energia Elétrica,Fatura Copel,4264.06
+21,2026-01-24,Energia Elétrica,Demanda contratada,2898.80
+22,2026-01-08,Energia Elétrica,Demanda contratada,2278.57
+23,2026-01-26,Energia Elétrica,Demanda contratada,1718.36
+24,2026-01-07,Energia Elétrica,Fatura Copel,1587.38
+25,2026-01-04,Energia Elétrica,Demanda contratada,3210.88
+26,2026-01-12,Energia Elétrica,Demanda contratada,3316.04
+27,2026-01-14,Energia Elétrica,Demanda contratada,1545.21
+28,2026-01-08,Água e Esgoto,Fatura Sanepar,3265.37
+29,2026-01-07,Água e Esgoto,Fatura Sanepar,4130.31
+30,2026-01-05,Água e Esgoto,Fatura Sanepar,1665.35
+31,2026-01-06,Água e Esgoto,Fatura Sanepar,2511.92
+32,2026-01-15,Água e Esgoto,Fatura Sanepar,2335.71
+33,2026-01-28,Água e Esgoto,Fatura Sanepar,3789.42
+34,2026-01-30,Gás,Gás da cozinha,444.94
+35,2026-01-10,Gás,Gás da cozinha,857.38
+36,2026-01-23,Gás,Gás da cozinha,774.36
+37,2026-01-05,Gás,Recarga de GLP,383.06
+38,2026-01-10,Gás,Recarga de GLP,441.48
+39,2026-01-31,Gás,Recarga de GLP,932.85
+40,2026-01-19,Gás,Recarga de GLP,547.98
+41,2026-01-24,Gás,Gás da cozinha,674.52
+42,2026-01-02,Gás,Recarga de GLP,730.29
+43,2026-01-19,Gás,Gás da cozinha,1015.52
+44,2026-01-17,Gás,Recarga de GLP,1043.64
+45,2026-01-02,Gás,Recarga de GLP,494.60
+46,2026-01-28,Gás,Recarga de GLP,373.68
+47,2026-01-03,Gás,Recarga de GLP,662.62
+48,2026-01-09,Manutenção e Reparos,Ar-condicionado,2626.85
+49,2026-01-22,Manutenção e Reparos,Hidráulica,4190.05
+50,2026-01-08,Manutenção e Reparos,Hidráulica,3109.05
+51,2026-01-13,Manutenção e Reparos,Ar-condicionado,3135.92
+52,2026-01-22,Manutenção e Reparos,Hidráulica,1568.78
+53,2026-01-15,Manutenção e Reparos,Hidráulica,1691.55
+54,2026-01-30,Manutenção e Reparos,Manutenção de elevador,3363.94
+55,2026-01-01,Manutenção e Reparos,Pintura,3096.12
+56,2026-01-20,Manutenção e Reparos,Manutenção de elevador,2372.81
+57,2026-01-26,Marketing e Vendas,Material promocional,2356.00
+58,2026-01-17,Marketing e Vendas,Comissão de OTA,1481.35
+59,2026-01-22,Marketing e Vendas,Material promocional,1988.56
+60,2026-01-10,Marketing e Vendas,Material promocional,1332.23
+61,2026-01-04,Marketing e Vendas,Comissão de OTA,1743.27
+62,2026-01-09,Marketing e Vendas,Comissão de OTA,1838.61
+63,2026-01-29,Marketing e Vendas,Comissão de OTA,2197.43
+64,2026-01-24,Marketing e Vendas,Material promocional,2443.44
+65,2026-01-05,Marketing e Vendas,Mídia paga,1879.67
+66,2026-01-09,Impostos e Taxas,ISS,7281.52
+67,2026-01-01,Impostos e Taxas,IPTU,4207.62
+68,2026-01-25,Impostos e Taxas,PIS/COFINS,6782.92
+69,2026-01-21,Impostos e Taxas,IPTU,4568.75
+70,2026-01-06,Impostos e Taxas,Taxa de bombeiros,5911.58
+71,2026-01-18,Impostos e Taxas,Taxa de bombeiros,8404.14
+72,2026-01-18,Impostos e Taxas,ISS,8049.92
+73,2026-01-04,Impostos e Taxas,ISS,3542.04
+74,2026-01-31,Impostos e Taxas,PIS/COFINS,5523.13
+75,2026-01-25,Alimentação e Bebidas,Panificação,2860.59
+76,2026-01-20,Alimentação e Bebidas,Carnes e frios,1712.62
+77,2026-01-30,Alimentação e Bebidas,Carnes e frios,1658.06
+78,2026-01-28,Alimentação e Bebidas,Carnes e frios,2135.86
+79,2026-01-26,Alimentação e Bebidas,Carnes e frios,3696.88
+80,2026-01-29,Alimentação e Bebidas,Panificação,3425.07
+81,2026-01-01,Alimentação e Bebidas,Carnes e frios,3595.73
+82,2026-01-24,Alimentação e Bebidas,Bebidas,3696.73
+83,2026-01-26,Alimentação e Bebidas,Panificação,1876.41
+84,2026-01-26,Alimentação e Bebidas,Carnes e frios,1980.67
+85,2026-01-09,Alimentação e Bebidas,Carnes e frios,1592.91
+86,2026-01-28,Limpeza e Higiene,Produtos de limpeza,1716.34
+87,2026-01-08,Limpeza e Higiene,Produtos de limpeza,1047.70
+88,2026-01-22,Limpeza e Higiene,Produtos de limpeza,1887.77
+89,2026-01-13,Limpeza e Higiene,Amenities,1360.51
+90,2026-01-09,Limpeza e Higiene,Produtos de limpeza,2758.56
+91,2026-01-31,Limpeza e Higiene,Amenities,1652.39
+92,2026-01-12,Limpeza e Higiene,Enxoval e rouparia,2568.14
+93,2026-01-07,Outras Despesas,Seguro predial,464.82
+94,2026-01-02,Outras Despesas,Material de escritório,295.06
+95,2026-01-14,Outras Despesas,Internet e telefonia,770.12
+96,2026-01-17,Outras Despesas,Material de escritório,425.71
+97,2026-01-22,Outras Despesas,Material de escritório,604.33
+98,2026-01-31,Outras Despesas,Material de escritório,829.68
+99,2026-01-24,Outras Despesas,Material de escritório,301.02
+100,2026-01-07,Outras Despesas,Seguro predial,613.26
+101,2026-01-14,Outras Despesas,Internet e telefonia,472.95
+102,2026-01-31,Outras Despesas,Material de escritório,719.44
+103,2026-01-30,Outras Despesas,Seguro predial,523.68
+104,2026-01-20,Outras Despesas,Seguro predial,830.07
+105,2026-01-22,Outras Despesas,Internet e telefonia,344.30
+106,2026-01-24,Outras Despesas,Seguro predial,782.68
+107,2026-02-03,Folha de Pagamento,Encargos sociais,34043.18
+108,2026-02-04,Folha de Pagamento,Horas extras,14133.49
+109,2026-02-28,Folha de Pagamento,Salários,12217.87
+110,2026-02-26,Folha de Pagamento,Salários,18871.59
+111,2026-02-12,Folha de Pagamento,Vale-transporte,27364.02
+112,2026-02-22,Folha de Pagamento,Horas extras,33890.99
+113,2026-02-03,Folha de Pagamento,Horas extras,20840.13
+114,2026-02-01,Folha de Pagamento,Vale-transporte,28239.49
+115,2026-02-21,Energia Elétrica,Demanda contratada,6206.53
+116,2026-02-20,Energia Elétrica,Demanda contratada,5732.26
+117,2026-02-15,Energia Elétrica,Demanda contratada,9251.89
+118,2026-02-27,Energia Elétrica,Demanda contratada,6380.83
+119,2026-02-11,Energia Elétrica,Fatura Copel,4341.41
+120,2026-02-27,Energia Elétrica,Fatura Copel,4495.30
+121,2026-02-09,Energia Elétrica,Demanda contratada,6793.09
+122,2026-02-07,Água e Esgoto,Fatura Sanepar,1341.34
+123,2026-02-08,Água e Esgoto,Fatura Sanepar,1464.64
+124,2026-02-16,Água e Esgoto,Fatura Sanepar,1048.65
+125,2026-02-23,Água e Esgoto,Fatura Sanepar,1246.63
+126,2026-02-21,Água e Esgoto,Fatura Sanepar,1034.38
+127,2026-02-15,Água e Esgoto,Fatura Sanepar,1238.16
+128,2026-02-03,Água e Esgoto,Fatura Sanepar,1071.75
+129,2026-02-08,Água e Esgoto,Fatura Sanepar,950.80
+130,2026-02-23,Água e Esgoto,Fatura Sanepar,977.51
+131,2026-02-10,Água e Esgoto,Fatura Sanepar,1374.33
+132,2026-02-16,Água e Esgoto,Fatura Sanepar,1730.34
+133,2026-02-14,Água e Esgoto,Fatura Sanepar,1323.72
+134,2026-02-12,Água e Esgoto,Fatura Sanepar,1274.62
+135,2026-02-25,Gás,Gás da cozinha,680.63
+136,2026-02-04,Gás,Recarga de GLP,1137.85
+137,2026-02-10,Gás,Recarga de GLP,759.83
+138,2026-02-12,Gás,Recarga de GLP,1157.97
+139,2026-02-10,Gás,Recarga de GLP,1351.76
+140,2026-02-23,Gás,Recarga de GLP,1108.85
+141,2026-02-09,Gás,Recarga de GLP,644.30
+142,2026-02-02,Gás,Gás da cozinha,1153.99
+143,2026-02-23,Gás,Recarga de GLP,723.45
+144,2026-02-21,Gás,Gás da cozinha,1015.15
+145,2026-02-16,Manutenção e Reparos,Manutenção de elevador,4358.50
+146,2026-02-27,Manutenção e Reparos,Manutenção de elevador,3933.76
+147,2026-02-13,Manutenção e Reparos,Pintura,3816.37
+148,2026-02-03,Manutenção e Reparos,Manutenção de elevador,2777.11
+149,2026-02-05,Manutenção e Reparos,Ar-condicionado,2237.46
+150,2026-02-26,Manutenção e Reparos,Hidráulica,5847.76
+151,2026-02-14,Marketing e Vendas,Mídia paga,1267.67
+152,2026-02-19,Marketing e Vendas,Material promocional,2591.79
+153,2026-02-02,Marketing e Vendas,Material promocional,2267.67
+154,2026-02-24,Marketing e Vendas,Comissão de OTA,2645.69
+155,2026-02-25,Marketing e Vendas,Comissão de OTA,1487.48
+156,2026-02-21,Marketing e Vendas,Comissão de OTA,2096.02
+157,2026-02-09,Marketing e Vendas,Material promocional,1948.31
+158,2026-02-03,Marketing e Vendas,Comissão de OTA,1932.34
+159,2026-02-08,Marketing e Vendas,Comissão de OTA,2788.00
+160,2026-02-22,Impostos e Taxas,PIS/COFINS,3998.84
+161,2026-02-09,Impostos e Taxas,PIS/COFINS,7561.36
+162,2026-02-14,Impostos e Taxas,ISS,8701.38
+163,2026-02-18,Impostos e Taxas,PIS/COFINS,6294.55
+164,2026-02-21,Impostos e Taxas,PIS/COFINS,5818.97
+165,2026-02-09,Impostos e Taxas,PIS/COFINS,9601.46
+166,2026-02-03,Impostos e Taxas,ISS,9569.89
+167,2026-02-06,Impostos e Taxas,IPTU,7589.42
+168,2026-02-20,Alimentação e Bebidas,Bebidas,2928.62
+169,2026-02-01,Alimentação e Bebidas,Hortifrúti,3020.75
+170,2026-02-08,Alimentação e Bebidas,Hortifrúti,2507.45
+171,2026-02-25,Alimentação e Bebidas,Bebidas,2814.35
+172,2026-02-19,Alimentação e Bebidas,Hortifrúti,2408.14
+173,2026-02-25,Alimentação e Bebidas,Carnes e frios,3243.04
+174,2026-02-16,Alimentação e Bebidas,Panificação,2924.27
+175,2026-02-09,Alimentação e Bebidas,Carnes e frios,3424.08
+176,2026-02-19,Alimentação e Bebidas,Panificação,4332.73
+177,2026-02-21,Alimentação e Bebidas,Panificação,3849.73
+178,2026-02-25,Limpeza e Higiene,Amenities,947.30
+179,2026-02-28,Limpeza e Higiene,Enxoval e rouparia,930.93
+180,2026-02-27,Limpeza e Higiene,Produtos de limpeza,1307.21
+181,2026-02-22,Limpeza e Higiene,Enxoval e rouparia,1516.79
+182,2026-02-15,Limpeza e Higiene,Amenities,927.01
+183,2026-02-02,Limpeza e Higiene,Produtos de limpeza,1333.51
+184,2026-02-17,Limpeza e Higiene,Amenities,880.55
+185,2026-02-20,Limpeza e Higiene,Amenities,1614.49
+186,2026-02-21,Limpeza e Higiene,Amenities,1467.45
+187,2026-02-25,Limpeza e Higiene,Produtos de limpeza,1173.11
+188,2026-02-07,Limpeza e Higiene,Amenities,1066.68
+189,2026-02-18,Limpeza e Higiene,Produtos de limpeza,909.93
+190,2026-02-10,Limpeza e Higiene,Amenities,919.72
+191,2026-02-16,Outras Despesas,Material de escritório,462.42
+192,2026-02-10,Outras Despesas,Material de escritório,1096.21
+193,2026-02-23,Outras Despesas,Seguro predial,825.15
+194,2026-02-14,Outras Despesas,Seguro predial,550.13
+195,2026-02-16,Outras Despesas,Internet e telefonia,489.92
+196,2026-02-15,Outras Despesas,Material de escritório,781.96
+197,2026-02-05,Outras Despesas,Seguro predial,783.01
+198,2026-02-07,Outras Despesas,Material de escritório,441.43
+199,2026-02-17,Outras Despesas,Material de escritório,1110.44
+200,2026-02-05,Outras Despesas,Internet e telefonia,1051.41
+201,2026-02-09,Outras Despesas,Seguro predial,715.44
+202,2026-02-11,Outras Despesas,Material de escritório,459.48
+203,2026-02-09,Outras Despesas,Internet e telefonia,991.29
+204,2026-03-22,Folha de Pagamento,Horas extras,18546.17
+205,2026-03-19,Folha de Pagamento,Vale-transporte,8123.34
+206,2026-03-27,Folha de Pagamento,Horas extras,18591.89
+207,2026-03-04,Folha de Pagamento,Encargos sociais,17243.49
+208,2026-03-16,Folha de Pagamento,Salários,15520.29
+209,2026-03-20,Folha de Pagamento,Horas extras,18762.31
+210,2026-03-30,Folha de Pagamento,Encargos sociais,18601.65
+211,2026-03-21,Folha de Pagamento,Salários,16539.21
+212,2026-03-21,Folha de Pagamento,Vale-transporte,10976.06
+213,2026-03-30,Folha de Pagamento,Horas extras,16362.92
+214,2026-03-21,Folha de Pagamento,Vale-transporte,6515.32
+215,2026-03-04,Folha de Pagamento,Encargos sociais,13141.38
+216,2026-03-02,Folha de Pagamento,Salários,12104.52
+217,2026-03-20,Energia Elétrica,Demanda contratada,1946.05
+218,2026-03-31,Energia Elétrica,Demanda contratada,2320.90
+219,2026-03-02,Energia Elétrica,Demanda contratada,3277.14
+220,2026-03-07,Energia Elétrica,Demanda contratada,2806.83
+221,2026-03-15,Energia Elétrica,Fatura Copel,2751.13
+222,2026-03-28,Energia Elétrica,Demanda contratada,4577.94
+223,2026-03-04,Energia Elétrica,Demanda contratada,3779.15
+224,2026-03-18,Energia Elétrica,Demanda contratada,3285.50
+225,2026-03-02,Energia Elétrica,Demanda contratada,3434.42
+226,2026-03-09,Energia Elétrica,Fatura Copel,3874.27
+227,2026-03-31,Energia Elétrica,Fatura Copel,4375.90
+228,2026-03-31,Energia Elétrica,Demanda contratada,3647.88
+229,2026-03-03,Energia Elétrica,Fatura Copel,4212.53
+230,2026-03-18,Água e Esgoto,Fatura Sanepar,1943.74
+231,2026-03-19,Água e Esgoto,Fatura Sanepar,2942.58
+232,2026-03-27,Água e Esgoto,Fatura Sanepar,5256.07
+233,2026-03-11,Água e Esgoto,Fatura Sanepar,4543.49
+234,2026-03-26,Água e Esgoto,Fatura Sanepar,2489.63
+235,2026-03-09,Água e Esgoto,Fatura Sanepar,4694.73
+236,2026-03-25,Gás,Gás da cozinha,890.49
+237,2026-03-17,Gás,Recarga de GLP,800.15
+238,2026-03-15,Gás,Recarga de GLP,1377.35
+239,2026-03-31,Gás,Recarga de GLP,623.73
+240,2026-03-24,Gás,Gás da cozinha,610.77
+241,2026-03-15,Gás,Recarga de GLP,1530.30
+242,2026-03-02,Gás,Gás da cozinha,875.40
+243,2026-03-28,Gás,Gás da cozinha,977.23
+244,2026-03-14,Gás,Recarga de GLP,799.85
+245,2026-03-16,Gás,Gás da cozinha,655.31
+246,2026-03-03,Gás,Recarga de GLP,1473.04
+247,2026-03-11,Gás,Recarga de GLP,1217.24
+248,2026-03-03,Gás,Recarga de GLP,1477.72
+249,2026-03-09,Gás,Gás da cozinha,1158.11
+250,2026-03-24,Manutenção e Reparos,Manutenção de elevador,1599.27
+251,2026-03-11,Manutenção e Reparos,Pintura,2023.09
+252,2026-03-11,Manutenção e Reparos,Hidráulica,1871.49
+253,2026-03-12,Manutenção e Reparos,Ar-condicionado,2601.61
+254,2026-03-22,Manutenção e Reparos,Pintura,1236.15
+255,2026-03-03,Manutenção e Reparos,Manutenção de elevador,2323.19
+256,2026-03-27,Manutenção e Reparos,Manutenção de elevador,2771.83
+257,2026-03-03,Manutenção e Reparos,Pintura,2115.20
+258,2026-03-04,Manutenção e Reparos,Hidráulica,2747.26
+259,2026-03-26,Manutenção e Reparos,Ar-condicionado,1871.23
+260,2026-03-18,Manutenção e Reparos,Manutenção de elevador,2792.73
+261,2026-03-19,Manutenção e Reparos,Hidráulica,1838.52
+262,2026-03-22,Manutenção e Reparos,Manutenção de elevador,2670.66
+263,2026-03-14,Manutenção e Reparos,Hidráulica,1808.17
+264,2026-03-25,Marketing e Vendas,Mídia paga,3197.02
+265,2026-03-19,Marketing e Vendas,Comissão de OTA,2853.43
+266,2026-03-26,Marketing e Vendas,Mídia paga,3431.43
+267,2026-03-28,Marketing e Vendas,Material promocional,2571.49
+268,2026-03-25,Marketing e Vendas,Material promocional,1990.17
+269,2026-03-20,Marketing e Vendas,Material promocional,2518.93
+270,2026-03-21,Marketing e Vendas,Material promocional,1665.56
+271,2026-03-01,Marketing e Vendas,Material promocional,2703.12
+272,2026-03-30,Marketing e Vendas,Material promocional,1692.45
+273,2026-03-27,Marketing e Vendas,Material promocional,1421.31
+274,2026-03-09,Marketing e Vendas,Comissão de OTA,3143.93
+275,2026-03-06,Marketing e Vendas,Mídia paga,2027.36
+276,2026-03-13,Impostos e Taxas,Taxa de bombeiros,9102.24
+277,2026-03-15,Impostos e Taxas,IPTU,5449.18
+278,2026-03-06,Impostos e Taxas,IPTU,4363.11
+279,2026-03-10,Impostos e Taxas,IPTU,4118.80
+280,2026-03-25,Impostos e Taxas,ISS,7410.59
+281,2026-03-29,Impostos e Taxas,ISS,3647.11
+282,2026-03-05,Impostos e Taxas,PIS/COFINS,7946.04
+283,2026-03-25,Impostos e Taxas,ISS,9424.14
+284,2026-03-22,Impostos e Taxas,ISS,3789.08
+285,2026-03-09,Impostos e Taxas,Taxa de bombeiros,6598.28
+286,2026-03-07,Alimentação e Bebidas,Bebidas,3530.99
+287,2026-03-31,Alimentação e Bebidas,Carnes e frios,2915.77
+288,2026-03-25,Alimentação e Bebidas,Carnes e frios,2282.29
+289,2026-03-25,Alimentação e Bebidas,Bebidas,3228.86
+290,2026-03-10,Alimentação e Bebidas,Bebidas,2695.66
+291,2026-03-04,Alimentação e Bebidas,Hortifrúti,1948.42
+292,2026-03-16,Alimentação e Bebidas,Panificação,3757.90
+293,2026-03-06,Alimentação e Bebidas,Carnes e frios,3486.53
+294,2026-03-13,Alimentação e Bebidas,Carnes e frios,3275.38
+295,2026-03-17,Alimentação e Bebidas,Bebidas,2578.44
+296,2026-03-03,Alimentação e Bebidas,Panificação,2298.08
+297,2026-03-28,Alimentação e Bebidas,Hortifrúti,4734.61
+298,2026-03-14,Alimentação e Bebidas,Hortifrúti,1769.46
+299,2026-03-11,Limpeza e Higiene,Produtos de limpeza,3120.20
+300,2026-03-26,Limpeza e Higiene,Enxoval e rouparia,2464.25
+301,2026-03-15,Limpeza e Higiene,Enxoval e rouparia,2458.85
+302,2026-03-30,Limpeza e Higiene,Amenities,2770.61
+303,2026-03-03,Limpeza e Higiene,Amenities,2102.17
+304,2026-03-28,Limpeza e Higiene,Produtos de limpeza,1409.18
+305,2026-03-08,Limpeza e Higiene,Amenities,1193.13
+306,2026-03-04,Outras Despesas,Internet e telefonia,444.63
+307,2026-03-09,Outras Despesas,Internet e telefonia,1053.10
+308,2026-03-06,Outras Despesas,Material de escritório,957.26
+309,2026-03-05,Outras Despesas,Material de escritório,554.45
+310,2026-03-03,Outras Despesas,Internet e telefonia,982.86
+311,2026-03-31,Outras Despesas,Material de escritório,442.88
+312,2026-03-16,Outras Despesas,Seguro predial,870.76
+313,2026-03-25,Outras Despesas,Material de escritório,791.90
+314,2026-03-25,Outras Despesas,Material de escritório,533.19
+315,2026-03-15,Outras Despesas,Material de escritório,980.64
+316,2026-03-30,Outras Despesas,Material de escritório,653.98
+317,2026-03-21,Outras Despesas,Material de escritório,1120.48
+318,2026-03-20,Outras Despesas,Seguro predial,880.15
+319,2026-03-28,Outras Despesas,Material de escritório,497.68
+320,2026-04-26,Folha de Pagamento,Vale-transporte,23885.35
+321,2026-04-03,Folha de Pagamento,Salários,18765.35
+322,2026-04-27,Folha de Pagamento,Vale-transporte,21957.86
+323,2026-04-20,Folha de Pagamento,Salários,18389.03
+324,2026-04-21,Folha de Pagamento,Encargos sociais,10935.44
+325,2026-04-23,Folha de Pagamento,Encargos sociais,14100.82
+326,2026-04-10,Folha de Pagamento,Vale-transporte,14334.31
+327,2026-04-01,Folha de Pagamento,Horas extras,9800.41
+328,2026-04-08,Folha de Pagamento,Vale-transporte,16457.65
+329,2026-04-28,Energia Elétrica,Demanda contratada,6280.94
+330,2026-04-02,Energia Elétrica,Demanda contratada,5281.37
+331,2026-04-12,Energia Elétrica,Demanda contratada,8919.27
+332,2026-04-24,Energia Elétrica,Fatura Copel,6407.34
+333,2026-04-12,Energia Elétrica,Fatura Copel,7894.48
+334,2026-04-12,Energia Elétrica,Fatura Copel,6183.60
+335,2026-04-24,Energia Elétrica,Fatura Copel,3193.20
+336,2026-04-15,Água e Esgoto,Fatura Sanepar,1359.35
+337,2026-04-10,Água e Esgoto,Fatura Sanepar,1829.10
+338,2026-04-02,Água e Esgoto,Fatura Sanepar,1799.59
+339,2026-04-29,Água e Esgoto,Fatura Sanepar,2452.53
+340,2026-04-11,Água e Esgoto,Fatura Sanepar,2855.11
+341,2026-04-17,Água e Esgoto,Fatura Sanepar,2542.43
+342,2026-04-27,Água e Esgoto,Fatura Sanepar,3177.96
+343,2026-04-09,Água e Esgoto,Fatura Sanepar,2100.01
+344,2026-04-25,Água e Esgoto,Fatura Sanepar,1464.22
+345,2026-04-10,Água e Esgoto,Fatura Sanepar,1362.45
+346,2026-04-28,Água e Esgoto,Fatura Sanepar,2609.73
+347,2026-04-09,Gás,Recarga de GLP,1002.89
+348,2026-04-24,Gás,Gás da cozinha,1685.30
+349,2026-04-03,Gás,Gás da cozinha,1215.26
+350,2026-04-20,Gás,Recarga de GLP,1167.37
+351,2026-04-18,Gás,Gás da cozinha,1218.88
+352,2026-04-11,Gás,Recarga de GLP,1889.11
+353,2026-04-03,Gás,Gás da cozinha,1088.27
+354,2026-04-22,Gás,Gás da cozinha,890.83
+355,2026-04-10,Gás,Gás da cozinha,1546.16
+356,2026-04-20,Gás,Gás da cozinha,1124.98
+357,2026-04-06,Gás,Gás da cozinha,1682.64
+358,2026-04-02,Manutenção e Reparos,Manutenção de elevador,5358.57
+359,2026-04-22,Manutenção e Reparos,Pintura,6165.72
+360,2026-04-12,Manutenção e Reparos,Ar-condicionado,4869.53
+361,2026-04-01,Manutenção e Reparos,Ar-condicionado,4083.70
+362,2026-04-28,Manutenção e Reparos,Pintura,4977.06
+363,2026-04-02,Manutenção e Reparos,Ar-condicionado,5641.01
+364,2026-04-09,Marketing e Vendas,Comissão de OTA,2214.62
+365,2026-04-04,Marketing e Vendas,Comissão de OTA,3723.27
+366,2026-04-24,Marketing e Vendas,Comissão de OTA,1367.55
+367,2026-04-16,Marketing e Vendas,Material promocional,1678.50
+368,2026-04-13,Marketing e Vendas,Material promocional,2440.08
+369,2026-04-04,Marketing e Vendas,Mídia paga,2237.26
+370,2026-04-25,Marketing e Vendas,Mídia paga,2424.71
+371,2026-04-23,Marketing e Vendas,Mídia paga,1481.85
+372,2026-04-07,Marketing e Vendas,Material promocional,1638.06
+373,2026-04-10,Marketing e Vendas,Material promocional,2226.95
+374,2026-04-30,Marketing e Vendas,Mídia paga,2091.92
+375,2026-04-12,Impostos e Taxas,ISS,8322.21
+376,2026-04-18,Impostos e Taxas,IPTU,5856.70
+377,2026-04-29,Impostos e Taxas,IPTU,8604.28
+378,2026-04-28,Impostos e Taxas,PIS/COFINS,5814.06
+379,2026-04-23,Impostos e Taxas,PIS/COFINS,3615.92
+380,2026-04-26,Impostos e Taxas,IPTU,7270.90
+381,2026-04-17,Impostos e Taxas,PIS/COFINS,8277.27
+382,2026-04-04,Impostos e Taxas,PIS/COFINS,5041.87
+383,2026-04-23,Alimentação e Bebidas,Panificação,6218.90
+384,2026-04-17,Alimentação e Bebidas,Panificação,2536.40
+385,2026-04-25,Alimentação e Bebidas,Panificação,5079.81
+386,2026-04-27,Alimentação e Bebidas,Hortifrúti,4187.68
+387,2026-04-05,Alimentação e Bebidas,Bebidas,6282.95
+388,2026-04-21,Alimentação e Bebidas,Hortifrúti,5068.37
+389,2026-04-15,Alimentação e Bebidas,Panificação,5358.99
+390,2026-04-22,Alimentação e Bebidas,Bebidas,2825.24
+391,2026-04-05,Alimentação e Bebidas,Carnes e frios,3900.34
+392,2026-04-12,Limpeza e Higiene,Enxoval e rouparia,2394.54
+393,2026-04-29,Limpeza e Higiene,Amenities,3622.06
+394,2026-04-28,Limpeza e Higiene,Produtos de limpeza,1426.05
+395,2026-04-09,Limpeza e Higiene,Produtos de limpeza,1602.56
+396,2026-04-21,Limpeza e Higiene,Enxoval e rouparia,1676.65
+397,2026-04-09,Limpeza e Higiene,Produtos de limpeza,1706.54
+398,2026-04-21,Limpeza e Higiene,Amenities,2112.22
+399,2026-04-20,Limpeza e Higiene,Enxoval e rouparia,3105.01
+400,2026-04-28,Outras Despesas,Internet e telefonia,1268.82
+401,2026-04-03,Outras Despesas,Internet e telefonia,1255.85
+402,2026-04-21,Outras Despesas,Material de escritório,780.02
+403,2026-04-09,Outras Despesas,Material de escritório,1306.79
+404,2026-04-07,Outras Despesas,Material de escritório,1629.30
+405,2026-04-14,Outras Despesas,Material de escritório,973.42
+406,2026-04-21,Outras Despesas,Internet e telefonia,1654.79
+407,2026-04-16,Outras Despesas,Material de escritório,628.94
+408,2026-05-09,Folha de Pagamento,Horas extras,11684.11
+409,2026-05-04,Folha de Pagamento,Vale-transporte,23741.80
+410,2026-05-29,Folha de Pagamento,Vale-transporte,12856.72
+411,2026-05-27,Folha de Pagamento,Horas extras,12717.93
+412,2026-05-31,Folha de Pagamento,Encargos sociais,11400.59
+413,2026-05-10,Folha de Pagamento,Salários,19423.16
+414,2026-05-10,Folha de Pagamento,Salários,13169.85
+415,2026-05-12,Folha de Pagamento,Vale-transporte,13681.83
+416,2026-05-21,Folha de Pagamento,Horas extras,23109.77
+417,2026-05-24,Folha de Pagamento,Vale-transporte,20880.59
+418,2026-05-05,Energia Elétrica,Fatura Copel,2667.45
+419,2026-05-31,Energia Elétrica,Fatura Copel,3673.65
+420,2026-05-14,Energia Elétrica,Demanda contratada,2669.14
+421,2026-05-16,Energia Elétrica,Fatura Copel,2107.39
+422,2026-05-25,Energia Elétrica,Demanda contratada,4292.40
+423,2026-05-11,Energia Elétrica,Demanda contratada,2557.27
+424,2026-05-21,Energia Elétrica,Fatura Copel,1905.17
+425,2026-05-30,Energia Elétrica,Fatura Copel,4860.71
+426,2026-05-21,Energia Elétrica,Fatura Copel,2510.19
+427,2026-05-18,Energia Elétrica,Fatura Copel,2534.97
+428,2026-05-30,Energia Elétrica,Fatura Copel,2076.16
+429,2026-05-14,Energia Elétrica,Fatura Copel,2872.09
+430,2026-05-30,Energia Elétrica,Fatura Copel,3363.67
+431,2026-05-27,Energia Elétrica,Demanda contratada,4085.89
+432,2026-05-10,Água e Esgoto,Fatura Sanepar,3434.02
+433,2026-05-21,Água e Esgoto,Fatura Sanepar,3495.03
+434,2026-05-29,Água e Esgoto,Fatura Sanepar,3408.75
+435,2026-05-28,Água e Esgoto,Fatura Sanepar,3290.92
+436,2026-05-09,Água e Esgoto,Fatura Sanepar,1217.33
+437,2026-05-26,Água e Esgoto,Fatura Sanepar,2552.82
+438,2026-05-11,Água e Esgoto,Fatura Sanepar,1451.67
+439,2026-05-24,Água e Esgoto,Fatura Sanepar,3544.89
+440,2026-05-14,Gás,Gás da cozinha,925.36
+441,2026-05-03,Gás,Gás da cozinha,1506.82
+442,2026-05-22,Gás,Recarga de GLP,1431.06
+443,2026-05-06,Gás,Recarga de GLP,2113.95
+444,2026-05-16,Gás,Gás da cozinha,1247.70
+445,2026-05-30,Gás,Recarga de GLP,1999.74
+446,2026-05-01,Gás,Gás da cozinha,2049.73
+447,2026-05-13,Gás,Recarga de GLP,1629.90
+448,2026-05-17,Manutenção e Reparos,Hidráulica,4779.58
+449,2026-05-23,Manutenção e Reparos,Manutenção de elevador,2636.09
+450,2026-05-21,Manutenção e Reparos,Hidráulica,4019.76
+451,2026-05-12,Manutenção e Reparos,Ar-condicionado,1681.15
+452,2026-05-08,Manutenção e Reparos,Ar-condicionado,3792.29
+453,2026-05-16,Manutenção e Reparos,Ar-condicionado,3920.77
+454,2026-05-15,Manutenção e Reparos,Hidráulica,1847.77
+455,2026-05-14,Manutenção e Reparos,Pintura,2032.18
+456,2026-05-25,Manutenção e Reparos,Ar-condicionado,2652.07
+457,2026-05-25,Manutenção e Reparos,Ar-condicionado,2976.21
+458,2026-05-07,Marketing e Vendas,Material promocional,3625.43
+459,2026-05-18,Marketing e Vendas,Comissão de OTA,3634.86
+460,2026-05-06,Marketing e Vendas,Mídia paga,3046.63
+461,2026-05-28,Marketing e Vendas,Material promocional,5010.33
+462,2026-05-15,Marketing e Vendas,Comissão de OTA,2164.32
+463,2026-05-22,Marketing e Vendas,Comissão de OTA,4697.56
+464,2026-05-23,Marketing e Vendas,Material promocional,4959.58
+465,2026-05-23,Impostos e Taxas,ISS,4919.88
+466,2026-05-18,Impostos e Taxas,ISS,2891.28
+467,2026-05-30,Impostos e Taxas,ISS,3288.36
+468,2026-05-30,Impostos e Taxas,Taxa de bombeiros,4763.47
+469,2026-05-02,Impostos e Taxas,IPTU,5536.13
+470,2026-05-14,Impostos e Taxas,PIS/COFINS,5509.51
+471,2026-05-25,Impostos e Taxas,PIS/COFINS,6102.57
+472,2026-05-25,Impostos e Taxas,Taxa de bombeiros,4205.36
+473,2026-05-12,Impostos e Taxas,Taxa de bombeiros,2715.06
+474,2026-05-15,Impostos e Taxas,Taxa de bombeiros,3925.86
+475,2026-05-13,Impostos e Taxas,ISS,2617.47
+476,2026-05-22,Impostos e Taxas,PIS/COFINS,3735.64
+477,2026-05-21,Impostos e Taxas,IPTU,2981.79
+478,2026-05-04,Impostos e Taxas,PIS/COFINS,4806.51
+479,2026-05-09,Alimentação e Bebidas,Carnes e frios,3889.26
+480,2026-05-30,Alimentação e Bebidas,Hortifrúti,4641.58
+481,2026-05-02,Alimentação e Bebidas,Panificação,2731.93
+482,2026-05-20,Alimentação e Bebidas,Hortifrúti,1903.24
+483,2026-05-08,Alimentação e Bebidas,Carnes e frios,1976.06
+484,2026-05-03,Alimentação e Bebidas,Hortifrúti,3017.99
+485,2026-05-20,Alimentação e Bebidas,Hortifrúti,4436.10
+486,2026-05-15,Alimentação e Bebidas,Hortifrúti,3948.24
+487,2026-05-08,Alimentação e Bebidas,Hortifrúti,3900.94
+488,2026-05-13,Alimentação e Bebidas,Panificação,5002.60
+489,2026-05-08,Alimentação e Bebidas,Carnes e frios,2825.76
+490,2026-05-25,Alimentação e Bebidas,Hortifrúti,3198.68
+491,2026-05-14,Limpeza e Higiene,Amenities,873.87
+492,2026-05-09,Limpeza e Higiene,Produtos de limpeza,1685.93
+493,2026-05-18,Limpeza e Higiene,Enxoval e rouparia,1280.89
+494,2026-05-29,Limpeza e Higiene,Enxoval e rouparia,1282.51
+495,2026-05-30,Limpeza e Higiene,Produtos de limpeza,1514.70
+496,2026-05-21,Limpeza e Higiene,Enxoval e rouparia,1569.26
+497,2026-05-14,Limpeza e Higiene,Enxoval e rouparia,877.13
+498,2026-05-16,Limpeza e Higiene,Produtos de limpeza,1638.15
+499,2026-05-12,Limpeza e Higiene,Enxoval e rouparia,1768.42
+500,2026-05-22,Limpeza e Higiene,Amenities,1215.59
+501,2026-05-14,Outras Despesas,Seguro predial,1392.36
+502,2026-05-18,Outras Despesas,Material de escritório,1057.11
+503,2026-05-05,Outras Despesas,Seguro predial,930.98
+504,2026-05-08,Outras Despesas,Seguro predial,795.95
+505,2026-05-07,Outras Despesas,Seguro predial,1208.03
+506,2026-05-21,Outras Despesas,Internet e telefonia,862.40
+507,2026-05-30,Outras Despesas,Seguro predial,844.22
+508,2026-05-28,Outras Despesas,Seguro predial,1580.02
+509,2026-05-03,Outras Despesas,Material de escritório,749.95
+510,2026-05-24,Outras Despesas,Internet e telefonia,1120.85
+511,2026-05-02,Outras Despesas,Seguro predial,649.01
+512,2026-06-07,Folha de Pagamento,Encargos sociais,28632.06
+513,2026-06-25,Folha de Pagamento,Vale-transporte,18864.53
+514,2026-06-30,Folha de Pagamento,Salários,25213.94
+515,2026-06-10,Folha de Pagamento,Encargos sociais,27995.82
+516,2026-06-19,Folha de Pagamento,Encargos sociais,16422.53
+517,2026-06-19,Folha de Pagamento,Vale-transporte,32644.87
+518,2026-06-22,Folha de Pagamento,Horas extras,12465.38
+519,2026-06-20,Energia Elétrica,Demanda contratada,7312.31
+520,2026-06-25,Energia Elétrica,Demanda contratada,6738.96
+521,2026-06-01,Energia Elétrica,Demanda contratada,3277.53
+522,2026-06-26,Energia Elétrica,Demanda contratada,7057.10
+523,2026-06-16,Energia Elétrica,Fatura Copel,4792.87
+524,2026-06-12,Energia Elétrica,Demanda contratada,3386.65
+525,2026-06-14,Energia Elétrica,Fatura Copel,4148.53
+526,2026-06-22,Energia Elétrica,Demanda contratada,3263.88
+527,2026-06-10,Água e Esgoto,Fatura Sanepar,2252.19
+528,2026-06-12,Água e Esgoto,Fatura Sanepar,2104.81
+529,2026-06-04,Água e Esgoto,Fatura Sanepar,1009.87
+530,2026-06-03,Água e Esgoto,Fatura Sanepar,1135.11
+531,2026-06-14,Água e Esgoto,Fatura Sanepar,2102.32
+532,2026-06-18,Água e Esgoto,Fatura Sanepar,1967.38
+533,2026-06-04,Água e Esgoto,Fatura Sanepar,2150.87
+534,2026-06-03,Água e Esgoto,Fatura Sanepar,1416.98
+535,2026-06-18,Água e Esgoto,Fatura Sanepar,1052.40
+536,2026-06-20,Água e Esgoto,Fatura Sanepar,876.54
+537,2026-06-19,Gás,Recarga de GLP,1487.47
+538,2026-06-22,Gás,Gás da cozinha,1667.71
+539,2026-06-06,Gás,Recarga de GLP,1098.35
+540,2026-06-09,Gás,Gás da cozinha,2632.01
+541,2026-06-09,Gás,Gás da cozinha,2639.66
+542,2026-06-05,Gás,Recarga de GLP,2776.72
+543,2026-06-13,Manutenção e Reparos,Hidráulica,2749.99
+544,2026-06-27,Manutenção e Reparos,Pintura,2938.47
+545,2026-06-26,Manutenção e Reparos,Hidráulica,1722.42
+546,2026-06-15,Manutenção e Reparos,Hidráulica,2244.23
+547,2026-06-14,Manutenção e Reparos,Ar-condicionado,2228.98
+548,2026-06-10,Manutenção e Reparos,Hidráulica,3358.84
+549,2026-06-20,Manutenção e Reparos,Ar-condicionado,3265.61
+550,2026-06-16,Manutenção e Reparos,Hidráulica,2076.59
+551,2026-06-06,Manutenção e Reparos,Pintura,1812.14
+552,2026-06-11,Manutenção e Reparos,Hidráulica,2402.34
+553,2026-06-23,Marketing e Vendas,Comissão de OTA,2621.11
+554,2026-06-15,Marketing e Vendas,Mídia paga,2289.33
+555,2026-06-27,Marketing e Vendas,Material promocional,1474.85
+556,2026-06-03,Marketing e Vendas,Mídia paga,1393.45
+557,2026-06-22,Marketing e Vendas,Mídia paga,2296.28
+558,2026-06-05,Marketing e Vendas,Material promocional,1544.73
+559,2026-06-10,Marketing e Vendas,Comissão de OTA,2557.36
+560,2026-06-09,Marketing e Vendas,Material promocional,1249.69
+561,2026-06-05,Marketing e Vendas,Material promocional,2673.79
+562,2026-06-14,Marketing e Vendas,Mídia paga,1214.20
+563,2026-06-03,Marketing e Vendas,Mídia paga,2263.69
+564,2026-06-20,Marketing e Vendas,Mídia paga,940.96
+565,2026-06-19,Marketing e Vendas,Mídia paga,2191.54
+566,2026-06-21,Impostos e Taxas,Taxa de bombeiros,4981.67
+567,2026-06-25,Impostos e Taxas,IPTU,6161.05
+568,2026-06-26,Impostos e Taxas,Taxa de bombeiros,4102.82
+569,2026-06-04,Impostos e Taxas,ISS,6661.20
+570,2026-06-04,Impostos e Taxas,IPTU,4949.50
+571,2026-06-08,Impostos e Taxas,PIS/COFINS,5432.92
+572,2026-06-15,Impostos e Taxas,IPTU,2792.32
+573,2026-06-13,Impostos e Taxas,Taxa de bombeiros,6057.14
+574,2026-06-25,Impostos e Taxas,PIS/COFINS,5525.62
+575,2026-06-12,Impostos e Taxas,ISS,4081.24
+576,2026-06-16,Impostos e Taxas,ISS,5475.02
+577,2026-06-10,Impostos e Taxas,Taxa de bombeiros,2598.11
+578,2026-06-16,Alimentação e Bebidas,Hortifrúti,3647.86
+579,2026-06-15,Alimentação e Bebidas,Panificação,8530.51
+580,2026-06-11,Alimentação e Bebidas,Hortifrúti,3799.48
+581,2026-06-10,Alimentação e Bebidas,Hortifrúti,4807.35
+582,2026-06-26,Alimentação e Bebidas,Hortifrúti,5656.70
+583,2026-06-01,Alimentação e Bebidas,Bebidas,4185.49
+584,2026-06-21,Alimentação e Bebidas,Hortifrúti,5820.08
+585,2026-06-21,Limpeza e Higiene,Produtos de limpeza,2381.13
+586,2026-06-06,Limpeza e Higiene,Enxoval e rouparia,2065.68
+587,2026-06-22,Limpeza e Higiene,Amenities,1691.85
+588,2026-06-13,Limpeza e Higiene,Produtos de limpeza,1751.66
+589,2026-06-24,Limpeza e Higiene,Enxoval e rouparia,1383.78
+590,2026-06-29,Limpeza e Higiene,Produtos de limpeza,1542.60
+591,2026-06-15,Limpeza e Higiene,Enxoval e rouparia,1602.03
+592,2026-06-14,Limpeza e Higiene,Amenities,2161.04
+593,2026-06-09,Outras Despesas,Material de escritório,665.61
+594,2026-06-28,Outras Despesas,Seguro predial,1181.04
+595,2026-06-17,Outras Despesas,Material de escritório,1234.23
+596,2026-06-11,Outras Despesas,Material de escritório,530.54
+597,2026-06-13,Outras Despesas,Material de escritório,567.50
+598,2026-06-13,Outras Despesas,Material de escritório,1293.88
+599,2026-06-04,Outras Despesas,Seguro predial,647.86
+600,2026-06-12,Outras Despesas,Seguro predial,778.97
+601,2026-06-20,Outras Despesas,Internet e telefonia,903.05
+602,2026-07-04,Folha de Pagamento,Vale-transporte,12438.03
+603,2026-07-01,Folha de Pagamento,Salários,16108.18
+604,2026-07-30,Folha de Pagamento,Encargos sociais,12334.44
+605,2026-07-15,Folha de Pagamento,Vale-transporte,13316.65
+606,2026-07-01,Folha de Pagamento,Vale-transporte,23016.57
+607,2026-07-07,Folha de Pagamento,Encargos sociais,14516.01
+608,2026-07-29,Folha de Pagamento,Horas extras,18677.65
+609,2026-07-06,Folha de Pagamento,Horas extras,18473.33
+610,2026-07-03,Folha de Pagamento,Horas extras,17073.22
+611,2026-07-09,Folha de Pagamento,Salários,14619.70
+612,2026-07-12,Folha de Pagamento,Encargos sociais,20490.40
+613,2026-07-02,Folha de Pagamento,Vale-transporte,9502.44
+614,2026-07-11,Energia Elétrica,Fatura Copel,5317.51
+615,2026-07-28,Energia Elétrica,Demanda contratada,3383.13
+616,2026-07-23,Energia Elétrica,Fatura Copel,3405.93
+617,2026-07-16,Energia Elétrica,Fatura Copel,4082.54
+618,2026-07-08,Energia Elétrica,Demanda contratada,3307.25
+619,2026-07-03,Energia Elétrica,Fatura Copel,6258.56
+620,2026-07-04,Energia Elétrica,Demanda contratada,5833.75
+621,2026-07-12,Energia Elétrica,Demanda contratada,5408.13
+622,2026-07-05,Energia Elétrica,Demanda contratada,2907.38
+623,2026-07-24,Água e Esgoto,Fatura Sanepar,2899.85
+624,2026-07-30,Água e Esgoto,Fatura Sanepar,2990.18
+625,2026-07-20,Água e Esgoto,Fatura Sanepar,1443.89
+626,2026-07-28,Água e Esgoto,Fatura Sanepar,2700.99
+627,2026-07-03,Água e Esgoto,Fatura Sanepar,2820.45
+628,2026-07-05,Água e Esgoto,Fatura Sanepar,1687.00
+629,2026-07-19,Água e Esgoto,Fatura Sanepar,2162.20
+630,2026-07-12,Água e Esgoto,Fatura Sanepar,1811.31
+631,2026-07-28,Gás,Gás da cozinha,935.78
+632,2026-07-07,Gás,Recarga de GLP,1432.38
+633,2026-07-24,Gás,Gás da cozinha,936.26
+634,2026-07-10,Gás,Recarga de GLP,1377.79
+635,2026-07-26,Gás,Recarga de GLP,1528.19
+636,2026-07-16,Gás,Gás da cozinha,982.25
+637,2026-07-04,Gás,Recarga de GLP,1803.62
+638,2026-07-16,Gás,Recarga de GLP,659.27
+639,2026-07-22,Manutenção e Reparos,Ar-condicionado,5609.31
+640,2026-07-25,Manutenção e Reparos,Pintura,5409.53
+641,2026-07-31,Manutenção e Reparos,Manutenção de elevador,2384.18
+642,2026-07-01,Manutenção e Reparos,Manutenção de elevador,5133.72
+643,2026-07-01,Manutenção e Reparos,Hidráulica,4030.50
+644,2026-07-07,Manutenção e Reparos,Manutenção de elevador,3264.80
+645,2026-07-26,Marketing e Vendas,Comissão de OTA,2151.26
+646,2026-07-18,Marketing e Vendas,Mídia paga,2411.90
+647,2026-07-13,Marketing e Vendas,Material promocional,2139.37
+648,2026-07-21,Marketing e Vendas,Material promocional,1956.40
+649,2026-07-22,Marketing e Vendas,Material promocional,2568.42
+650,2026-07-03,Marketing e Vendas,Mídia paga,1244.72
+651,2026-07-23,Marketing e Vendas,Mídia paga,2215.27
+652,2026-07-24,Marketing e Vendas,Comissão de OTA,2385.14
+653,2026-07-02,Marketing e Vendas,Comissão de OTA,1661.55
+654,2026-07-03,Marketing e Vendas,Mídia paga,1730.88
+655,2026-07-04,Marketing e Vendas,Mídia paga,2161.29
+656,2026-07-20,Marketing e Vendas,Material promocional,1502.82
+657,2026-07-06,Impostos e Taxas,IPTU,3584.93
+658,2026-07-05,Impostos e Taxas,IPTU,6990.55
+659,2026-07-24,Impostos e Taxas,ISS,6953.50
+660,2026-07-25,Impostos e Taxas,ISS,3841.83
+661,2026-07-11,Impostos e Taxas,Taxa de bombeiros,8409.12
+662,2026-07-09,Impostos e Taxas,ISS,5920.49
+663,2026-07-09,Impostos e Taxas,ISS,7425.10
+664,2026-07-16,Impostos e Taxas,Taxa de bombeiros,7065.00
+665,2026-07-24,Alimentação e Bebidas,Hortifrúti,5583.91
+666,2026-07-08,Alimentação e Bebidas,Hortifrúti,5959.72
+667,2026-07-02,Alimentação e Bebidas,Hortifrúti,4846.98
+668,2026-07-08,Alimentação e Bebidas,Hortifrúti,4218.15
+669,2026-07-16,Alimentação e Bebidas,Bebidas,3367.88
+670,2026-07-13,Alimentação e Bebidas,Carnes e frios,5998.97
+671,2026-07-24,Limpeza e Higiene,Amenities,1907.70
+672,2026-07-09,Limpeza e Higiene,Produtos de limpeza,2561.96
+673,2026-07-19,Limpeza e Higiene,Amenities,2247.98
+674,2026-07-04,Limpeza e Higiene,Enxoval e rouparia,1665.82
+675,2026-07-22,Limpeza e Higiene,Produtos de limpeza,1489.04
+676,2026-07-06,Limpeza e Higiene,Produtos de limpeza,1660.18
+677,2026-07-18,Outras Despesas,Seguro predial,2285.26
+678,2026-07-01,Outras Despesas,Seguro predial,894.14
+679,2026-07-07,Outras Despesas,Seguro predial,1516.76
+680,2026-07-19,Outras Despesas,Seguro predial,1229.49
+681,2026-07-24,Outras Despesas,Material de escritório,2113.59
+682,2026-07-08,Outras Despesas,Seguro predial,1300.20
+683,2026-08-23,Folha de Pagamento,Horas extras,18584.33
+684,2026-08-16,Folha de Pagamento,Vale-transporte,23101.20
+685,2026-08-12,Folha de Pagamento,Horas extras,26225.67
+686,2026-08-13,Folha de Pagamento,Horas extras,15145.65
+687,2026-08-06,Folha de Pagamento,Salários,30206.22
+688,2026-08-11,Folha de Pagamento,Encargos sociais,21099.79
+689,2026-08-01,Folha de Pagamento,Horas extras,10503.43
+690,2026-08-02,Folha de Pagamento,Vale-transporte,17841.62
+691,2026-08-28,Energia Elétrica,Demanda contratada,6968.86
+692,2026-08-12,Energia Elétrica,Fatura Copel,2837.39
+693,2026-08-06,Energia Elétrica,Fatura Copel,5469.56
+694,2026-08-19,Energia Elétrica,Demanda contratada,3624.08
+695,2026-08-26,Energia Elétrica,Demanda contratada,6223.29
+696,2026-08-30,Energia Elétrica,Fatura Copel,6700.69
+697,2026-08-23,Energia Elétrica,Demanda contratada,2628.29
+698,2026-08-31,Energia Elétrica,Fatura Copel,7074.82
+699,2026-08-19,Energia Elétrica,Fatura Copel,3401.32
+700,2026-08-28,Água e Esgoto,Fatura Sanepar,1982.61
+701,2026-08-02,Água e Esgoto,Fatura Sanepar,1285.22
+702,2026-08-05,Água e Esgoto,Fatura Sanepar,1023.46
+703,2026-08-25,Água e Esgoto,Fatura Sanepar,1058.09
+704,2026-08-28,Água e Esgoto,Fatura Sanepar,2095.88
+705,2026-08-31,Água e Esgoto,Fatura Sanepar,989.15
+706,2026-08-12,Água e Esgoto,Fatura Sanepar,1860.59
+707,2026-08-19,Água e Esgoto,Fatura Sanepar,1582.35
+708,2026-08-11,Água e Esgoto,Fatura Sanepar,2119.60
+709,2026-08-11,Água e Esgoto,Fatura Sanepar,2485.47
+710,2026-08-06,Água e Esgoto,Fatura Sanepar,1599.52
+711,2026-08-26,Água e Esgoto,Fatura Sanepar,1288.84
+712,2026-08-21,Água e Esgoto,Fatura Sanepar,2477.82
+713,2026-08-31,Gás,Recarga de GLP,820.45
+714,2026-08-06,Gás,Gás da cozinha,982.18
+715,2026-08-30,Gás,Recarga de GLP,884.67
+716,2026-08-21,Gás,Recarga de GLP,497.15
+717,2026-08-30,Gás,Gás da cozinha,748.54
+718,2026-08-05,Gás,Gás da cozinha,464.23
+719,2026-08-24,Gás,Recarga de GLP,554.61
+720,2026-08-08,Gás,Gás da cozinha,816.97
+721,2026-08-11,Gás,Recarga de GLP,431.24
+722,2026-08-21,Gás,Recarga de GLP,844.69
+723,2026-08-27,Gás,Gás da cozinha,995.89
+724,2026-08-15,Gás,Recarga de GLP,995.83
+725,2026-08-09,Gás,Recarga de GLP,612.88
+726,2026-08-08,Gás,Recarga de GLP,1027.16
+727,2026-08-12,Manutenção e Reparos,Pintura,5243.81
+728,2026-08-04,Manutenção e Reparos,Pintura,2355.25
+729,2026-08-26,Manutenção e Reparos,Ar-condicionado,4031.30
+730,2026-08-06,Manutenção e Reparos,Pintura,3951.52
+731,2026-08-03,Manutenção e Reparos,Manutenção de elevador,2863.09
+732,2026-08-10,Manutenção e Reparos,Manutenção de elevador,3927.31
+733,2026-08-11,Manutenção e Reparos,Hidráulica,5937.13
+734,2026-08-20,Marketing e Vendas,Mídia paga,3285.23
+735,2026-08-23,Marketing e Vendas,Comissão de OTA,5416.52
+736,2026-08-14,Marketing e Vendas,Material promocional,2579.24
+737,2026-08-06,Marketing e Vendas,Material promocional,2244.00
+738,2026-08-29,Marketing e Vendas,Mídia paga,5626.88
+739,2026-08-06,Marketing e Vendas,Comissão de OTA,5768.18
+740,2026-08-04,Marketing e Vendas,Mídia paga,3270.17
+741,2026-08-16,Impostos e Taxas,PIS/COFINS,5389.10
+742,2026-08-02,Impostos e Taxas,IPTU,6247.49
+743,2026-08-01,Impostos e Taxas,Taxa de bombeiros,8449.06
+744,2026-08-03,Impostos e Taxas,IPTU,6164.60
+745,2026-08-27,Impostos e Taxas,Taxa de bombeiros,6878.61
+746,2026-08-07,Impostos e Taxas,ISS,4726.02
+747,2026-08-01,Impostos e Taxas,PIS/COFINS,3531.86
+748,2026-08-06,Impostos e Taxas,IPTU,5292.04
+749,2026-08-03,Impostos e Taxas,Taxa de bombeiros,6221.12
+750,2026-08-15,Alimentação e Bebidas,Panificação,5220.69
+751,2026-08-09,Alimentação e Bebidas,Carnes e frios,3945.12
+752,2026-08-27,Alimentação e Bebidas,Bebidas,5667.64
+753,2026-08-19,Alimentação e Bebidas,Hortifrúti,3108.35
+754,2026-08-05,Alimentação e Bebidas,Hortifrúti,4639.61
+755,2026-08-03,Alimentação e Bebidas,Bebidas,3606.18
+756,2026-08-26,Alimentação e Bebidas,Panificação,3539.11
+757,2026-08-25,Alimentação e Bebidas,Carnes e frios,3581.47
+758,2026-08-18,Alimentação e Bebidas,Hortifrúti,2789.71
+759,2026-08-27,Alimentação e Bebidas,Panificação,2212.88
+760,2026-08-20,Limpeza e Higiene,Produtos de limpeza,1890.41
+761,2026-08-04,Limpeza e Higiene,Amenities,1531.11
+762,2026-08-06,Limpeza e Higiene,Produtos de limpeza,1852.66
+763,2026-08-07,Limpeza e Higiene,Produtos de limpeza,1383.62
+764,2026-08-05,Limpeza e Higiene,Produtos de limpeza,948.85
+765,2026-08-14,Limpeza e Higiene,Produtos de limpeza,1030.38
+766,2026-08-22,Limpeza e Higiene,Amenities,1154.14
+767,2026-08-07,Limpeza e Higiene,Enxoval e rouparia,1746.35
+768,2026-08-05,Limpeza e Higiene,Enxoval e rouparia,689.71
+769,2026-08-09,Limpeza e Higiene,Amenities,1381.69
+770,2026-08-30,Limpeza e Higiene,Enxoval e rouparia,1311.52
+771,2026-08-30,Limpeza e Higiene,Produtos de limpeza,1382.03
+772,2026-08-30,Outras Despesas,Internet e telefonia,532.94
+773,2026-08-19,Outras Despesas,Internet e telefonia,490.63
+774,2026-08-26,Outras Despesas,Seguro predial,460.98
+775,2026-08-28,Outras Despesas,Material de escritório,569.05
+776,2026-08-29,Outras Despesas,Seguro predial,815.70
+777,2026-08-29,Outras Despesas,Seguro predial,764.08
+778,2026-08-09,Outras Despesas,Seguro predial,666.98
+779,2026-08-21,Outras Despesas,Seguro predial,607.30
+780,2026-08-19,Outras Despesas,Material de escritório,546.14
+781,2026-08-16,Outras Despesas,Internet e telefonia,543.08
+782,2026-08-06,Outras Despesas,Seguro predial,384.96
+783,2026-08-13,Outras Despesas,Internet e telefonia,646.12
+784,2026-08-20,Outras Despesas,Material de escritório,747.35
+785,2026-08-22,Outras Despesas,Material de escritório,855.00
+786,2026-09-11,Folha de Pagamento,Horas extras,10335.38
+787,2026-09-09,Folha de Pagamento,Horas extras,9067.87
+788,2026-09-15,Folha de Pagamento,Salários,9528.26
+789,2026-09-16,Folha de Pagamento,Salários,11511.59
+790,2026-09-28,Folha de Pagamento,Salários,19852.47
+791,2026-09-16,Folha de Pagamento,Encargos sociais,19163.19
+792,2026-09-17,Folha de Pagamento,Salários,10364.70
+793,2026-09-28,Folha de Pagamento,Vale-transporte,17900.65
+794,2026-09-17,Folha de Pagamento,Horas extras,12679.67
+795,2026-09-14,Folha de Pagamento,Salários,8941.88
+796,2026-09-28,Folha de Pagamento,Encargos sociais,12977.85
+797,2026-09-05,Folha de Pagamento,Encargos sociais,18879.32
+798,2026-09-11,Folha de Pagamento,Vale-transporte,12246.50
+799,2026-09-19,Folha de Pagamento,Vale-transporte,19545.15
+800,2026-09-06,Energia Elétrica,Fatura Copel,7050.87
+801,2026-09-16,Energia Elétrica,Fatura Copel,5444.59
+802,2026-09-05,Energia Elétrica,Demanda contratada,6235.45
+803,2026-09-21,Energia Elétrica,Demanda contratada,3731.37
+804,2026-09-13,Energia Elétrica,Demanda contratada,6254.56
+805,2026-09-16,Energia Elétrica,Demanda contratada,2782.51
+806,2026-09-01,Energia Elétrica,Fatura Copel,4264.50
+807,2026-09-18,Energia Elétrica,Fatura Copel,6953.03
+808,2026-09-08,Água e Esgoto,Fatura Sanepar,5361.70
+809,2026-09-10,Água e Esgoto,Fatura Sanepar,4841.10
+810,2026-09-04,Água e Esgoto,Fatura Sanepar,3971.31
+811,2026-09-17,Água e Esgoto,Fatura Sanepar,1994.90
+812,2026-09-06,Água e Esgoto,Fatura Sanepar,1941.77
+813,2026-09-27,Água e Esgoto,Fatura Sanepar,4751.57
+814,2026-09-30,Gás,Gás da cozinha,1129.96
+815,2026-09-01,Gás,Recarga de GLP,1206.04
+816,2026-09-08,Gás,Recarga de GLP,1210.57
+817,2026-09-07,Gás,Recarga de GLP,1103.65
+818,2026-09-19,Gás,Recarga de GLP,1402.85
+819,2026-09-04,Gás,Gás da cozinha,749.18
+820,2026-09-23,Gás,Recarga de GLP,1768.53
+821,2026-09-13,Gás,Gás da cozinha,1170.45
+822,2026-09-25,Gás,Recarga de GLP,1477.71
+823,2026-09-20,Gás,Recarga de GLP,785.93
+824,2026-09-07,Manutenção e Reparos,Manutenção de elevador,3932.13
+825,2026-09-10,Manutenção e Reparos,Pintura,4416.66
+826,2026-09-22,Manutenção e Reparos,Manutenção de elevador,6772.95
+827,2026-09-22,Manutenção e Reparos,Hidráulica,4472.64
+828,2026-09-20,Manutenção e Reparos,Ar-condicionado,5398.90
+829,2026-09-14,Manutenção e Reparos,Manutenção de elevador,8620.22
+830,2026-09-12,Marketing e Vendas,Material promocional,2537.73
+831,2026-09-14,Marketing e Vendas,Mídia paga,4165.52
+832,2026-09-06,Marketing e Vendas,Comissão de OTA,3234.92
+833,2026-09-18,Marketing e Vendas,Mídia paga,3595.66
+834,2026-09-30,Marketing e Vendas,Comissão de OTA,4143.46
+835,2026-09-23,Marketing e Vendas,Mídia paga,4317.05
+836,2026-09-11,Marketing e Vendas,Comissão de OTA,4776.22
+837,2026-09-04,Impostos e Taxas,IPTU,9381.44
+838,2026-09-21,Impostos e Taxas,PIS/COFINS,8903.67
+839,2026-09-15,Impostos e Taxas,IPTU,7795.34
+840,2026-09-09,Impostos e Taxas,Taxa de bombeiros,4328.66
+841,2026-09-02,Impostos e Taxas,ISS,3934.82
+842,2026-09-27,Impostos e Taxas,PIS/COFINS,6746.31
+843,2026-09-28,Impostos e Taxas,ISS,8159.04
+844,2026-09-20,Alimentação e Bebidas,Bebidas,5022.21
+845,2026-09-29,Alimentação e Bebidas,Hortifrúti,3135.83
+846,2026-09-12,Alimentação e Bebidas,Bebidas,4778.91
+847,2026-09-06,Alimentação e Bebidas,Hortifrúti,2295.80
+848,2026-09-13,Alimentação e Bebidas,Panificação,4854.78
+849,2026-09-15,Alimentação e Bebidas,Bebidas,2106.31
+850,2026-09-27,Alimentação e Bebidas,Panificação,5216.69
+851,2026-09-23,Alimentação e Bebidas,Panificação,4488.81
+852,2026-09-26,Alimentação e Bebidas,Panificação,2587.17
+853,2026-09-21,Alimentação e Bebidas,Carnes e frios,3308.77
+854,2026-09-04,Alimentação e Bebidas,Carnes e frios,3618.17
+855,2026-09-15,Limpeza e Higiene,Produtos de limpeza,3649.08
+856,2026-09-20,Limpeza e Higiene,Amenities,3311.11
+857,2026-09-25,Limpeza e Higiene,Amenities,1486.93
+858,2026-09-20,Limpeza e Higiene,Produtos de limpeza,3475.82
+859,2026-09-28,Limpeza e Higiene,Enxoval e rouparia,2420.31
+860,2026-09-29,Limpeza e Higiene,Enxoval e rouparia,2632.79
+861,2026-09-17,Outras Despesas,Material de escritório,1522.49
+862,2026-09-19,Outras Despesas,Material de escritório,1530.30
+863,2026-09-19,Outras Despesas,Internet e telefonia,2148.96
+864,2026-09-22,Outras Despesas,Seguro predial,1456.84
+865,2026-09-17,Outras Despesas,Material de escritório,872.44
+866,2026-09-23,Outras Despesas,Material de escritório,1788.70
+867,2026-09-20,Outras Despesas,Internet e telefonia,793.49
+868,2026-09-14,Outras Despesas,Material de escritório,2119.13
+869,2026-10-30,Folha de Pagamento,Horas extras,16096.30
+870,2026-10-25,Folha de Pagamento,Encargos sociais,23576.28
+871,2026-10-25,Folha de Pagamento,Encargos sociais,35162.03
+872,2026-10-10,Folha de Pagamento,Vale-transporte,40194.06
+873,2026-10-06,Folha de Pagamento,Salários,42992.85
+874,2026-10-06,Folha de Pagamento,Encargos sociais,41733.47
+875,2026-10-23,Energia Elétrica,Fatura Copel,7598.89
+876,2026-10-02,Energia Elétrica,Fatura Copel,8043.36
+877,2026-10-30,Energia Elétrica,Demanda contratada,9152.97
+878,2026-10-20,Energia Elétrica,Fatura Copel,5458.06
+879,2026-10-25,Energia Elétrica,Demanda contratada,9390.22
+880,2026-10-16,Energia Elétrica,Demanda contratada,6540.46
+881,2026-10-03,Energia Elétrica,Demanda contratada,7194.90
+882,2026-10-11,Água e Esgoto,Fatura Sanepar,2737.92
+883,2026-10-10,Água e Esgoto,Fatura Sanepar,3450.57
+884,2026-10-31,Água e Esgoto,Fatura Sanepar,1768.85
+885,2026-10-18,Água e Esgoto,Fatura Sanepar,2798.21
+886,2026-10-04,Água e Esgoto,Fatura Sanepar,2423.54
+887,2026-10-15,Água e Esgoto,Fatura Sanepar,2278.64
+888,2026-10-29,Água e Esgoto,Fatura Sanepar,3711.16
+889,2026-10-31,Água e Esgoto,Fatura Sanepar,3120.81
+890,2026-10-10,Gás,Recarga de GLP,1166.36
+891,2026-10-11,Gás,Recarga de GLP,1715.33
+892,2026-10-31,Gás,Recarga de GLP,811.71
+893,2026-10-06,Gás,Recarga de GLP,1001.23
+894,2026-10-21,Gás,Recarga de GLP,1619.74
+895,2026-10-07,Gás,Recarga de GLP,694.37
+896,2026-10-28,Gás,Gás da cozinha,1345.67
+897,2026-10-27,Gás,Recarga de GLP,1681.30
+898,2026-10-07,Gás,Gás da cozinha,1342.28
+899,2026-10-21,Gás,Recarga de GLP,1334.91
+900,2026-10-24,Gás,Recarga de GLP,1305.88
+901,2026-10-13,Manutenção e Reparos,Manutenção de elevador,1614.61
+902,2026-10-18,Manutenção e Reparos,Manutenção de elevador,1720.76
+903,2026-10-21,Manutenção e Reparos,Manutenção de elevador,2035.17
+904,2026-10-25,Manutenção e Reparos,Manutenção de elevador,2257.05
+905,2026-10-23,Manutenção e Reparos,Manutenção de elevador,1712.33
+906,2026-10-12,Manutenção e Reparos,Manutenção de elevador,3967.19
+907,2026-10-10,Manutenção e Reparos,Hidráulica,4235.45
+908,2026-10-20,Manutenção e Reparos,Manutenção de elevador,2724.50
+909,2026-10-10,Manutenção e Reparos,Pintura,2855.06
+910,2026-10-13,Manutenção e Reparos,Pintura,2714.94
+911,2026-10-27,Manutenção e Reparos,Manutenção de elevador,2450.65
+912,2026-10-05,Marketing e Vendas,Comissão de OTA,1229.89
+913,2026-10-02,Marketing e Vendas,Comissão de OTA,2130.08
+914,2026-10-19,Marketing e Vendas,Material promocional,2215.53
+915,2026-10-13,Marketing e Vendas,Material promocional,2305.57
+916,2026-10-18,Marketing e Vendas,Comissão de OTA,1358.22
+917,2026-10-10,Marketing e Vendas,Comissão de OTA,1937.52
+918,2026-10-24,Marketing e Vendas,Material promocional,1363.48
+919,2026-10-29,Marketing e Vendas,Material promocional,2369.65
+920,2026-10-12,Marketing e Vendas,Comissão de OTA,2503.58
+921,2026-10-14,Marketing e Vendas,Material promocional,2335.76
+922,2026-10-28,Marketing e Vendas,Material promocional,1961.26
+923,2026-10-05,Marketing e Vendas,Comissão de OTA,2489.96
+924,2026-10-06,Marketing e Vendas,Comissão de OTA,873.30
+925,2026-10-20,Marketing e Vendas,Mídia paga,2348.79
+926,2026-10-22,Impostos e Taxas,ISS,7434.30
+927,2026-10-09,Impostos e Taxas,ISS,6776.03
+928,2026-10-07,Impostos e Taxas,Taxa de bombeiros,3519.70
+929,2026-10-31,Impostos e Taxas,IPTU,7942.61
+930,2026-10-12,Impostos e Taxas,PIS/COFINS,9460.20
+931,2026-10-22,Impostos e Taxas,PIS/COFINS,6658.94
+932,2026-10-04,Impostos e Taxas,IPTU,7267.31
+933,2026-10-20,Impostos e Taxas,ISS,3638.78
+934,2026-10-23,Alimentação e Bebidas,Panificação,3754.52
+935,2026-10-09,Alimentação e Bebidas,Bebidas,3154.65
+936,2026-10-05,Alimentação e Bebidas,Bebidas,4415.51
+937,2026-10-29,Alimentação e Bebidas,Panificação,4545.13
+938,2026-10-15,Alimentação e Bebidas,Panificação,2484.56
+939,2026-10-12,Alimentação e Bebidas,Bebidas,4063.01
+940,2026-10-16,Alimentação e Bebidas,Hortifrúti,4980.21
+941,2026-10-06,Alimentação e Bebidas,Hortifrúti,5555.11
+942,2026-10-27,Alimentação e Bebidas,Bebidas,2546.43
+943,2026-10-28,Alimentação e Bebidas,Carnes e frios,3097.02
+944,2026-10-29,Alimentação e Bebidas,Carnes e frios,4896.27
+945,2026-10-07,Limpeza e Higiene,Produtos de limpeza,2153.57
+946,2026-10-18,Limpeza e Higiene,Amenities,2442.51
+947,2026-10-18,Limpeza e Higiene,Enxoval e rouparia,2367.91
+948,2026-10-16,Limpeza e Higiene,Enxoval e rouparia,1985.49
+949,2026-10-25,Limpeza e Higiene,Produtos de limpeza,2303.09
+950,2026-10-12,Limpeza e Higiene,Amenities,1892.98
+951,2026-10-08,Limpeza e Higiene,Enxoval e rouparia,2226.86
+952,2026-10-05,Outras Despesas,Seguro predial,772.67
+953,2026-10-06,Outras Despesas,Internet e telefonia,1220.32
+954,2026-10-19,Outras Despesas,Material de escritório,719.85
+955,2026-10-22,Outras Despesas,Internet e telefonia,1053.01
+956,2026-10-24,Outras Despesas,Material de escritório,622.38
+957,2026-10-16,Outras Despesas,Seguro predial,900.66
+958,2026-10-02,Outras Despesas,Internet e telefonia,1784.54
+959,2026-10-25,Outras Despesas,Seguro predial,1806.30
+960,2026-10-08,Outras Despesas,Internet e telefonia,1443.43
+961,2026-10-09,Outras Despesas,Seguro predial,1532.47
+962,2026-11-22,Folha de Pagamento,Vale-transporte,17145.97
+963,2026-11-25,Folha de Pagamento,Encargos sociais,30155.06
+964,2026-11-14,Folha de Pagamento,Vale-transporte,19734.56
+965,2026-11-06,Folha de Pagamento,Horas extras,35481.30
+966,2026-11-18,Folha de Pagamento,Vale-transporte,24184.30
+967,2026-11-09,Folha de Pagamento,Horas extras,22667.68
+968,2026-11-19,Folha de Pagamento,Horas extras,20308.76
+969,2026-11-23,Energia Elétrica,Fatura Copel,4912.75
+970,2026-11-06,Energia Elétrica,Demanda contratada,5386.68
+971,2026-11-21,Energia Elétrica,Fatura Copel,4608.63
+972,2026-11-26,Energia Elétrica,Fatura Copel,4960.58
+973,2026-11-27,Energia Elétrica,Fatura Copel,3763.11
+974,2026-11-16,Energia Elétrica,Demanda contratada,4767.76
+975,2026-11-03,Energia Elétrica,Fatura Copel,2630.91
+976,2026-11-09,Energia Elétrica,Fatura Copel,2840.27
+977,2026-11-12,Energia Elétrica,Fatura Copel,3580.10
+978,2026-11-20,Energia Elétrica,Fatura Copel,3333.14
+979,2026-11-24,Energia Elétrica,Demanda contratada,4176.48
+980,2026-11-30,Energia Elétrica,Demanda contratada,4758.80
+981,2026-11-20,Água e Esgoto,Fatura Sanepar,1163.98
+982,2026-11-22,Água e Esgoto,Fatura Sanepar,2166.03
+983,2026-11-12,Água e Esgoto,Fatura Sanepar,825.05
+984,2026-11-21,Água e Esgoto,Fatura Sanepar,1884.95
+985,2026-11-06,Água e Esgoto,Fatura Sanepar,999.40
+986,2026-11-09,Água e Esgoto,Fatura Sanepar,1471.67
+987,2026-11-12,Água e Esgoto,Fatura Sanepar,755.85
+988,2026-11-13,Água e Esgoto,Fatura Sanepar,1998.84
+989,2026-11-17,Água e Esgoto,Fatura Sanepar,2117.53
+990,2026-11-24,Água e Esgoto,Fatura Sanepar,1506.87
+991,2026-11-30,Água e Esgoto,Fatura Sanepar,1028.23
+992,2026-11-18,Água e Esgoto,Fatura Sanepar,1900.26
+993,2026-11-24,Água e Esgoto,Fatura Sanepar,1495.61
+994,2026-11-12,Água e Esgoto,Fatura Sanepar,1773.71
+995,2026-11-17,Gás,Gás da cozinha,1412.23
+996,2026-11-29,Gás,Gás da cozinha,1337.08
+997,2026-11-23,Gás,Gás da cozinha,746.45
+998,2026-11-13,Gás,Gás da cozinha,998.48
+999,2026-11-25,Gás,Recarga de GLP,1488.37
+1000,2026-11-25,Gás,Gás da cozinha,1565.87
+1001,2026-11-25,Gás,Gás da cozinha,1483.83
+1002,2026-11-22,Gás,Gás da cozinha,1242.43
+1003,2026-11-29,Gás,Recarga de GLP,912.65
+1004,2026-11-08,Manutenção e Reparos,Hidráulica,1685.42
+1005,2026-11-03,Manutenção e Reparos,Pintura,3366.54
+1006,2026-11-22,Manutenção e Reparos,Hidráulica,4437.19
+1007,2026-11-03,Manutenção e Reparos,Ar-condicionado,3494.98
+1008,2026-11-16,Manutenção e Reparos,Hidráulica,2167.61
+1009,2026-11-12,Manutenção e Reparos,Ar-condicionado,2422.41
+1010,2026-11-29,Manutenção e Reparos,Hidráulica,4322.11
+1011,2026-11-06,Manutenção e Reparos,Ar-condicionado,3018.63
+1012,2026-11-16,Manutenção e Reparos,Ar-condicionado,1513.68
+1013,2026-11-08,Manutenção e Reparos,Ar-condicionado,3956.05
+1014,2026-11-01,Marketing e Vendas,Material promocional,2255.21
+1015,2026-11-02,Marketing e Vendas,Mídia paga,4128.55
+1016,2026-11-12,Marketing e Vendas,Material promocional,4132.86
+1017,2026-11-11,Marketing e Vendas,Mídia paga,2647.42
+1018,2026-11-29,Marketing e Vendas,Material promocional,3955.36
+1019,2026-11-28,Marketing e Vendas,Mídia paga,1917.09
+1020,2026-11-16,Marketing e Vendas,Comissão de OTA,1789.08
+1021,2026-11-25,Marketing e Vendas,Material promocional,4502.27
+1022,2026-11-09,Marketing e Vendas,Mídia paga,3070.00
+1023,2026-11-04,Impostos e Taxas,Taxa de bombeiros,3863.70
+1024,2026-11-11,Impostos e Taxas,ISS,9058.93
+1025,2026-11-01,Impostos e Taxas,PIS/COFINS,6821.16
+1026,2026-11-13,Impostos e Taxas,ISS,7256.57
+1027,2026-11-11,Impostos e Taxas,IPTU,6989.58
+1028,2026-11-20,Impostos e Taxas,IPTU,6231.28
+1029,2026-11-06,Impostos e Taxas,IPTU,8271.53
+1030,2026-11-08,Impostos e Taxas,IPTU,4704.92
+1031,2026-11-04,Alimentação e Bebidas,Bebidas,3091.07
+1032,2026-11-26,Alimentação e Bebidas,Carnes e frios,3565.29
+1033,2026-11-18,Alimentação e Bebidas,Panificação,2536.37
+1034,2026-11-28,Alimentação e Bebidas,Panificação,4286.16
+1035,2026-11-07,Alimentação e Bebidas,Carnes e frios,3113.87
+1036,2026-11-26,Alimentação e Bebidas,Carnes e frios,4834.51
+1037,2026-11-16,Alimentação e Bebidas,Hortifrúti,2783.03
+1038,2026-11-06,Alimentação e Bebidas,Panificação,2426.99
+1039,2026-11-16,Alimentação e Bebidas,Carnes e frios,2252.96
+1040,2026-11-29,Alimentação e Bebidas,Bebidas,3840.59
+1041,2026-11-26,Alimentação e Bebidas,Panificação,2600.75
+1042,2026-11-14,Limpeza e Higiene,Produtos de limpeza,1539.22
+1043,2026-11-12,Limpeza e Higiene,Enxoval e rouparia,620.57
+1044,2026-11-20,Limpeza e Higiene,Produtos de limpeza,678.66
+1045,2026-11-19,Limpeza e Higiene,Enxoval e rouparia,751.58
+1046,2026-11-21,Limpeza e Higiene,Enxoval e rouparia,810.64
+1047,2026-11-18,Limpeza e Higiene,Produtos de limpeza,854.63
+1048,2026-11-25,Limpeza e Higiene,Amenities,1517.09
+1049,2026-11-12,Limpeza e Higiene,Amenities,675.63
+1050,2026-11-22,Limpeza e Higiene,Enxoval e rouparia,1410.16
+1051,2026-11-16,Limpeza e Higiene,Enxoval e rouparia,860.84
+1052,2026-11-15,Limpeza e Higiene,Produtos de limpeza,974.75
+1053,2026-11-13,Limpeza e Higiene,Enxoval e rouparia,1198.17
+1054,2026-11-10,Limpeza e Higiene,Amenities,1484.28
+1055,2026-11-21,Limpeza e Higiene,Produtos de limpeza,956.43
+1056,2026-11-29,Outras Despesas,Seguro predial,955.38
+1057,2026-11-25,Outras Despesas,Seguro predial,1152.81
+1058,2026-11-24,Outras Despesas,Material de escritório,937.71
+1059,2026-11-17,Outras Despesas,Seguro predial,1458.30
+1060,2026-11-14,Outras Despesas,Internet e telefonia,600.20
+1061,2026-11-06,Outras Despesas,Internet e telefonia,874.34
+1062,2026-11-05,Outras Despesas,Material de escritório,843.10
+1063,2026-11-08,Outras Despesas,Material de escritório,1194.99
+1064,2026-11-09,Outras Despesas,Material de escritório,1254.50
+1065,2026-11-23,Outras Despesas,Material de escritório,1145.63
+1066,2026-11-03,Outras Despesas,Internet e telefonia,928.06
+1067,2026-12-22,Folha de Pagamento,Encargos sociais,26362.80
+1068,2026-12-04,Folha de Pagamento,Encargos sociais,12089.30
+1069,2026-12-21,Folha de Pagamento,Vale-transporte,22545.20
+1070,2026-12-11,Folha de Pagamento,Salários,22847.84
+1071,2026-12-06,Folha de Pagamento,Horas extras,19265.82
+1072,2026-12-19,Folha de Pagamento,Salários,11419.87
+1073,2026-12-13,Folha de Pagamento,Encargos sociais,18011.20
+1074,2026-12-01,Folha de Pagamento,Salários,14662.81
+1075,2026-12-19,Folha de Pagamento,Vale-transporte,15793.77
+1076,2026-12-23,Folha de Pagamento,Encargos sociais,10133.98
+1077,2026-12-12,Energia Elétrica,Fatura Copel,3821.49
+1078,2026-12-23,Energia Elétrica,Fatura Copel,5103.60
+1079,2026-12-05,Energia Elétrica,Demanda contratada,6053.08
+1080,2026-12-08,Energia Elétrica,Demanda contratada,4279.32
+1081,2026-12-18,Energia Elétrica,Demanda contratada,7501.12
+1082,2026-12-26,Energia Elétrica,Demanda contratada,6428.81
+1083,2026-12-24,Energia Elétrica,Fatura Copel,2858.52
+1084,2026-12-27,Água e Esgoto,Fatura Sanepar,1105.11
+1085,2026-12-03,Água e Esgoto,Fatura Sanepar,817.38
+1086,2026-12-15,Água e Esgoto,Fatura Sanepar,1801.14
+1087,2026-12-27,Água e Esgoto,Fatura Sanepar,1268.83
+1088,2026-12-18,Água e Esgoto,Fatura Sanepar,1207.27
+1089,2026-12-15,Água e Esgoto,Fatura Sanepar,1023.40
+1090,2026-12-25,Água e Esgoto,Fatura Sanepar,1541.50
+1091,2026-12-24,Água e Esgoto,Fatura Sanepar,888.27
+1092,2026-12-29,Água e Esgoto,Fatura Sanepar,884.21
+1093,2026-12-20,Água e Esgoto,Fatura Sanepar,1091.59
+1094,2026-12-25,Água e Esgoto,Fatura Sanepar,1587.04
+1095,2026-12-11,Água e Esgoto,Fatura Sanepar,998.43
+1096,2026-12-04,Gás,Gás da cozinha,1101.56
+1097,2026-12-07,Gás,Recarga de GLP,576.12
+1098,2026-12-02,Gás,Gás da cozinha,988.13
+1099,2026-12-22,Gás,Gás da cozinha,1057.04
+1100,2026-12-17,Gás,Gás da cozinha,546.28
+1101,2026-12-02,Gás,Gás da cozinha,654.01
+1102,2026-12-08,Gás,Recarga de GLP,759.80
+1103,2026-12-01,Gás,Recarga de GLP,686.49
+1104,2026-12-21,Gás,Gás da cozinha,497.95
+1105,2026-12-30,Gás,Recarga de GLP,967.81
+1106,2026-12-15,Gás,Recarga de GLP,454.12
+1107,2026-12-12,Gás,Gás da cozinha,1200.73
+1108,2026-12-27,Gás,Gás da cozinha,566.74
+1109,2026-12-26,Gás,Recarga de GLP,443.68
+1110,2026-12-22,Manutenção e Reparos,Ar-condicionado,3211.36
+1111,2026-12-19,Manutenção e Reparos,Ar-condicionado,3852.00
+1112,2026-12-18,Manutenção e Reparos,Pintura,4164.56
+1113,2026-12-24,Manutenção e Reparos,Manutenção de elevador,1803.62
+1114,2026-12-25,Manutenção e Reparos,Hidráulica,2234.18
+1115,2026-12-22,Manutenção e Reparos,Pintura,3181.60
+1116,2026-12-23,Manutenção e Reparos,Pintura,1876.30
+1117,2026-12-29,Manutenção e Reparos,Manutenção de elevador,2281.36
+1118,2026-12-06,Manutenção e Reparos,Ar-condicionado,2762.94
+1119,2026-12-18,Manutenção e Reparos,Pintura,2163.08
+1120,2026-12-21,Marketing e Vendas,Mídia paga,2209.27
+1121,2026-12-27,Marketing e Vendas,Material promocional,2350.33
+1122,2026-12-11,Marketing e Vendas,Material promocional,3063.19
+1123,2026-12-08,Marketing e Vendas,Material promocional,2996.87
+1124,2026-12-18,Marketing e Vendas,Comissão de OTA,2243.85
+1125,2026-12-13,Marketing e Vendas,Material promocional,3198.51
+1126,2026-12-30,Marketing e Vendas,Material promocional,2873.72
+1127,2026-12-09,Marketing e Vendas,Mídia paga,1949.52
+1128,2026-12-27,Impostos e Taxas,IPTU,8053.17
+1129,2026-12-30,Impostos e Taxas,PIS/COFINS,2759.35
+1130,2026-12-04,Impostos e Taxas,ISS,2949.48
+1131,2026-12-15,Impostos e Taxas,IPTU,4327.62
+1132,2026-12-05,Impostos e Taxas,PIS/COFINS,2848.20
+1133,2026-12-09,Impostos e Taxas,IPTU,3503.47
+1134,2026-12-29,Impostos e Taxas,PIS/COFINS,7669.77
+1135,2026-12-08,Impostos e Taxas,IPTU,2794.50
+1136,2026-12-26,Impostos e Taxas,IPTU,8188.71
+1137,2026-12-03,Impostos e Taxas,Taxa de bombeiros,3943.34
+1138,2026-12-19,Impostos e Taxas,PIS/COFINS,4495.45
+1139,2026-12-24,Impostos e Taxas,ISS,7014.40
+1140,2026-12-24,Impostos e Taxas,IPTU,7962.27
+1141,2026-12-13,Alimentação e Bebidas,Hortifrúti,3705.24
+1142,2026-12-25,Alimentação e Bebidas,Hortifrúti,5245.22
+1143,2026-12-30,Alimentação e Bebidas,Bebidas,4509.72
+1144,2026-12-12,Alimentação e Bebidas,Panificação,4947.12
+1145,2026-12-14,Alimentação e Bebidas,Hortifrúti,2232.14
+1146,2026-12-28,Alimentação e Bebidas,Carnes e frios,4282.54
+1147,2026-12-24,Alimentação e Bebidas,Hortifrúti,2014.71
+1148,2026-12-21,Alimentação e Bebidas,Panificação,4905.23
+1149,2026-12-05,Limpeza e Higiene,Amenities,483.26
+1150,2026-12-03,Limpeza e Higiene,Amenities,928.62
+1151,2026-12-19,Limpeza e Higiene,Enxoval e rouparia,580.05
+1152,2026-12-02,Limpeza e Higiene,Enxoval e rouparia,895.11
+1153,2026-12-13,Limpeza e Higiene,Amenities,643.65
+1154,2026-12-03,Limpeza e Higiene,Amenities,491.59
+1155,2026-12-17,Limpeza e Higiene,Amenities,1099.75
+1156,2026-12-25,Limpeza e Higiene,Enxoval e rouparia,797.31
+1157,2026-12-05,Limpeza e Higiene,Produtos de limpeza,844.40
+1158,2026-12-16,Limpeza e Higiene,Enxoval e rouparia,977.91
+1159,2026-12-07,Limpeza e Higiene,Amenities,897.19
+1160,2026-12-13,Limpeza e Higiene,Enxoval e rouparia,644.80
+1161,2026-12-19,Limpeza e Higiene,Produtos de limpeza,705.25
+1162,2026-12-18,Limpeza e Higiene,Enxoval e rouparia,798.60
+1163,2026-12-20,Outras Despesas,Seguro predial,547.98
+1164,2026-12-20,Outras Despesas,Internet e telefonia,419.77
+1165,2026-12-15,Outras Despesas,Internet e telefonia,937.55
+1166,2026-12-30,Outras Despesas,Internet e telefonia,604.64
+1167,2026-12-07,Outras Despesas,Material de escritório,1045.77
+1168,2026-12-12,Outras Despesas,Internet e telefonia,432.95
+1169,2026-12-25,Outras Despesas,Material de escritório,860.43
+1170,2026-12-28,Outras Despesas,Internet e telefonia,678.17
+1171,2026-12-04,Outras Despesas,Material de escritório,622.93
+1172,2026-12-02,Outras Despesas,Internet e telefonia,602.68
+1173,2026-12-31,Outras Despesas,Material de escritório,803.25
+1174,2026-12-30,Outras Despesas,Internet e telefonia,384.93
+1175,2026-12-28,Outras Despesas,Seguro predial,590.99
+1176,2026-12-01,Outras Despesas,Seguro predial,1092.41

@@ -1,321 +1,616 @@
+"""Hotel Budget Manager — interface Streamlit.
+
+Ponto de entrada da aplicação. Execute com:
+
+    streamlit run app.py
+
+Esta camada só cuida da tela: toda regra de negócio vive em `cadastro`,
+`etl`, `analise`, `graficos` e `exports`.
+"""
+
 from datetime import date
 
 import streamlit as st
 
-import budget
-import dashboard
+import analise
+import cadastro
 import exports
-import models
-import reports
+import graficos
 from config import (
-    DESPESA_CATEGORIAS,
     HOTEL_NOME,
-    RECEITA_CATEGORIAS,
+    LIMITE_DESVIO,
     SISTEMA_NOME,
     VERSAO,
+    categorias_de,
     mes_nome,
+    paleta,
 )
-from database import init_db
-from utils import moeda, validar_data, validar_valor
+from utils import moeda
 
 st.set_page_config(
     page_title=f"{SISTEMA_NOME} — {HOTEL_NOME}",
-    page_icon="hotel",
+    page_icon="🏨",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-init_db()
+TODOS_OS_MESES = "Todo o período"
+ROTULO = {"receita": "Receitas", "despesa": "Despesas"}
+NOME_SITUACAO = {
+    "ok": "Dentro do previsto",
+    "atencao": "Atenção",
+    "critico": "Crítico",
+    "sem_orcamento": "Sem orçamento",
+}
 
-PAGINAS = ["Dashboard", "Orçamento", "Movimentações", "Relatório Mensal"]
-TIPO_NOME = {"receita": "Receitas", "despesa": "Despesas"}
+
+def tema_atual() -> str:
+    """Tema escolhido pelo usuário em Menu (⋮) > Settings > Appearance.
+
+    Os gráficos leem daqui para trocar de paleta junto com a interface.
+    """
+    try:
+        return "dark" if st.context.theme.type == "dark" else "light"
+    except (AttributeError, RuntimeError):
+        return "light"
 
 
-def _mes_options(obrigatorio=False):
-    meses = budget.meses_disponiveis()
+def brl(valor) -> str:
+    """Valor em reais pronto para markdown.
+
+    O Streamlit interpreta `$` como delimitador de LaTeX, então "R$ 1.000,00"
+    sairia renderizado como fórmula. A barra invertida desliga esse parser.
+    Dentro de HTML (`unsafe_allow_html`) o escape não é necessário — lá vale
+    o `moeda()` puro.
+    """
+    return moeda(valor).replace("$", r"\$")
+
+
+# ------------------------------------------------------------------ Auxiliares
+
+
+def seletor_de_mes(chave: str, incluir_todos: bool = True, rotulo: str = "Período"):
+    """Selectbox de mês compartilhado pelas páginas. Devolve None para 'todos'."""
+    meses = analise.meses_disponiveis()
     if not meses:
-        return []
-    return meses if obrigatorio else (["Todos os meses"] + meses)
+        return None
+    opcoes = ([TODOS_OS_MESES] + meses) if incluir_todos else meses
+    escolha = st.selectbox(
+        rotulo, opcoes, key=chave,
+        format_func=lambda m: TODOS_OS_MESES if m == TODOS_OS_MESES else mes_nome(m),
+    )
+    return None if escolha == TODOS_OS_MESES else escolha
 
 
-def _mes_para_filtro(valor):
-    return None if valor in (None, "", "Todos os meses") else valor
+def grafico(fig, vazio: str = "Sem dados para o período selecionado.") -> None:
+    """Exibe um gráfico Plotly ou uma mensagem quando não há dados.
+
+    `theme=None` impede o Streamlit de sobrepor o próprio tema ao nosso — as
+    cores já vêm da paleta validada correspondente ao tema em uso.
+    """
+    if fig is None:
+        st.info(vazio)
+    else:
+        st.plotly_chart(fig, width="stretch", theme=None, config={"displayModeBar": False})
 
 
-def pagina_dashboard():
+def indicador(coluna, rotulo: str, valor: str, apoio: str = "", cor: str = "") -> None:
+    """Cartão de indicador com valor grande e uma linha de apoio."""
+    with coluna:
+        st.caption(rotulo)
+        estilo = f"color:{cor};" if cor else ""
+        # Dentro do HTML o cifrão não dispara o parser de LaTeX, então vai cru.
+        st.markdown(
+            f"<div style='{estilo}font-size:1.75rem;font-weight:600;line-height:1.2'>{valor}</div>",
+            unsafe_allow_html=True,
+        )
+        if apoio:
+            st.caption(apoio.replace("$", r"\$"))
+
+
+def tabela_comparativa(df) -> None:
+    """Tabela planejado x realizado com barra de execução e situação."""
+    if df.empty:
+        st.info("Sem dados.")
+        return
+    visao = df.copy()
+    visao["situacao"] = visao["situacao"].map(NOME_SITUACAO)
+    st.dataframe(
+        visao[["categoria", "planejado", "realizado", "variacao", "execucao", "participacao", "situacao"]],
+        width="stretch",
+        hide_index=True,
+        column_config={
+            "categoria": st.column_config.TextColumn("Categoria"),
+            "planejado": st.column_config.NumberColumn("Planejado (R$)", format="localized"),
+            "realizado": st.column_config.NumberColumn("Realizado (R$)", format="localized"),
+            "variacao": st.column_config.NumberColumn("Variação (R$)", format="localized"),
+            "execucao": st.column_config.ProgressColumn(
+                "Execução", format="%.0f%%", min_value=0,
+                max_value=float(max(visao["execucao"].max(), 100)),
+            ),
+            "participacao": st.column_config.NumberColumn("Part. %", format="%.1f%%"),
+            "situacao": st.column_config.TextColumn("Situação"),
+        },
+    )
+
+
+def mostrar_alertas(mes: str, limite: int = 6) -> None:
+    """Lista as categorias fora do limite de desvio orçamentário."""
+    cores = paleta(tema_atual())
+    encontrados = analise.alertas(mes)
+    if not encontrados:
+        st.success(f"Nenhuma categoria com desvio acima de {LIMITE_DESVIO:.0f}% em {mes_nome(mes)}.")
+        return
+    criticos = sum(1 for a in encontrados if a["situacao"] == "critico")
+    st.markdown(f"**{len(encontrados)} categorias fora do previsto** — {criticos} em situação crítica.")
+    for alerta in encontrados[:limite]:
+        cor = graficos.cor_da_situacao(alerta["situacao"], cores)
+        st.markdown(
+            f"<div style='border-left:3px solid {cor};padding:.35rem .7rem;margin-bottom:.35rem'>"
+            f"{alerta['mensagem']}<br>"
+            f"<span style='color:{cores['texto_suave']};font-size:.85rem'>"
+            f"diferença de {moeda(abs(alerta['variacao']))}</span>"
+            f"</div>",
+            unsafe_allow_html=True,
+        )
+    if len(encontrados) > limite:
+        st.caption(f"e mais {len(encontrados) - limite} categoria(s).")
+
+
+def botao_exportar(rotulo: str, chave: str, gerador, nome_arquivo: str, mime: str) -> None:
+    """Exportação em duas etapas: gera sob demanda, depois oferece o download.
+
+    Evita que o arquivo seja remontado a cada interação da página — o
+    `st.download_button` exige os bytes prontos no momento em que é desenhado.
+    """
+    pronto = st.session_state.get(chave)
+    if pronto and pronto.get("arquivo") == nome_arquivo:
+        st.download_button(
+            f"⬇ Baixar {rotulo}", data=pronto["dados"], file_name=nome_arquivo,
+            mime=mime, key=f"dl_{chave}", width="stretch",
+        )
+        return
+    if st.button(f"Gerar {rotulo}", key=f"gen_{chave}", width="stretch"):
+        with st.spinner(f"Gerando {rotulo}..."):
+            st.session_state[chave] = {"arquivo": nome_arquivo, "dados": gerador()}
+        st.rerun()
+
+
+# --------------------------------------------------------------------- Páginas
+
+
+def pagina_dashboard() -> None:
+    """Visão geral: indicadores, evolução, comparativos e alertas."""
+    tema = tema_atual()
+    cores = paleta(tema)
     st.title("Dashboard")
-    meses = budget.meses_disponiveis()
-    opcoes = _mes_options()
-    selecao = st.selectbox("Período", opcoes, index=0) if opcoes else None
-    mes = _mes_para_filtro(selecao)
+    mes = seletor_de_mes("dash_mes")
+    resumo = analise.resumo_mes(mes)
+
+    c1, c2, c3, c4 = st.columns(4)
+    indicador(
+        c1, "Receitas", moeda(resumo["receita_realizada"]),
+        f"{resumo['execucao_receita']:.1f}% de {moeda(resumo['receita_planejada'])} previstos",
+        cores["receita"],
+    )
+    indicador(
+        c2, "Despesas", moeda(resumo["despesa_realizada"]),
+        f"{resumo['execucao_despesa']:.1f}% de {moeda(resumo['despesa_planejada'])} previstos",
+        cores["despesa"],
+    )
+    indicador(
+        c3, "Saldo", moeda(resumo["saldo_realizado"]),
+        f"previsto: {moeda(resumo['saldo_planejado'])}",
+        cores["ok"] if resumo["saldo_realizado"] >= 0 else cores["critico"],
+    )
+    indicador(
+        c4, "Margem", f"{resumo['margem']:.1f}%",
+        f"{resumo['qtd_receitas'] + resumo['qtd_despesas']} lançamentos",
+    )
+
+    st.divider()
 
     if mes:
-        resumo = budget.resumo_mes(mes)
-        c1, c2, c3, c4 = st.columns(4)
-        c1.metric(
-            "Receitas (realizado)",
-            moeda(resumo["receita_realizada"]),
-            f"planejado: {moeda(resumo['receita_planejada'])}",
-        )
-        c2.metric(
-            "Despesas (realizado)",
-            moeda(resumo["despesa_realizada"]),
-            f"planejado: {moeda(resumo['despesa_planejada'])}",
-        )
-        c3.metric(
-            "Saldo realizado",
-            moeda(resumo["saldo_realizado"]),
-            f"planejado: {moeda(resumo['saldo_planejado'])}",
-        )
-        c4.metric("Adimplência receitas", f"{resumo['adimplencia_receita']:.1f}%", "sobre o planejado")
-
-    st.subheader("Evolução mensal — Receitas x Despesas")
-    fig = dashboard.fig_serie_mensal()
-    if fig:
-        st.pyplot(fig)
+        esquerda, direita = st.columns([3, 2])
+        with esquerda:
+            st.subheader("Evolução mensal")
+            grafico(graficos.grafico_evolucao_mensal(tema))
+        with direita:
+            st.subheader("Pontos de atenção")
+            mostrar_alertas(mes)
     else:
-        st.info("Sem dados para exibir.")
+        st.subheader("Evolução mensal")
+        grafico(graficos.grafico_evolucao_mensal(tema))
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.subheader(f"Receitas — Planejado x Realizado {f'({mes_nome(mes)})' if mes else ''}")
-        fig = dashboard.fig_planejado_x_realizado("receita", mes)
-        st.pyplot(fig) if fig else st.info("Sem dados para exibir.")
-    with col2:
-        st.subheader(f"Despesas — Planejado x Realizado {f'({mes_nome(mes)})' if mes else ''}")
-        fig = dashboard.fig_planejado_x_realizado("despesa", mes)
-        st.pyplot(fig) if fig else st.info("Sem dados para exibir.")
+    st.subheader("Resultado por mês")
+    grafico(graficos.grafico_saldo_mensal(tema))
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.subheader("Distribuição de Receitas")
-        fig = dashboard.fig_distribuicao("receita", mes)
-        st.pyplot(fig) if fig else st.info("Sem dados para exibir.")
-    with col2:
-        st.subheader("Distribuição de Despesas")
-        fig = dashboard.fig_distribuicao("despesa", mes)
-        st.pyplot(fig) if fig else st.info("Sem dados para exibir.")
+    st.divider()
+    periodo = f" — {mes_nome(mes)}" if mes else ""
+    esquerda, direita = st.columns(2)
+    with esquerda:
+        st.subheader(f"Receitas por categoria{periodo}")
+        grafico(graficos.grafico_distribuicao("receita", mes, tema))
+    with direita:
+        st.subheader(f"Despesas por categoria{periodo}")
+        grafico(graficos.grafico_distribuicao("despesa", mes, tema))
+
+    esquerda, direita = st.columns(2)
+    with esquerda:
+        st.subheader("Receitas — Planejado x Realizado")
+        grafico(graficos.grafico_planejado_realizado("receita", mes, tema))
+    with direita:
+        st.subheader("Despesas — Planejado x Realizado")
+        grafico(graficos.grafico_planejado_realizado("despesa", mes, tema))
 
 
-def _campos_orcamento(mes, tipo, categorias):
-    atuais = {o["categoria"]: o["valor_planejado"] for o in models.listar_orcamento(mes) if o["tipo"] == tipo}
+def pagina_movimentacoes() -> None:
+    """Cadastro, edição, exclusão e exportação dos lançamentos."""
+    st.title("Movimentações")
+    abas = st.tabs([ROTULO["receita"], ROTULO["despesa"]])
+    for aba, tipo in zip(abas, ("receita", "despesa")):
+        with aba:
+            _aba_movimentacoes(tipo)
+
+
+def _aba_movimentacoes(tipo: str) -> None:
+    """Conteúdo de uma aba de movimentações."""
+    filtro, _ = st.columns([1, 2])
+    with filtro:
+        mes = seletor_de_mes(f"mov_mes_{tipo}", rotulo="Período")
+
+    df = cadastro.listar_movimentacoes(tipo, mes)
+    _editor_lancamentos(tipo, mes, df)
+
+    if df.empty:
+        return
+
+    total = float(df["valor"].sum())
+    resumo, medio, exportar = st.columns([2, 2, 1])
+    resumo.markdown(f"**Total do período:** {brl(total)}  ·  {len(df)} lançamentos")
+    medio.markdown(f"**Ticket médio:** {brl(total / len(df))}")
+    with exportar:
+        sufixo = mes or "todos"
+        botao_exportar(
+            "PDF", f"exp_pdf_{tipo}_{sufixo}",
+            lambda: exports.gerar_pdf_movimentacoes(tipo, mes),
+            f"{tipo}s_{sufixo}.pdf", "application/pdf",
+        )
+
+
+def _editor_lancamentos(tipo: str, mes, df) -> None:
+    """Tabela editável: inclui, altera e exclui lançamentos na própria grade.
+
+    O `Nº` é gerado pelo sistema e fica bloqueado. Data, Categoria, Descrição e
+    Valor são editáveis, e a última linha em branco serve para incluir um novo
+    registro. Nada é gravado antes de o usuário confirmar.
+    """
+    # A chave carrega uma versão: ao incrementá-la, o editor renasce limpo e as
+    # alterações já aplicadas não voltam a ser processadas.
+    versao = st.session_state.get(f"versao_editor_{tipo}", 0)
+    chave = f"editor_{tipo}_{mes}_{versao}"
+
+    st.caption(
+        "Edite direto na tabela. A linha em branco no fim inclui um novo lançamento; "
+        "para excluir, selecione a linha pela caixa à esquerda e tecle Delete. "
+        "As mudanças só valem depois de salvar."
+    )
+    st.data_editor(
+        df[["id", "data", "categoria", "descricao", "valor"]],
+        key=chave,
+        width="stretch",
+        hide_index=True,
+        num_rows="dynamic",
+        column_config={
+            "id": st.column_config.NumberColumn(
+                "Nº", format="%d", disabled=True, help="Gerado automaticamente pelo sistema.",
+            ),
+            "data": st.column_config.DateColumn("Data", format="DD/MM/YYYY", required=True),
+            "categoria": st.column_config.SelectboxColumn(
+                "Categoria", options=categorias_de(tipo), required=True,
+            ),
+            "descricao": st.column_config.TextColumn("Descrição", max_chars=120),
+            # "localized" usa o separador de milhar do navegador (1.234,56 em
+            # pt-BR); o printf "R$ %.2f" sairia sem separador nenhum.
+            "valor": st.column_config.NumberColumn(
+                "Valor (R$)", format="localized", min_value=0.01, step=100.0, required=True,
+            ),
+        },
+    )
+
+    mudancas = st.session_state.get(chave, {})
+    pendentes = (
+        len(mudancas.get("added_rows", []))
+        + len(mudancas.get("edited_rows", {}))
+        + len(mudancas.get("deleted_rows", []))
+    )
+
+    coluna, _ = st.columns([1, 3])
+    with coluna:
+        salvar = st.button(
+            f"Salvar {pendentes} alteração(ões)" if pendentes else "Salvar alterações",
+            key=f"salvar_{tipo}_{mes}", type="primary",
+            disabled=not pendentes, width="stretch",
+        )
+    if salvar:
+        _aplicar_edicoes(tipo, df, mudancas)
+        st.session_state[f"versao_editor_{tipo}"] = versao + 1
+        st.rerun()
+
+
+def _aplicar_edicoes(tipo: str, df, mudancas: dict) -> None:
+    """Grava no CSV o que foi mexido na grade, validando registro a registro."""
+    incluidos = alterados = excluidos = 0
+    erros: list[str] = []
+
+    # Exclusões primeiro: as posições se referem ao DataFrame original.
+    for posicao in mudancas.get("deleted_rows", []):
+        try:
+            if cadastro.excluir_movimentacao(tipo, int(df.iloc[posicao]["id"])):
+                excluidos += 1
+        except (IndexError, ValueError) as erro:
+            erros.append(f"Exclusão: {erro}")
+
+    for posicao, campos in mudancas.get("edited_rows", {}).items():
+        try:
+            linha = df.iloc[int(posicao)]
+            valores = {
+                "data": campos.get("data", linha["data"]),
+                "categoria": campos.get("categoria", linha["categoria"]),
+                "descricao": campos.get("descricao", linha["descricao"]),
+                "valor": campos.get("valor", linha["valor"]),
+            }
+            cadastro.atualizar_movimentacao(
+                tipo, int(linha["id"]), valores["data"], valores["categoria"],
+                valores["descricao"], valores["valor"],
+            )
+            alterados += 1
+        except (IndexError, ValueError, TypeError) as erro:
+            erros.append(f"Nº {df.iloc[int(posicao)]['id']}: {erro}")
+
+    for nova in mudancas.get("added_rows", []):
+        if not nova:
+            continue
+        try:
+            cadastro.adicionar_movimentacao(
+                tipo, nova.get("data"), nova.get("categoria"),
+                nova.get("descricao", ""), nova.get("valor"),
+            )
+            incluidos += 1
+        except (ValueError, TypeError) as erro:
+            erros.append(f"Nova linha: {erro}")
+
+    partes = []
+    if incluidos:
+        partes.append(f"{incluidos} incluído(s)")
+    if alterados:
+        partes.append(f"{alterados} alterado(s)")
+    if excluidos:
+        partes.append(f"{excluidos} excluído(s)")
+    if partes:
+        st.toast(" · ".join(partes), icon="✅")
+    for erro in erros:
+        st.toast(erro, icon="⚠️")
+
+
+def pagina_orcamento() -> None:
+    """Planejamento: define o valor previsto de cada categoria no mês."""
+    cores = paleta(tema_atual())
+    st.title("Orçamento")
+    meses = analise.meses_disponiveis()
+    proximo = date.today().strftime("%Y-%m")
+    opcoes = sorted(set(meses) | {proximo}, reverse=True)
+
+    c1, _ = st.columns([1, 2])
+    with c1:
+        mes = st.selectbox("Mês do orçamento", opcoes, format_func=mes_nome, key="orc_mes")
+
+    with st.expander("Copiar de outro mês"):
+        _copiar_orcamento(mes, [m for m in meses if m != mes])
+
+    st.caption("Informe o valor previsto para cada categoria do mês selecionado.")
+
+    with st.form(f"form_orcamento_{mes}"):
+        receitas_atuais = cadastro.orcamento_do_mes(mes, "receita")
+        despesas_atuais = cadastro.orcamento_do_mes(mes, "despesa")
+
+        col_receita, col_despesa = st.columns(2)
+        with col_receita:
+            st.subheader(ROTULO["receita"])
+            receitas = _campos_orcamento(mes, "receita", receitas_atuais)
+            st.markdown(f"**Total previsto:** {brl(sum(receitas.values()))}")
+        with col_despesa:
+            st.subheader(ROTULO["despesa"])
+            despesas = _campos_orcamento(mes, "despesa", despesas_atuais)
+            st.markdown(f"**Total previsto:** {brl(sum(despesas.values()))}")
+
+        salvo = st.form_submit_button("Salvar orçamento", type="primary", width="stretch")
+
+    if salvo:
+        try:
+            gravadas = cadastro.salvar_orcamento_mes(mes, {"receita": receitas, "despesa": despesas})
+            st.success(f"Orçamento de {mes_nome(mes)} salvo — {gravadas} categorias.")
+            st.rerun()
+        except ValueError as erro:
+            st.error(str(erro))
+
+    resultado = sum(receitas.values()) - sum(despesas.values())
+    st.divider()
+    indicador(
+        st.container(), "Resultado previsto para o mês", moeda(resultado),
+        cor=cores["ok"] if resultado >= 0 else cores["critico"],
+    )
+
+
+def _campos_orcamento(mes: str, tipo: str, atuais: dict) -> dict:
+    """Campos numéricos do formulário. A chave inclui o mês — sem isso o
+    Streamlit reaproveitaria o valor digitado no mês anterior."""
     valores = {}
-    for cat in categorias:
-        valores[cat] = st.number_input(
-            cat,
+    for categoria in categorias_de(tipo):
+        valores[categoria] = st.number_input(
+            categoria,
             min_value=0.0,
-            step=100.0,
-            value=float(atuais.get(cat, 0.0)),
+            step=1000.0,
+            value=float(atuais.get(categoria, 0.0)),
             format="%.2f",
-            key=f"{tipo}_{cat}",
+            key=f"orc_{mes}_{tipo}_{categoria}",
         )
     return valores
 
 
-def pagina_orcamento():
-    st.title("Orçamento")
-    meses = budget.meses_disponiveis()
+def _copiar_orcamento(destino: str, origens: list[str]) -> None:
+    """Replica o orçamento de um mês para outro, com reajuste percentual."""
+    if not origens:
+        st.caption("Nenhum outro mês com orçamento cadastrado.")
+        return
+    c1, c2, c3 = st.columns([2, 1, 1])
+    origem = c1.selectbox("Copiar de", origens, format_func=mes_nome, key="orc_origem")
+    reajuste = c2.number_input("Reajuste (%)", value=0.0, step=1.0, format="%.1f", key="orc_reajuste")
+    c3.markdown("<div style='height:1.8rem'></div>", unsafe_allow_html=True)
+    if c3.button("Copiar", key="orc_copiar", width="stretch"):
+        try:
+            total = cadastro.copiar_orcamento(origem, destino, reajuste)
+            st.success(f"{total} categorias copiadas de {mes_nome(origem)} para {mes_nome(destino)}.")
+            st.rerun()
+        except ValueError as erro:
+            st.error(str(erro))
+
+
+def pagina_relatorio() -> None:
+    """Relatório mensal detalhado, com projeção e exportações."""
+    tema = tema_atual()
+    cores = paleta(tema)
+    st.title("Relatório Mensal")
+    meses = analise.meses_disponiveis()
     if not meses:
-        st.info("Não há meses disponíveis. Cadastre movimentações ou rode o seed.")
+        st.info("Nenhum mês disponível. Cadastre lançamentos ou gere os dados de exemplo com `python seed.py`.")
         return
-    mes = st.selectbox("Mês", meses, index=0, key="orc_mes")
 
-    with st.form("form_orcamento"):
-        col1, col2 = st.columns(2)
-        with col1:
-            st.subheader("Receitas")
-            receitas = _campos_orcamento(mes, "receita", RECEITA_CATEGORIAS)
-        with col2:
-            st.subheader("Despesas")
-            despesas = _campos_orcamento(mes, "despesa", DESPESA_CATEGORIAS)
-        salvar = st.form_submit_button("Salvar orçamento", type="primary", width="stretch")
+    c1, _ = st.columns([1, 2])
+    with c1:
+        mes = st.selectbox("Mês", meses, format_func=mes_nome, key="rel_mes")
 
-    if salvar:
-        for cat, valor in receitas.items():
-            models.upsert_orcamento(mes, "receita", cat, valor)
-        for cat, valor in despesas.items():
-            models.upsert_orcamento(mes, "despesa", cat, valor)
-        st.success(f"Orçamento de {mes_nome(mes)} salvo com sucesso.")
+    resumo = analise.resumo_mes(mes)
+    projecao = analise.projecao_fechamento(mes)
+
+    c1, c2, c3, c4 = st.columns(4)
+    indicador(c1, "Receitas", moeda(resumo["receita_realizada"]),
+              f"{resumo['execucao_receita']:.1f}% do previsto", cores["receita"])
+    indicador(c2, "Despesas", moeda(resumo["despesa_realizada"]),
+              f"{resumo['execucao_despesa']:.1f}% do previsto", cores["despesa"])
+    indicador(c3, "Saldo", moeda(resumo["saldo_realizado"]),
+              f"previsto: {moeda(resumo['saldo_planejado'])}",
+              cores["ok"] if resumo["saldo_realizado"] >= 0 else cores["critico"])
+    indicador(c4, "Saldo projetado", moeda(projecao["saldo_projetado"]),
+              f"ritmo de {projecao['dias_corridos']} de {projecao['dias_no_mes']} dias")
+
+    st.divider()
+    st.subheader("Pontos de atenção")
+    mostrar_alertas(mes, limite=10)
+
+    st.divider()
+    for tipo in ("receita", "despesa"):
+        st.subheader(f"{ROTULO[tipo]} — Planejado x Realizado")
+        tabela_comparativa(analise.comparativo_categorias(tipo, mes))
+        grafico(graficos.grafico_execucao_orcamentaria(tipo, mes, tema),
+                "Cadastre o orçamento do mês para ver a execução.")
+
+    st.divider()
+    st.subheader("Exportar")
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        botao_exportar("CSV", f"rel_csv_{mes}", lambda: exports.gerar_csv_relatorio(mes),
+                       f"relatorio_{mes}.csv", "text/csv")
+    with c2:
+        botao_exportar("PDF", f"rel_pdf_{mes}", lambda: exports.gerar_pdf_relatorio(mes),
+                       f"relatorio_{mes}.pdf", "application/pdf")
+    pptx = "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    with c3:
+        botao_exportar("Slides", f"rel_ppt_{mes}", lambda: exports.gerar_pptx_relatorio(mes),
+                       f"fechamento_{mes}.pptx", pptx)
+    with c4:
+        botao_exportar("Slides (executivo)", f"rel_exe_{mes}", lambda: exports.gerar_pptx_executivo(mes),
+                       f"executivo_{mes}.pptx", pptx)
 
 
-def _tabela_movimentacoes(tipo, mes):
-    movs = models.listar_movimentacoes(tipo, mes)
-    if not movs:
-        st.info("Nenhum lançamento encontrado.")
-        return
-    dados = [
-        {
-            "id": m["id"],
-            "data": m["data"],
-            "categoria": m["categoria"],
-            "descricao": m["descricao"] or "—",
-            "valor": m["valor"],
-        }
-        for m in movs
+def pagina_qualidade() -> None:
+    """Registro das correções feitas pelo ETL na última leitura dos CSV."""
+    cores = paleta(tema_atual())
+    st.title("Qualidade dos Dados")
+    st.caption(
+        "Registro das correções aplicadas na leitura dos arquivos CSV. Todo dado "
+        "exibido no sistema passa por Extração, Transformação e Carga antes de ser analisado."
+    )
+
+    qualidade = analise.qualidade_dados()
+    c1, c2, c3 = st.columns(3)
+    indicador(c1, "Linhas lidas", f"{qualidade['lidas']}", "nos três arquivos CSV")
+    indicador(c2, "Linhas carregadas", f"{qualidade['carregadas']}",
+              "aprovadas na transformação", cores["ok"])
+    indicador(c3, "Linhas descartadas", f"{qualidade['descartadas']}", "fora do padrão",
+              cores["critico"] if qualidade["descartadas"] else "")
+
+    st.subheader("Correções aplicadas")
+    correcoes = [
+        ("Linhas vazias removidas", qualidade["vazias"], "sem data, categoria ou valor"),
+        ("Registros duplicados removidos", qualidade["duplicadas"], "mesma data, categoria, descrição e valor"),
+        ("Valores inválidos descartados", qualidade["valor_invalido"], "não numéricos ou menores ou iguais a zero"),
+        ("Datas inválidas descartadas", qualidade["data_invalida"], "fora do formato AAAA-MM-DD"),
+        ("Categorias padronizadas", qualidade["categoria_ajustada"], "sinônimos e acentos convertidos"),
+        ("Categorias não reconhecidas", qualidade["categoria_invalida"], "fora da lista oficial"),
     ]
     st.dataframe(
-        dados,
+        [{"Correção": nome, "Ocorrências": qtd, "Critério": criterio} for nome, qtd, criterio in correcoes],
         width="stretch",
         hide_index=True,
         column_config={
-            "valor": st.column_config.NumberColumn("Valor", format="R$ %.2f"),
+            "Correção": st.column_config.TextColumn(width="medium"),
+            "Ocorrências": st.column_config.NumberColumn(format="%d", width="small"),
+            "Critério": st.column_config.TextColumn(width="large"),
         },
     )
-    total = sum(m["valor"] for m in movs)
-    st.markdown(f"**Total:** {moeda(total)}")
+
+    if not qualidade["descartadas"] and not qualidade["categoria_ajustada"]:
+        st.success("Nenhuma correção foi necessária: os arquivos estão íntegros.")
+    for detalhe in qualidade["detalhes"]:
+        st.warning(detalhe)
 
 
-def _form_nova_movimentacao(tipo):
-    categorias = RECEITA_CATEGORIAS if tipo == "receita" else DESPESA_CATEGORIAS
-    with st.expander(f"+ Novo lançamento de {TIPO_NOME[tipo].lower()}", expanded=False):
-        with st.form(f"form_novo_{tipo}", clear_on_submit=True):
-            c1, c2 = st.columns(2)
-            data = c1.date_input("Data", value=date.today())
-            categoria = c2.selectbox("Categoria", categorias, key=f"cat_{tipo}")
-            descricao = st.text_input("Descrição", placeholder="Opcional")
-            valor = st.number_input("Valor (R$)", min_value=0.01, step=10.0, format="%.2f", key=f"val_{tipo}")
-            enviar = st.form_submit_button("Salvar", type="primary")
-        if enviar:
-            models.adicionar_movimentacao(tipo, data.isoformat(), categoria, descricao.strip(), valor)
-            st.success("Lançamento adicionado.")
-            st.rerun()
+# ----------------------------------------------------------------- Navegação
+
+PAGINAS = {
+    "Dashboard": pagina_dashboard,
+    "Movimentações": pagina_movimentacoes,
+    "Orçamento": pagina_orcamento,
+    "Relatório Mensal": pagina_relatorio,
+    "Qualidade dos Dados": pagina_qualidade,
+}
 
 
-def _excluir_movimentacao(tipo, mes):
-    movs = models.listar_movimentacoes(tipo, mes)
-    if not movs:
-        return
-    opcoes = [f"#{m['id']} — {m['data']} — {m['categoria']} — {moeda(m['valor'])}" for m in movs]
-    rotulo = st.selectbox("Lançamento para excluir", opcoes, key=f"del_{tipo}_{mes}")
-    indice = opcoes.index(rotulo)
-    if st.button("Excluir lançamento", type="secondary", key=f"btn_del_{tipo}_{mes}"):
-        models.excluir_movimentacao(tipo, movs[indice]["id"])
-        st.success("Lançamento excluído.")
-        st.rerun()
-
-
-def pagina_movimentacoes():
-    st.title("Movimentações")
-    abas = st.tabs(["Receitas", "Despesas"])
-    for aba, tipo in zip(abas, ("receita", "despesa")):
-        with aba:
-            meses = budget.meses_disponiveis()
-            opcoes = _mes_options()
-            selecao = st.selectbox("Mês", opcoes, index=0, key=f"mes_{tipo}") if opcoes else None
-            mes = _mes_para_filtro(selecao)
-            c1, c2, c3 = st.columns([2, 2, 3])
-            with c3:
-                _form_nova_movimentacao(tipo)
-            with c1:
-                buf = reports.gerar_csv_movimentacoes(tipo, mes)
-                st.download_button(
-                    "Exportar CSV",
-                    data=buf.getvalue(),
-                    file_name=f"{tipo}_{mes or 'todos'}.csv",
-                    mime="text/csv",
-                    key=f"csv_{tipo}_{mes}",
-                )
-            with c2:
-                pdf = exports.gerar_pdf_movimentacoes(tipo, mes)
-                st.download_button(
-                    "Exportar PDF",
-                    data=pdf,
-                    file_name=f"{tipo}_{mes or 'todos'}.pdf",
-                    mime="application/pdf",
-                    key=f"pdf_{tipo}_{mes}",
-                )
-            _tabela_movimentacoes(tipo, mes)
-            _excluir_movimentacao(tipo, mes)
-
-
-def _tabela_comparativo(titulo, linhas, cor):
-    st.subheader(titulo)
-    if not linhas:
-        st.info("Sem dados.")
-        return
-    for linha in linhas:
-        c1, c2, c3, c4, c5, c6 = st.columns([3, 2, 2, 2, 1, 3])
-        c1.markdown(linha["categoria"])
-        c2.markdown(moeda(linha["planejado"]))
-        c3.markdown(f"**{moeda(linha['realizado'])}**")
-        c4.markdown(moeda(linha["variacao"]))
-        c5.markdown(f"{linha['percentual']:.1f}%")
-        if linha["planejado"]:
-            pct = min(linha["percentual"], 100.0) / 100.0
-            cor_bar = cor if linha["percentual"] < 100 else "#d32f2f"
-            c6.progress(pct)
-        else:
-            c6.markdown("—")
-
-
-def pagina_relatorio():
-    st.title("Relatório Mensal")
-    meses = budget.meses_disponiveis()
-    if not meses:
-        st.info("Não há meses disponíveis.")
-        return
-    mes = st.selectbox("Mês", meses, index=0, key="rel_mes")
-    relatorio = reports.relatorio_mensal(mes)
-    resumo = relatorio["resumo"]
-
-    c1, c2, c3, c4 = st.columns(4)
-    c1.download_button(
-        "Exportar CSV",
-        data=exports.gerar_csv_relatorio(mes),
-        file_name=f"relatorio_{mes}.csv",
-        mime="text/csv",
-        key="csv_rel",
-    )
-    c2.download_button(
-        "Exportar PDF",
-        data=exports.gerar_pdf_relatorio(mes),
-        file_name=f"relatorio_{mes}.pdf",
-        mime="application/pdf",
-        key="pdf_rel",
-    )
-    c3.download_button(
-        "Exportar Slide",
-        data=exports.gerar_pptx_relatorio(mes),
-        file_name=f"relatorio_{mes}.pptx",
-        mime="application/vnd.openxmlformats-officedocument.presentationml.presentation",
-        key="pptx_rel",
-    )
-
-    c1, c2, c3 = st.columns(3)
-    c1.metric(
-        "Receitas",
-        moeda(resumo["receita_realizada"]),
-        f"planejado: {moeda(resumo['receita_planejada'])} ({resumo['adimplencia_receita']:.1f}%)",
-    )
-    c2.metric(
-        "Despesas",
-        moeda(resumo["despesa_realizada"]),
-        f"planejado: {moeda(resumo['despesa_planejada'])} ({resumo['adimplencia_despesa']:.1f}%)",
-    )
-    c3.metric(
-        "Saldo realizado",
-        moeda(resumo["saldo_realizado"]),
-        f"planejado: {moeda(resumo['saldo_planejado'])}",
-    )
-
-    _tabela_comparativo("Planejado x Realizado — Receitas", relatorio["receitas"], cor="#2e7d32")
-    _tabela_comparativo("Planejado x Realizado — Despesas", relatorio["despesas"], cor="#c62828")
-
-
-def main():
+def main() -> None:
+    """Monta a barra lateral e despacha para a página escolhida."""
     with st.sidebar:
-        st.title("Hotel Budget Manager")
+        st.title("🏨 " + SISTEMA_NOME)
         st.caption(HOTEL_NOME)
-        st.markdown(f"**{SISTEMA_NOME} v{VERSAO}**")
-        pagina = st.radio("Navegação", PAGINAS)
+        st.divider()
+        escolhida = st.radio("Navegação", list(PAGINAS), label_visibility="collapsed")
+        st.divider()
+        resumo = analise.resumo_mes()
+        st.caption("Acumulado do período")
+        st.markdown(
+            f"Receitas: **{brl(resumo['receita_realizada'])}**  \n"
+            f"Despesas: **{brl(resumo['despesa_realizada'])}**  \n"
+            f"Saldo: **{brl(resumo['saldo_realizado'])}**"
+        )
+        st.divider()
+        atual = "escuro" if tema_atual() == "dark" else "claro"
+        st.caption(f"Tema {atual} · troque em ⋮ › Settings › Appearance")
+        st.caption(f"versão {VERSAO}")
 
-    paginas = {
-        "Dashboard": pagina_dashboard,
-        "Orçamento": pagina_orcamento,
-        "Movimentações": pagina_movimentacoes,
-        "Relatório Mensal": pagina_relatorio,
-    }
-    paginas[pagina]()
+    PAGINAS[escolhida]()
 
 
-main()
+# O Streamlit executa este arquivo como "__main__"; a guarda permite importar o
+# módulo em testes sem disparar a montagem da interface.
+if __name__ == "__main__":
+    main()
