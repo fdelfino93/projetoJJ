@@ -6,11 +6,14 @@ Cadastra receitas e despesas, guarda tudo em arquivos CSV, aplica um processo
 ETL de limpeza, analisa os dados com Pandas e apresenta o resultado em um
 dashboard interativo feito em Streamlit.
 
+O código da aplicação fica na pasta `hotel_budget/`.
+
 ---
 
 ## Como executar
 
 ```bash
+cd hotel_budget
 pip install -r requirements.txt
 python seed.py            # opcional: gera 12 meses de dados de exemplo
 streamlit run app.py
@@ -26,6 +29,7 @@ O hotel exporta do PMS (Opera) o relatório **NA02 - Manager Report Gross** uma
 vez por dia (`manrepTT.PDF`). Ele entra no banco de dados de forma padronizada:
 
 ```bash
+cd hotel_budget
 python importa_pdf.py manrepTT.PDF
 ```
 
@@ -48,6 +52,7 @@ no Agendador de Tarefas que rode `python importa_pdf.py` na pasta do projeto.
 ## Estrutura
 
 ```text
+README.md
 hotel_budget/
     app.py            interface Streamlit (5 páginas)
     cadastro.py       inclusão, alteração e exclusão nos CSV
@@ -65,7 +70,6 @@ hotel_budget/
         orcamento.csv
         operacao.csv   indicadores diários importados do OPERA
     requirements.txt
-    README.md
 ```
 
 O fluxo de dependências é de mão única, sem importações circulares:
@@ -86,7 +90,7 @@ config / utils  →  etl  →  cadastro
 | **Movimentações** | Tabela editável de receitas e despesas, com exportação em PDF |
 | **Orçamento** | Definição do valor previsto por categoria, com cópia entre meses e reajuste percentual |
 | **Relatório Mensal** | Comparativo detalhado, pontos de atenção, projeção de fechamento e exportação em CSV, PDF e PowerPoint |
-| **Qualidade dos Dados** | Registro das correções que o ETL aplicou na última leitura dos CSV |
+| **Qualidade de Dados** | Registro das correções que o ETL aplicou na última leitura dos CSV |
 
 ### Editando lançamentos
 
