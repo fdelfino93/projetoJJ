@@ -1,4 +1,4 @@
-# Hotel Budget Manager
+# Gerente de Orçamento de Hotel
 
 Sistema de planejamento orçamentário do **Hotel Ibis Styles Curitiba Centro Cívico**.
 
@@ -20,6 +20,31 @@ A aplicação abre em <http://localhost:8501>.
 
 ---
 
+## Importação diária do relatório do OPERA
+
+O hotel exporta do PMS (Opera) o relatório **NA02 - Manager Report Gross** uma
+vez por dia (`manrepTT.PDF`). Ele entra no banco de dados de forma padronizada:
+
+```bash
+python importa_pdf.py manrepTT.PDF
+```
+
+O comando extrai as métricas do PDF, traduz o nome de cada uma para o português
+do Brasil e grava em `data/operacao.csv`, no formato **uma linha por métrica por
+dia**. Para cada métrica são guardados o valor do dia, do mês acumulado e do ano
+acumulado, tanto do ano atual quanto do ano anterior.
+
+A importação é **idempotente**: rodar de novo o mesmo arquivo substitui os
+registros daquele dia em vez de duplicá-los — pode ser executada diariamente sem
+cuidado. Métricas novas (que o relatório passe a exibir e ainda não tenham
+tradução no catálogo `config.INDICADORES_OPERACAO`) são listadas como aviso no
+fim da execução.
+
+Para agendar a importação automática diária no Windows, basta criar uma tarefa
+no Agendador de Tarefas que rode `python importa_pdf.py` na pasta do projeto.
+
+---
+
 ## Estrutura
 
 ```text
@@ -31,12 +56,14 @@ hotel_budget/
     graficos.py       Plotly (tela) e Matplotlib (PDF/PPTX)
     exports.py        geração de CSV, PDF e PowerPoint
     utils.py          validações e formatação
-    config.py         categorias, cores e caminhos
+    config.py         categorias, cores, caminhos e traduções das métricas
     seed.py           gerador de dados de exemplo
+    importa_pdf.py    importador diário do relatório do OPERA (NA02)
     data/
         receitas.csv
         despesas.csv
         orcamento.csv
+        operacao.csv   indicadores diários importados do OPERA
     requirements.txt
     README.md
 ```
@@ -113,6 +140,10 @@ só roda de novo quando algum CSV muda.
 
 A página **Qualidade dos Dados** mostra o relatório de cada execução — quantas
 linhas entraram, quantas foram descartadas e por qual critério.
+
+Os indicadores diários do OPERA (`operacao.csv`) passam pelo mesmo processo pela
+função `etl.carregar_operacao()` — a tradução das métricas acontece na
+importação, e a leitura do CSV continua sempre tratada pelo ETL.
 
 ---
 

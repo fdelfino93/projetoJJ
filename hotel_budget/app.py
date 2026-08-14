@@ -1,4 +1,4 @@
-"""Hotel Budget Manager — interface Streamlit.
+"""Gerente de Orçamento de Hotel — interface Streamlit.
 
 Ponto de entrada da aplicação. Execute com:
 
@@ -69,16 +69,24 @@ def brl(valor) -> str:
 # ------------------------------------------------------------------ Auxiliares
 
 
+def selectbox_mes(rotulo: str, chave: str, meses: list[str], incluir_todos: bool = False) -> str | None:
+    """Selectbox de mês sem `format_func`, que no Streamlit 1.61 mostra um
+    mês diferente do clicado quando o campo fecha. As opções já são os
+    rótulos ("Março/2026"); o valor original ("2026-03") é recuperado pelo
+    mapa reverso de `mes_nome`.
+    """
+    itens = ([TODOS_OS_MESES] + meses) if incluir_todos else meses
+    rotulo_para_mes = {mes_nome(m): m for m in itens}
+    escolha = st.selectbox(rotulo, list(rotulo_para_mes), key=chave)
+    return rotulo_para_mes[escolha]
+
+
 def seletor_de_mes(chave: str, incluir_todos: bool = True, rotulo: str = "Período"):
     """Selectbox de mês compartilhado pelas páginas. Devolve None para 'todos'."""
     meses = analise.meses_disponiveis()
     if not meses:
         return None
-    opcoes = ([TODOS_OS_MESES] + meses) if incluir_todos else meses
-    escolha = st.selectbox(
-        rotulo, opcoes, key=chave,
-        format_func=lambda m: TODOS_OS_MESES if m == TODOS_OS_MESES else mes_nome(m),
-    )
+    escolha = selectbox_mes(rotulo, chave, meses, incluir_todos)
     return None if escolha == TODOS_OS_MESES else escolha
 
 
@@ -183,7 +191,7 @@ def pagina_dashboard() -> None:
     """Visão geral: indicadores, evolução, comparativos e alertas."""
     tema = tema_atual()
     cores = paleta(tema)
-    st.title("Dashboard")
+    st.title("Painel")
     mes = seletor_de_mes("dash_mes")
     resumo = analise.resumo_mes(mes)
 
@@ -210,17 +218,8 @@ def pagina_dashboard() -> None:
 
     st.divider()
 
-    if mes:
-        esquerda, direita = st.columns([3, 2])
-        with esquerda:
-            st.subheader("Evolução mensal")
-            grafico(graficos.grafico_evolucao_mensal(tema))
-        with direita:
-            st.subheader("Pontos de atenção")
-            mostrar_alertas(mes)
-    else:
-        st.subheader("Evolução mensal")
-        grafico(graficos.grafico_evolucao_mensal(tema))
+    st.subheader("Evolução mensal")
+    grafico(graficos.grafico_evolucao_mensal(tema))
 
     st.subheader("Resultado por mês")
     grafico(graficos.grafico_saldo_mensal(tema))
@@ -242,6 +241,11 @@ def pagina_dashboard() -> None:
     with direita:
         st.subheader("Despesas — Planejado x Realizado")
         grafico(graficos.grafico_planejado_realizado("despesa", mes, tema))
+
+    if mes:
+        st.divider()
+        st.subheader("Pontos de atenção")
+        mostrar_alertas(mes)
 
 
 def pagina_movimentacoes() -> None:
@@ -400,10 +404,11 @@ def pagina_orcamento() -> None:
     meses = analise.meses_disponiveis()
     proximo = date.today().strftime("%Y-%m")
     opcoes = sorted(set(meses) | {proximo}, reverse=True)
+    rotulos_orc = {mes_nome(m): m for m in opcoes}
 
     c1, _ = st.columns([1, 2])
     with c1:
-        mes = st.selectbox("Mês do orçamento", opcoes, format_func=mes_nome, key="orc_mes")
+        mes = rotulos_orc[st.selectbox("Mês do orçamento", list(rotulos_orc), key="orc_mes")]
 
     with st.expander("Copiar de outro mês"):
         _copiar_orcamento(mes, [m for m in meses if m != mes])
@@ -464,7 +469,8 @@ def _copiar_orcamento(destino: str, origens: list[str]) -> None:
         st.caption("Nenhum outro mês com orçamento cadastrado.")
         return
     c1, c2, c3 = st.columns([2, 1, 1])
-    origem = c1.selectbox("Copiar de", origens, format_func=mes_nome, key="orc_origem")
+    rotulos_origem = {mes_nome(m): m for m in origens}
+    origem = rotulos_origem[c1.selectbox("Copiar de", list(rotulos_origem), key="orc_origem")]
     reajuste = c2.number_input("Reajuste (%)", value=0.0, step=1.0, format="%.1f", key="orc_reajuste")
     c3.markdown("<div style='height:1.8rem'></div>", unsafe_allow_html=True)
     if c3.button("Copiar", key="orc_copiar", width="stretch"):
@@ -488,7 +494,7 @@ def pagina_relatorio() -> None:
 
     c1, _ = st.columns([1, 2])
     with c1:
-        mes = st.selectbox("Mês", meses, format_func=mes_nome, key="rel_mes")
+        mes = selectbox_mes("Mês", "rel_mes", meses)
 
     resumo = analise.resumo_mes(mes)
     projecao = analise.projecao_fechamento(mes)
@@ -578,22 +584,92 @@ def pagina_qualidade() -> None:
 
 # ----------------------------------------------------------------- Navegação
 
+# Páginas da aplicação. O menu é desenhado na barra lateral com o rádio do
+# Streamlit, estilizado para parecer um menu moderno (ver `ESTILO_MENU`). Os
+# ícones vêm em formato emoji para aparecerem dentro do próprio rádio.
 PAGINAS = {
-    "Dashboard": pagina_dashboard,
+    "Painel": pagina_dashboard,
     "Movimentações": pagina_movimentacoes,
     "Orçamento": pagina_orcamento,
     "Relatório Mensal": pagina_relatorio,
-    "Qualidade dos Dados": pagina_qualidade,
+    "Qualidade de Dados": pagina_qualidade,
 }
+
+ICONES_MENU = {
+    "Painel": "📊",
+    "Movimentações": "💳",
+    "Orçamento": "🎯",
+    "Relatório Mensal": "📄",
+    "Qualidade de Dados": "✅",
+}
+
+# Estilo do menu lateral: transforma o rádio em itens de menu com cantos
+# arredondados e destaque no item ativo. A cor primária é a mesma do tema
+# (config.toml), injetada por tema para funcionar mesmo no modo escuro.
+PRIMARIA_POR_TEMA = {"light": "#2a78d6", "dark": "#3987e5"}
+
+
+def _rgba(hex_cor: str, alfa: float) -> str:
+    """Converte "#rrggbb" em "rgba(r, g, b, alfa)"."""
+    cor = hex_cor.lstrip("#")
+    r, g, b = (int(cor[i:i + 2], 16) for i in (0, 2, 4))
+    return f"rgba({r}, {g}, {b}, {alfa})"
+
+
+def estilo_menu(tema: str) -> str:
+    """CSS do menu lateral na cor primária do tema escolhido."""
+    primaria = PRIMARIA_POR_TEMA[tema]
+    hover = _rgba(primaria, 0.12)
+    return f"""
+<style>
+[data-testid="stSidebar"] div[role="radiogroup"] {{
+    gap: 0.2rem;
+}}
+[data-testid="stSidebar"] div[role="radiogroup"] label {{
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}}
+[data-testid="stSidebar"] div[role="radiogroup"] label:hover {{
+    background-color: {hover};
+}}
+[data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) {{
+    background-color: {primaria};
+    color: #ffffff;
+    font-weight: 600;
+}}
+[data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) p {{
+    color: #ffffff;
+}}
+</style>
+"""
 
 
 def main() -> None:
-    """Monta a barra lateral e despacha para a página escolhida."""
+    """Monta a barra lateral (título em primeiro lugar) e despacha a página."""
+    tema = tema_atual()
+    cores = paleta(tema)
     with st.sidebar:
-        st.title("🏨 " + SISTEMA_NOME)
-        st.caption(HOTEL_NOME)
+        st.markdown(estilo_menu(tema), unsafe_allow_html=True)
+        st.markdown(
+            f"<div style='font-size:1.25rem;font-weight:700;line-height:1.25;"
+            f"color:{cores['texto']}'>🏨 {SISTEMA_NOME}</div>"
+            f"<div style='font-size:.85rem;color:{cores['texto_suave']}'>"
+            f"{HOTEL_NOME}</div>",
+            unsafe_allow_html=True,
+        )
         st.divider()
-        escolhida = st.radio("Navegação", list(PAGINAS), label_visibility="collapsed")
+        escolhida = st.radio(
+            "Navegação",
+            list(PAGINAS),
+            label_visibility="collapsed",
+            format_func=lambda nome: f"{ICONES_MENU[nome]}  {nome}",
+        )
         st.divider()
         resumo = analise.resumo_mes()
         st.caption("Acumulado do período")
@@ -603,7 +679,7 @@ def main() -> None:
             f"Saldo: **{brl(resumo['saldo_realizado'])}**"
         )
         st.divider()
-        atual = "escuro" if tema_atual() == "dark" else "claro"
+        atual = "escuro" if tema == "dark" else "claro"
         st.caption(f"Tema {atual} · troque em ⋮ › Settings › Appearance")
         st.caption(f"versão {VERSAO}")
 

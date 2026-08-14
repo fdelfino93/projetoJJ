@@ -1,0 +1,101 @@
+﻿data,indicador,hoje,mtd,ytd,hoje_ant,mtd_ant,ytd_ant
+2026-08-12,Adultos no hotel,86,894,18312,86,929,19213
+2026-08-12,Aniversariantes no hotel,0,1,51,0,2,74
+2026-08-12,Blocos no hotel,0,5,5,0,0,3
+2026-08-12,Cancelamentos de reservas feitos hoje,14,136,2983,7,292,5311
+2026-08-12,Cancelamentos tardios de reserva hoje,4,28,354,0,158,794
+2026-08-12,Chegadas deduzidas,33,360,6744,34,359,6864
+2026-08-12,Chegadas não deduzidas,0,0,2,0,0,0
+2026-08-12,Crianças no hotel,0,35,998,0,36,962
+2026-08-12,Demanda de hoje,73,721,13384,74,704,13795
+2026-08-12,Diária média (ADR),270.88,260.88,253.50,250.81,231.84,240.91
+2026-08-12,Diária média menos cortesia,270.88,260.88,254.03,250.81,240.02,241.81
+2026-08-12,Diária média menos cortesia e uso interno,270.88,260.88,254.24,257.78,245.06,243.12
+2026-08-12,Diária média menos uso interno,270.88,260.88,253.71,257.78,236.54,242.21
+2026-08-12,Diárias reservadas hoje,138,1590,20394,116,1290,22600
+2026-08-12,Duplos vendidos como single,0,0,0,0,0,0
+2026-08-12,Média de pessoas por bloco,0,1.04,1.04,0,0,1.11
+2026-08-12,Ocupação menos OOO,92.41,76.14,74.98,92.50,73.33,77.52
+2026-08-12,Ocupação menos cortesia,91.25,75.10,74.53,92.50,70.83,76.70
+2026-08-12,Ocupação menos cortesia e OOO,92.41,76.14,74.82,92.50,70.83,77.24
+2026-08-12,Ocupação menos cortesia e uso interno,91.25,75.10,74.47,90,69.38,76.28
+2026-08-12,"Ocupação menos cortesia, uso interno e OOO",92.41,76.14,74.76,90,69.38,76.82
+2026-08-12,Ocupação menos uso interno,91.25,75.10,74.63,90,71.88,76.57
+2026-08-12,Ocupação menos uso interno e OOO,92.41,76.14,74.92,90,71.88,77.11
+2026-08-12,Ocupação múltipla (%),19.18,,,16.22,,
+2026-08-12,Ocupação prevista para amanhã,77.50,,,96.25,,
+2026-08-12,Ocupação prevista para os próximos 7 dias,80.18,,,75.54,,
+2026-08-12,Outras receitas,107.90,839.80,11958.66,-1.80,576.02,13488.50
+2026-08-12,Pessoas VIP no hotel,0,4,182,0,6,214
+2026-08-12,Pessoas avulsas em saída,38,471,10081,31,490,10403
+2026-08-12,Pessoas avulsas no hotel,86,848,19229,86,965,20092
+2026-08-12,Pessoas com saída antecipada,0,5,147,0,1,127
+2026-08-12,Pessoas com saída estendida,0,3,75,0,1,125
+2026-08-12,Pessoas de blocos no hotel,0,81,81,0,0,83
+2026-08-12,Pessoas de membro avulso em saída,19,202,4677,9,167,3665
+2026-08-12,Pessoas de membros em saída,19,208,4683,9,167,3665
+2026-08-12,Pessoas de membros no hotel,25,350,8584,24,280,6674
+2026-08-12,Pessoas em chegada,42,478,10112,39,506,10470
+2026-08-12,Pessoas em chegada amanhã,43,,,41,,
+2026-08-12,Pessoas em saída,38,498,10108,31,490,10462
+2026-08-12,Pessoas em saída amanhã,45,,,34,,
+2026-08-12,Pessoas no-show,3,32,466,2,14,446
+2026-08-12,Pessoas walk-in,0,7,73,0,3,164
+2026-08-12,Quartos avulsos em saída,34,326,6690,21,341,6782
+2026-08-12,Quartos avulsos no hotel,73,643,13306,74,704,13720
+2026-08-12,Quartos com saída antecipada,0,4,97,0,1,92
+2026-08-12,Quartos com saída estendida,0,1,48,0,1,86
+2026-08-12,Quartos corporativos no hotel,9,102,2500,27,160,2466
+2026-08-12,Quartos de agência no hotel,56,413,7265,49,343,7201
+2026-08-12,Quartos de blocos no hotel,0,78,78,0,0,75
+2026-08-12,Quartos de cortesia,0,0,28,0,24,51
+2026-08-12,Quartos de day use,0,3,110,0,3,59
+2026-08-12,Quartos de grupos no hotel,0,78,78,0,0,75
+2026-08-12,Quartos de membro avulso em saída,17,134,2970,7,108,2219
+2026-08-12,Quartos de membros em saída,17,140,2976,7,108,2219
+2026-08-12,Quartos de uso interno,0,0,11,2,14,74
+2026-08-12,Quartos disponíveis,7,239,4536,6,256,4125
+2026-08-12,Quartos disponíveis menos OOO,6,226,4466,6,256,4000
+2026-08-12,Quartos em chegada,33,360,6746,34,359,6864
+2026-08-12,Quartos em chegada amanhã,28,,,30,,
+2026-08-12,Quartos em saída,34,352,6716,21,341,6833
+2026-08-12,Quartos em saída amanhã,38,,,27,,
+2026-08-12,Quartos fora de ordem (OOO),1,13,70,0,0,125
+2026-08-12,Quartos fora de serviço (OOS),0,0,0,0,0,10
+2026-08-12,Quartos limpos,6,,,6,,
+2026-08-12,Quartos no-show,3,25,349,2,11,325
+2026-08-12,Quartos ocupados,73,721,13384,74,704,13795
+2026-08-12,Quartos ocupados menos cortesia,73,721,13356,74,680,13744
+2026-08-12,Quartos ocupados menos cortesia e uso interno,73,721,13345,72,666,13670
+2026-08-12,Quartos ocupados menos uso interno,73,721,13373,72,690,13721
+2026-08-12,Quartos por fonte no hotel,0,0,0,0,0,0
+2026-08-12,Quartos sujos,73,,,74,,
+2026-08-12,Quartos walk-in,0,4,50,0,2,114
+2026-08-12,Recebimentos,21769.71,222080.72,4222501.57,18735.78,225467.37,4216375.17
+2026-08-12,Receita de alimentação e bebidas,5057.50,41584.98,844970.37,4458.62,39108.11,836758.64
+2026-08-12,Receita de avulsos,24939.98,209723.94,4228973.45,23016.65,202896.01,4146890.23
+2026-08-12,Receita de blocos,0,20794.50,20794.50,0,0,26748.30
+2026-08-12,Receita de diárias,19774.58,188093.66,3392838.92,18559.83,163211.88,3323391.39
+2026-08-12,Receita de diárias de avulsos,19774.58,171814.16,3376559.42,18559.83,163211.88,3300826.89
+2026-08-12,Receita de diárias de blocos,0,16279.50,16279.50,0,0,22564.50
+2026-08-12,Receita de diárias de membros,5913.01,68987.82,1445706.77,4640.94,47465.38,1057802.85
+2026-08-12,Receita de membros,6996.01,81710.02,1741475.39,5694.74,56502.13,1280361.08
+2026-08-12,Receita máxima,0,0,0,0,0,0
+2026-08-12,Receita máxima (%),0,0,0,0,0,0
+2026-08-12,Receita máxima por quarto ocupado,0,0,0,0,0,0
+2026-08-12,Receita máxima por quarto ocupado (%),0,0,0,0,0,0
+2026-08-12,Receita média de diárias por bloco,0,208.71,208.71,0,0,300.86
+2026-08-12,Receita média por bloco,0,266.60,266.60,0,0,356.64
+2026-08-12,Receita por quarto disponível (RevPAR),247.18,195.93,189.33,232,170.01,185.46
+2026-08-12,Receita total,24939.98,230518.44,4249767.95,23016.65,202896.01,4173638.53
+2026-08-12,Receita total por pessoa,290,248.14,220.08,267.64,210.25,206.87
+2026-08-12,Reservas canceladas hoje,8,95,2861,8,807,5118
+2026-08-12,Reservas feitas hoje,74,699,12791,56,821,15750
+2026-08-12,Saídas de membros (%),50,39.77,44.31,33.33,31.67,32.47
+2026-08-12,Saídas de membros avulsos (%),50,39.77,44.31,33.33,31.67,32.47
+2026-08-12,Tarifa média por pessoa,229.94,202.47,175.70,215.81,169.13,164.73
+2026-08-12,Taxa de camas ocupadas,0,0,0,0,0,0
+2026-08-12,Taxa de ocupação,91.25,75.10,74.69,92.50,73.33,76.98
+2026-08-12,Total de pessoas no hotel,86,929,19310,86,965,20175
+2026-08-12,Total de quartos do hotel,80,960,17920,80,960,17920
+2026-08-12,Total de quartos menos fora de ordem (OOO),79,947,17850,80,960,17795

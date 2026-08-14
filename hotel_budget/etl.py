@@ -14,8 +14,10 @@ from dataclasses import dataclass, field
 import pandas as pd
 
 from config import (
+    ARQ_OPERACAO,
     ARQ_ORCAMENTO,
     COLUNAS_MOVIMENTACAO,
+    COLUNAS_OPERACAO,
     COLUNAS_ORCAMENTO,
     TIPOS,
     arquivo_de,
@@ -156,6 +158,43 @@ def transformar_movimentacoes(df: pd.DataFrame, tipo: str) -> tuple[pd.DataFrame
     return df[COLUNAS_MOVIMENTACAO + ["mes", "tipo"]], rel
 
 
+def transformar_operacao(df: pd.DataFrame) -> tuple[pd.DataFrame, RelatorioETL]:
+    """Limpa e padroniza os indicadores diários importados do relatório OPERA.
+
+    Algumas métricas do relatório só trazem o valor do dia (não acumulam mês ou
+    ano) — nesses casos as colunas `mtd`, `ytd`, `mtd_ant` e `ytd_ant` ficam
+    vazias e continuam válidas.
+    """
+    rel = RelatorioETL(lidas=len(df))
+    if df.empty:
+        return pd.DataFrame(columns=COLUNAS_OPERACAO), rel
+
+    df = df.copy()
+
+    vazias = df[["data", "indicador"]].apply(lambda c: c.astype(str).str.strip() == "").any(axis=1)
+    rel.vazias = int(vazias.sum())
+    df = df[~vazias]
+
+    df["data"] = pd.to_datetime(df["data"], format="%Y-%m-%d", errors="coerce")
+    sem_data = df["data"].isna()
+    rel.data_invalida = int(sem_data.sum())
+    df = df[~sem_data]
+
+    for coluna in ("hoje", "mtd", "ytd", "hoje_ant", "mtd_ant", "ytd_ant"):
+        df[coluna] = pd.to_numeric(df[coluna].astype(str).str.replace(",", ""), errors="coerce")
+    invalidos = df["hoje"].isna()
+    rel.valor_invalido = int(invalidos.sum())
+    df = df[~invalidos]
+
+    antes = len(df)
+    df = df.drop_duplicates(subset=["data", "indicador"], keep="last")
+    rel.duplicadas = antes - len(df)
+
+    df["data"] = df["data"].dt.strftime("%Y-%m-%d")
+    df = df.sort_values(["data", "indicador"]).reset_index(drop=True)
+    return df[COLUNAS_OPERACAO], rel
+
+
 def transformar_orcamento(df: pd.DataFrame) -> tuple[pd.DataFrame, RelatorioETL]:
     """Limpa e padroniza o orçamento planejado."""
     rel = RelatorioETL(lidas=len(df))
@@ -210,6 +249,12 @@ def carregar_orcamento() -> tuple[pd.DataFrame, RelatorioETL]:
     """Executa o ETL completo do orçamento."""
     bruto = extrair(ARQ_ORCAMENTO, COLUNAS_ORCAMENTO)
     return transformar_orcamento(bruto)
+
+
+def carregar_operacao() -> tuple[pd.DataFrame, RelatorioETL]:
+    """Executa o ETL completo dos indicadores diários do relatório OPERA."""
+    bruto = extrair(ARQ_OPERACAO, COLUNAS_OPERACAO)
+    return transformar_operacao(bruto)
 
 
 def carregar_tudo() -> tuple[pd.DataFrame, pd.DataFrame, RelatorioETL]:
