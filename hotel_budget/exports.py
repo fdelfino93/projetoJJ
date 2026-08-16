@@ -1,4 +1,4 @@
-"""Exportação de relatórios em CSV, PDF e PowerPoint.
+"""Exportação de relatórios em Excel e PDF.
 
 Os gráficos embutidos aqui vêm do `graficos` em versão Matplotlib (PNG), já
 que Plotly serve à tela e não a arquivos estáticos.
@@ -6,6 +6,8 @@ que Plotly serve à tela e não a arquivos estáticos.
 
 import io
 from typing import Optional
+
+import xlsxwriter
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -22,6 +24,7 @@ import analise
 import cadastro
 import graficos
 from config import (
+    COR_ATENCAO,
     COR_CRITICO,
     COR_DESPESA,
     COR_OK,
@@ -101,6 +104,132 @@ def gerar_csv_relatorio(mes: str) -> str:
         linhas += ["", "ALERTAS;SITUACAO"]
         linhas += [f"{a['mensagem']};{a['situacao']}" for a in relatorio["alertas"]]
     return "\n".join(linhas)
+
+
+# --------------------------------------------------------------------- Excel
+
+
+def gerar_xlsx_relatorio(mes: str) -> bytes:
+    """Relatório mensal completo em Excel (.xlsx), com resumo e comparativos."""
+    mes = validar_mes(mes)
+    relatorio = analise.relatorio_mensal(mes)
+    resumo = relatorio["resumo"]
+    projecao = relatorio["projecao"]
+
+    saida = io.BytesIO()
+    with xlsxwriter.Workbook(saida, {"in_memory": True}) as pasta:
+        _planilha_resumo(pasta, relatorio, resumo, projecao)
+        for tipo in ("receita", "despesa"):
+            _planilha_comparativo(pasta, relatorio, tipo)
+        _planilha_lancamentos(pasta, relatorio)
+    return saida.getvalue()
+
+
+def _formato_moeda(pasta) -> object:
+    return pasta.add_format({"num_format": "R$ #.##0,00", "font_color": COR_TEXTO})
+
+
+def _formato_titulo(pasta) -> object:
+    return pasta.add_format(
+        {"bold": True, "font_size": 14, "font_color": COR_RECEITA, "valign": "vcenter"}
+    )
+
+
+def _formato_cabecalho(pasta, cor: str) -> object:
+    return pasta.add_format(
+        {"bold": True, "font_color": "#FFFFFF", "bg_color": cor, "border": 1}
+    )
+
+
+def _planilha_resumo(pasta, relatorio: dict, resumo: dict, projecao: dict) -> None:
+    """Aba 'Resumo': identificação, totais e projeção de fechamento."""
+    planilha = pasta.add_worksheet("Resumo")
+    planilha.set_column("A:A", 38)
+    planilha.set_column("B:B", 22)
+
+    planilha.merge_range("A1:B1", f"{HOTEL_NOME} — Relatório Mensal", _formato_titulo(pasta))
+    planilha.write("A2", "Mês", pasta.add_format({"bold": True}))
+    planilha.write("B2", mes_nome(relatorio["mes"]))
+
+    cabecalho = _formato_cabecalho(pasta, COR_RECEITA)
+    planilha.write("A4", "Indicador", cabecalho)
+    planilha.write("B4", "Valor", cabecalho)
+
+    resumos = [
+        ("Receitas planejadas", resumo["receita_planejada"]),
+        ("Receitas realizadas", resumo["receita_realizada"]),
+        ("Despesas planejadas", resumo["despesa_planejada"]),
+        ("Despesas realizadas", resumo["despesa_realizada"]),
+        ("Saldo planejado", resumo["saldo_planejado"]),
+        ("Saldo realizado", resumo["saldo_realizado"]),
+        ("Execução das receitas (%)", resumo["execucao_receita"] / 100),
+        ("Execução das despesas (%)", resumo["execucao_despesa"] / 100),
+        ("Margem (%)", resumo["margem"] / 100),
+        ("Saldo projetado", projecao["saldo_projetado"]),
+    ]
+    moeda = _formato_moeda(pasta)
+    percentual = pasta.add_format({"num_format": "0.0%"})
+    for linha, (rotulo, valor) in enumerate(resumos, start=4):
+        planilha.write(linha, 0, rotulo)
+        formato = percentual if rotulo.endswith("(%)") else moeda
+        planilha.write(linha, 1, valor, formato)
+
+    if relatorio["alertas"]:
+        linha_inicial = 4 + len(resumos) + 1
+        planilha.merge_range(
+            linha_inicial - 1, 0, linha_inicial - 1, 1,
+            "Alertas", _formato_cabecalho(pasta, COR_ATENCAO),
+        )
+        for i, alerta in enumerate(relatorio["alertas"]):
+            planilha.write(linha_inicial + i, 0, alerta["mensagem"])
+            planilha.write(linha_inicial + i, 1, alerta["situacao"])
+
+
+def _planilha_comparativo(pasta, relatorio: dict, tipo: str) -> None:
+    """Aba 'Receitas' ou 'Despesas': planejado x realizado por categoria."""
+    df = relatorio[f"{tipo}s"]
+    planilha = pasta.add_worksheet(_rotulo(tipo))
+    planilha.set_column("A:A", 34)
+    for coluna in range(1, 7):
+        planilha.set_column(coluna, coluna, 16)
+
+    cor = COR_RECEITA if tipo == "receita" else COR_DESPESA
+    cabecalho = _formato_cabecalho(pasta, cor)
+    titulos = ["Categoria", "Planejado", "Realizado", "Variação", "Execução", "Part. %"]
+    for coluna, titulo in enumerate(titulos):
+        planilha.write(0, coluna, titulo, cabecalho)
+
+    moeda = _formato_moeda(pasta)
+    percentual = pasta.add_format({"num_format": "0.0%"})
+    for i, linha in enumerate(df.itertuples(), start=1):
+        planilha.write(i, 0, linha.categoria)
+        planilha.write(i, 1, linha.planejado, moeda)
+        planilha.write(i, 2, linha.realizado, moeda)
+        planilha.write(i, 3, linha.variacao, moeda)
+        planilha.write(i, 4, linha.execucao / 100, percentual)
+        planilha.write(i, 5, linha.participacao / 100, percentual)
+
+
+def _planilha_lancamentos(pasta, relatorio: dict) -> None:
+    """Aba 'Lançamentos': todas as movimentações do mês."""
+    planilha = pasta.add_worksheet("Lançamentos")
+    planilha.set_column("A:A", 12)
+    planilha.set_column("B:B", 18)
+    planilha.set_column("C:C", 14)
+    planilha.set_column("D:D", 44)
+    planilha.set_column("E:E", 16)
+
+    cabecalho = _formato_cabecalho(pasta, COR_RECEITA)
+    for coluna, titulo in enumerate(["Data", "Tipo", "Categoria", "Descrição", "Valor"]):
+        planilha.write(0, coluna, titulo, cabecalho)
+
+    moeda = _formato_moeda(pasta)
+    for i, linha in enumerate(relatorio["lancamentos"].itertuples(), start=1):
+        planilha.write_datetime(i, 0, linha.data.to_pydatetime(), pasta.add_format({"num_format": "DD/MM/YYYY"}))
+        planilha.write(i, 1, _rotulo(linha.tipo))
+        planilha.write(i, 2, linha.categoria)
+        planilha.write(i, 3, linha.descricao)
+        planilha.write(i, 4, linha.valor, moeda)
 
 
 # --------------------------------------------------------------------- PDF
