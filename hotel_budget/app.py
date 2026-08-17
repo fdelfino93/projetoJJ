@@ -523,7 +523,7 @@ def pagina_relatorio() -> None:
 
     st.divider()
     st.subheader("Exportar")
-    c1, c2 = st.columns(2)
+    c1, c2, c3, c4 = st.columns(4)
     with c1:
         botao_exportar("Excel", f"rel_xlsx_{mes}", lambda: exports.gerar_xlsx_relatorio(mes),
                        f"relatorio_{mes}.xlsx",
@@ -531,6 +531,15 @@ def pagina_relatorio() -> None:
     with c2:
         botao_exportar("PDF", f"rel_pdf_{mes}", lambda: exports.gerar_pdf_relatorio(mes),
                        f"relatorio_{mes}.pdf", "application/pdf")
+    with c3:
+        botao_exportar("PowerPoint", f"rel_pptx_{mes}", lambda: exports.gerar_pptx_relatorio(mes),
+                       f"relatorio_{mes}.pptx",
+                       "application/vnd.openxmlformats-officedocument.presentationml.presentation")
+    with c4:
+        botao_exportar("Apresentação Executiva", f"rel_pptx_exec_{mes}",
+                       lambda: exports.gerar_pptx_executivo(mes),
+                       f"relatorio_executivo_{mes}.pptx",
+                       "application/vnd.openxmlformats-officedocument.presentationml.presentation")
 
 
 def pagina_qualidade() -> None:

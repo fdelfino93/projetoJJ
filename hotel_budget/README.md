@@ -1,6 +1,6 @@
-# Gerente de Orçamento de Hotel
+# Hotel Budget Manager
 
-Sistema de planejamento orçamentário do **Hotel Ibis Styles Curitiba Centro Cívico**.
+**Sistema de planejamento orçamentário do Hotel Ibis Styles Curitiba Centro Cívico.**
 
 Cadastra receitas e despesas, guarda tudo em arquivos CSV, aplica um processo
 ETL de limpeza, analisa os dados com Pandas e apresenta o resultado em um
@@ -48,24 +48,22 @@ no Agendador de Tarefas que rode `python importa_pdf.py` na pasta do projeto.
 ## Estrutura
 
 ```text
-hotel_budget/
-    app.py            interface Streamlit (5 páginas)
-    cadastro.py       inclusão, alteração e exclusão nos CSV
-    etl.py            extração, transformação e carga
-    analise.py        análises com Pandas (totais, comparativos, projeção)
-    graficos.py       Plotly (tela) e Matplotlib (PDF/PPTX)
-    exports.py        geração de CSV, PDF e PowerPoint
-    utils.py          validações e formatação
-    config.py         categorias, cores, caminhos e traduções das métricas
-    seed.py           gerador de dados de exemplo
-    importa_pdf.py    importador diário do relatório do OPERA (NA02)
-    data/
-        receitas.csv
-        despesas.csv
-        orcamento.csv
-        operacao.csv   indicadores diários importados do OPERA
-    requirements.txt
-    README.md
+app.py              Interface Streamlit (5 páginas)
+cadastro.py         Inclusão, alteração e exclusão nos CSV
+etl.py              Extração, Transformação e Carga
+analise.py          Análises com Pandas (totais, comparativos, projeção)
+graficos.py         Plotly (tela) e Matplotlib (PDF/PPTX)
+exports.py          Geração de Excel, PDF e PowerPoint
+utils.py            Validações e formatação
+config.py           Categorias, cores, caminhos e traduções das métricas
+seed.py             Gerador de dados de exemplo
+importa_pdf.py      Importador diário do relatório do OPERA (NA02)
+data/
+    receitas.csv
+    despesas.csv
+    orcamento.csv
+    operacao.csv     Indicadores diários importados do OPERA
+requirements.txt
 ```
 
 O fluxo de dependências é de mão única, sem importações circulares:
@@ -85,7 +83,7 @@ config / utils  →  etl  →  cadastro
 | **Painel** | Indicadores do período, evolução mensal, resultado por mês, ranking de categorias e comparativo planejado x realizado |
 | **Movimentações** | Tabela editável de receitas e despesas, com exportação em PDF |
 | **Orçamento** | Definição do valor previsto por categoria, com cópia entre meses e reajuste percentual |
-| **Relatório Mensal** | Comparativo detalhado, pontos de atenção, projeção de fechamento e exportação em CSV, PDF e PowerPoint |
+| **Relatório Mensal** | Comparativo detalhado, pontos de atenção, projeção de fechamento e exportação em CSV, Excel, PDF e PowerPoint |
 | **Qualidade dos Dados** | Registro das correções que o ETL aplicou na última leitura dos CSV |
 
 ### Editando lançamentos

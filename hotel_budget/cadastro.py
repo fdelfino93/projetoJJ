@@ -67,7 +67,7 @@ def adicionar_movimentacao(tipo: str, data, categoria: str, descricao: str, valo
 
     ensure_dirs()
     existe = caminho.exists() and caminho.stat().st_size > 0
-    with open(caminho, "a", encoding=ENCODING if not existe else "utf-8", newline="") as arq:
+    with open(caminho, "a", encoding=ENCODING, newline="") as arq:
         writer = csv.writer(arq, quoting=csv.QUOTE_MINIMAL, lineterminator="\n")
         if not existe:
             writer.writerow(COLUNAS_MOVIMENTACAO)

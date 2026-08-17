@@ -3,7 +3,7 @@
 # Hotel Budget Manager
 ## Sistema de Planejamento Orçamentário do Ibis Styles Curitiba Centro Cívico
 
-**Versão:** 1.0  
+**Versão:** 2.0  
 **Disciplina:** Python Básico  
 **Equipe:** Nome dos integrantes
 
@@ -13,7 +13,7 @@
 
 O **Hotel Budget Manager** é um sistema desenvolvido em Python com o objetivo de auxiliar o gerente financeiro do Hotel Ibis Styles Curitiba Centro Cívico no planejamento e controle do orçamento mensal.
 
-A aplicação permitirá cadastrar receitas e despesas, organizar os dados financeiros, realizar análises simples e apresentar gráficos que auxiliem na tomada de decisões.
+A aplicação cadastra receitas e despesas, organiza os dados financeiros em arquivos CSV, realiza análises com Pandas, importa indicadores operacionais do PMS (Opera) e apresenta gráficos interativos em um dashboard Streamlit com suporte a exportação em Excel, PDF e PowerPoint.
 
 ---
 
@@ -21,7 +21,7 @@ A aplicação permitirá cadastrar receitas e despesas, organizar os dados finan
 
 O controle financeiro realizado manualmente pode dificultar a organização das informações e tornar a análise dos resultados mais demorada.
 
-O sistema busca centralizar os dados financeiros em um único ambiente, permitindo uma visualização clara das receitas, despesas e do resultado financeiro do hotel.
+O sistema centraliza os dados financeiros em um único ambiente, permitindo uma visualização clara das receitas, despesas, do resultado financeiro e dos indicadores operacionais do hotel.
 
 ---
 
@@ -29,200 +29,174 @@ O sistema busca centralizar os dados financeiros em um único ambiente, permitin
 
 Desenvolver uma aplicação em Python que permita:
 
-- Cadastrar receitas;
-- Cadastrar despesas;
-- Organizar os dados financeiros;
-- Realizar análises utilizando Pandas;
-- Gerar gráficos para facilitar a visualização das informações.
+- Cadastrar receitas e despesas com validação completa;
+- Armazenar os dados em arquivos CSV com codificação UTF-8;
+- Importar automaticamente o relatório diário do OPERA (PDF);
+- Aplicar um processo ETL completo com relatório de qualidade;
+- Analisar os dados com Pandas (totais, comparativos, projeções);
+- Gerar gráficos interativos (Plotly) e estáticos (Matplotlib);
+- Exportar relatórios em Excel, PDF e PowerPoint;
+- Suportar temas claro e escuro com paletas validadas para daltonismo.
 
 ---
 
 # 4. Público-Alvo
 
-O sistema será utilizado por:
-
-- Gerente Financeiro;
-- Administração do Hotel.
+- Gerente Financeiro do hotel;
+- Administração do Hotel Ibis Styles Curitiba Centro Cívico.
 
 ---
 
 # 5. Tecnologias
 
-O projeto será desenvolvido utilizando as seguintes tecnologias:
-
-- **Python** – Desenvolvimento da aplicação.
-- **Pandas** – Manipulação e análise dos dados.
-- **Streamlit** – Interface interativa da aplicação.
-- **Arquivos CSV** – Armazenamento das informações.
+| Tecnologia | Uso |
+|---|---|
+| **Python** | Desenvolvimento da aplicação |
+| **Pandas** | Manipulação e análise dos dados |
+| **Streamlit** | Interface interativa (dashboard) |
+| **Plotly** | Gráficos interativos na tela |
+| **Matplotlib** | Gráficos estáticos para exportação |
+| **ReportLab** | Geração de PDF |
+| **python-pptx** | Geração de PowerPoint |
+| **xlsxwriter** | Geração de Excel |
+| **pdfplumber** | Extração de dados do PDF do OPERA |
+| **Arquivos CSV** | Armazenamento das informações |
 
 ---
 
 # 6. Funcionalidades
 
-## Cadastro de Receitas
+## 6.1 Cadastro de Receitas
 
-O sistema permitirá cadastrar receitas provenientes de:
-
-- Hospedagem
-- Café da manhã
-- Restaurante
-- Bar
-- Estacionamento
-- Lavanderia
+Categorias oficiais:
+- Diárias de Apartamentos
+- Restaurante e Bar
 - Eventos
-- Pet Fee
+- Estacionamento
+- Outras Receitas
 
-Todas as informações serão armazenadas em um arquivo CSV.
+O sistema aceita sinônimos operacionais (ex: "Hospedagem" → "Diárias de Apartamentos", "Café da manhã" → "Restaurante e Bar") e normaliza automaticamente via ETL.
 
----
+## 6.2 Cadastro de Despesas
 
-## Cadastro de Despesas
+Categorias oficiais:
+- Folha de Pagamento
+- Energia Elétrica
+- Água e Esgoto
+- Gás
+- Manutenção e Reparos
+- Marketing e Vendas
+- Impostos e Taxas
+- Alimentação e Bebidas
+- Limpeza e Higiene
+- Outras Despesas
 
-O sistema permitirá cadastrar despesas como:
+## 6.3 Controle Orçamentário
 
-- Folha de pagamento
-- Energia elétrica
-- Água
-- Internet
-- Produtos de limpeza
-- Amenities
-- Rouparia
-- Lavanderia
-- Manutenção
-- Marketing
-- Impostos
-- Seguros
+- Definição do valor previsto por categoria em cada mês;
+- Cópia de orçamento entre meses com reajuste percentual;
+- Comparativo planejado x realizado com indicadores de situação (ok, atenção, crítico).
 
-As informações também serão armazenadas em arquivos CSV.
+## 6.4 Importação do OPERA
 
----
+- Importação diária do relatório NA02 (Manager Report Gross) em PDF;
+- Tradução automática de ~100 métricas do inglês para o português;
+- Formato: uma linha por métrica por dia, com valores do dia, mês acumulado e ano acumulado;
+- Importação idempotente (nunca duplica registros).
 
-## Consulta dos Dados
+## 6.5 Dashboard Interativo (Streamlit)
 
-O usuário poderá visualizar:
+| Página | O que faz |
+|---|---|
+| **Painel** | Indicadores do período, evolução mensal, resultado por mês, ranking de categorias e comparativo planejado x realizado |
+| **Movimentações** | Tabela editável de receitas e despesas, com exportação em PDF |
+| **Orçamento** | Definição do valor previsto por categoria, com cópia entre meses e reajuste percentual |
+| **Relatório Mensal** | Comparativo detalhado, pontos de atenção, projeção de fechamento e exportação em CSV, Excel, PDF e PowerPoint |
+| **Qualidade de Dados** | Registro das correções que o ETL aplicou na última leitura dos CSV |
 
-- Todas as receitas;
-- Todas as despesas;
-- Total de receitas;
-- Total de despesas.
+## 6.6 Exportações
 
----
+- **Excel** (.xlsx): relatório mensal com abas Resumo, Receitas, Despesas e Lançamentos;
+- **PDF**: relatório mensal com resumo, alertas, tabelas e gráficos estáticos;
+- **PowerPoint**: apresentação do fechamento mensal (relatório completo e versão executiva);
+- **CSV**: movimentações e relatório mensal em formato separado por ponto e vírgula.
 
-## Controle Orçamentário
+## 6.7 Tema Claro e Escuro
 
-O sistema realizará automaticamente os seguintes cálculos:
-
-- Receita Total;
-- Despesa Total;
-- Lucro;
-- Diferença entre receitas e despesas.
+- Escolha via ⋮ › Settings › Appearance no Streamlit;
+- Paletas validadas para daltonismo (ΔE > 15 em visão normal, > 8 em protanopia);
+- Contraste mínimo de 3:1 contra a superfície;
+- Gráficos Plotly acompanham o tema automaticamente.
 
 ---
 
 # 7. Processo ETL
 
-Antes da geração dos gráficos, será realizado um processo simples de ETL.
-
 ## Extração
 
-Leitura dos arquivos CSV utilizando Pandas.
+Leitura dos arquivos CSV utilizando Pandas. Arquivo ausente ou vazio devolve um DataFrame vazio com as colunas esperadas.
 
 ## Transformação
 
-- Remoção de linhas vazias;
-- Remoção de registros duplicados;
-- Conversão de valores para formato numérico;
-- Organização das categorias.
+1. Remoção de linhas vazias (sem data, categoria ou valor);
+2. Conversão de valores para formato numérico (aceita formato brasileiro `R$ 1.234,56`);
+3. Conversão e validação de datas no formato `AAAA-MM-DD`;
+4. Normalização de categorias via mapa de sinônimos e correção de acentos;
+5. Remoção de registros duplicados;
+6. Criação de colunas derivadas (`mes`, `tipo`).
 
 ## Carga
 
-Os dados tratados serão utilizados para gerar análises e gráficos.
+Os dados tratados são alimentados em cache (chaveado por data de modificação dos arquivos) e consumidos por análises, gráficos e exportações.
+
+## Relatório de Qualidade
+
+A página "Qualidade dos Dados" exibe:
+- Total de linhas lidas, carregadas e descartadas;
+- Detalhamento por critério (vazias, duplicadas, valores inválidos, datas inválidas, categorias não reconhecidas).
 
 ---
 
-# 8. Dashboard
-
-A interface será desenvolvida utilizando **Streamlit**, permitindo uma visualização simples e intuitiva dos dados.
-
-O Dashboard apresentará gráficos como:
-
-- Receita por categoria;
-- Despesas por categoria;
-- Receita x Despesa;
-- Lucro Total.
-
----
-
-# 9. Estrutura do Projeto
+# 8. Estrutura do Projeto
 
 ```text
 hotel_budget/
-
-app.py
-
-cadastro.py
-
-analise.py
-
-etl.py
-
-graficos.py
-
-utils.py
-
-data/
-    receitas.csv
-    despesas.csv
-
-requirements.txt
-README.md
+├── app.py              Interface Streamlit (5 páginas)
+├── cadastro.py         Inclusão, alteração e exclusão nos CSV
+├── etl.py              Extração, Transformação e Carga
+├── analise.py          Análises com Pandas
+├── graficos.py         Plotly (tela) e Matplotlib (PDF/PPTX)
+├── exports.py          Geração de Excel, PDF e PowerPoint
+├── utils.py            Validações e formatação
+├── config.py           Categorias, cores, caminhos e traduções
+├── seed.py             Gerador de dados de exemplo
+├── importa_pdf.py      Importador do relatório OPERA
+├── data/
+│   ├── receitas.csv
+│   ├── despesas.csv
+│   ├── orcamento.csv
+│   └── operacao.csv
+├── .streamlit/
+│   └── config.toml
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# 10. Fluxo da Aplicação
+# 9. Fluxo de Dependências
 
 ```text
-Início
-
-↓
-
-Tela Inicial (Streamlit)
-
-↓
-
-Cadastrar Receita
-
-↓
-
-Cadastrar Despesa
-
-↓
-
-Ler arquivos CSV
-
-↓
-
-Processo ETL
-
-↓
-
-Análise com Pandas
-
-↓
-
-Dashboard
-
-↓
-
-Visualização dos Gráficos
+config / utils  →  etl  →  cadastro
+                    ↓
+                 analise  →  graficos  →  exports  →  app
 ```
+
+Fluxo de mão única, sem importações circulares.
 
 ---
 
-# 11. Recursos do Curso Aplicados
-
-Durante o desenvolvimento serão utilizados os seguintes conceitos aprendidos na disciplina:
+# 10. Recursos do Curso Aplicados
 
 - Variáveis;
 - Estruturas condicionais (`if`);
@@ -238,39 +212,24 @@ Durante o desenvolvimento serão utilizados os seguintes conceitos aprendidos na
 
 ---
 
-# 12. Gráficos
+# 11. Critérios de Sucesso
 
-O sistema apresentará os seguintes gráficos:
+O projeto é considerado concluído quando for possível:
 
-- Receita por categoria;
-- Despesas por categoria;
-- Comparação entre receitas e despesas;
-- Lucro total.
-
----
-
-# 13. Critérios de Sucesso
-
-O projeto será considerado concluído quando for possível:
-
-- Cadastrar receitas;
-- Cadastrar despesas;
-- Armazenar os dados em arquivos CSV;
-- Ler os dados utilizando Pandas;
-- Aplicar um processo simples de ETL;
-- Gerar gráficos utilizando os dados cadastrados;
-- Demonstrar o funcionamento da aplicação durante a apresentação.
+- [x] Cadastrar receitas e despesas com validação;
+- [x] Armazenar os dados em arquivos CSV;
+- [x] Ler os dados utilizando Pandas;
+- [x] Aplicar um processo completo de ETL com relatório de qualidade;
+- [x] Importar o relatório diário do OPERA (PDF);
+- [x] Gerar gráficos interativos e estáticos;
+- [x] Exportar relatórios em Excel, PDF e PowerPoint;
+- [x] Suportar temas claro e escuro;
+- [x] Demonstrar o funcionamento da aplicação durante a apresentação.
 
 ---
 
-# 14. Objetivo da Apresentação
-
-Demonstrar como a linguagem Python pode ser utilizada para organizar informações financeiras de um hotel e transformá-las em análises e gráficos que auxiliam na tomada de decisões.
-
----
-
-# 15. Considerações Finais
+# 12. Considerações Finais
 
 O **Hotel Budget Manager** foi desenvolvido como uma aplicação prática para demonstrar os conhecimentos adquiridos na disciplina de Python.
 
-O projeto reúne conceitos de manipulação de arquivos CSV, análise de dados com Pandas, processo ETL, visualização de dados e desenvolvimento de interfaces simples com Streamlit, oferecendo uma solução organizada para o controle financeiro de um hotel.
+O projeto reúne conceitos de manipulação de arquivos CSV, análise de dados com Pandas, processo ETL, visualização de dados, importação de PDFs e desenvolvimento de interfaces com Streamlit, oferecendo uma solução completa e organizada para o controle financeiro de um hotel.

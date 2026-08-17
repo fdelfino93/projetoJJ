@@ -1,7 +1,8 @@
-streamlit>=1.30
-pandas>=2.2
-plotly>=5.20
-matplotlib>=3.8
-reportlab>=4.0
-python-pptx>=0.6.23
-pdfplumber>=0.11
+streamlit>=1.30,<2.0
+pandas>=2.2,<3.0
+plotly>=5.20,<6.0
+matplotlib>=3.8,<4.0
+reportlab>=4.0,<5.0
+python-pptx>=0.6.23,<1.0
+pdfplumber>=0.11,<1.0
+xlsxwriter>=3.2,<4.0

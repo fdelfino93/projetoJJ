@@ -1,26 +1,14 @@
-# O usuário escolhe o tema em Menu (⋮) > Settings > Appearance.
-# As duas variantes abaixo são as paletas validadas do sistema — ver
-# config.PALETAS para os números de contraste e daltonismo.
+# Tema padrão do Streamlit. O usuário escolhe entre claro e escuro em
+# Menu (⋮) > Settings > Appearance. As paletas validadas do sistema
+# vivem em config.PALETAS e os gráficos trocam de cor via CSS em app.py.
 
 [theme]
-base = "light"
-font = "sans serif"
-
-[theme.light]
-primaryColor = "#2a78d6"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f9f9f7"
-textColor = "#0b0b0b"
-borderColor = "#e1e0d9"
-linkColor = "#2a78d6"
-
-[theme.dark]
+base = "dark"
 primaryColor = "#3987e5"
 backgroundColor = "#1a1a19"
 secondaryBackgroundColor = "#262624"
 textColor = "#ffffff"
-borderColor = "#383835"
-linkColor = "#3987e5"
+font = "sans serif"
 
 [browser]
 gatherUsageStats = false

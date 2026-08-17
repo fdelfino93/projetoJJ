@@ -518,7 +518,12 @@ def gerar_pptx_relatorio(mes: str) -> bytes:
 
 
 def gerar_pptx_executivo(mes: str) -> bytes:
-    """Apresentação curta para a diretoria: tendência e números-chave."""
+    """Apresentação executiva resumida para a diretoria.
+
+    Contém apenas os slide essenciais: capa, evolução mensal, números-chave
+    do mês e distribuição de receitas por categoria. Ideal para reuniões
+    rápidas onde o tempo é limitado.
+    """
     mes = validar_mes(mes)
     resumo = analise.resumo_mes(mes)
 
@@ -548,7 +553,12 @@ def _mes_anterior(mes: str) -> str:
 
 
 def gerar_pptx_comparativo(mes: str) -> bytes:
-    """Apresentação comparando o mês escolhido com o mês anterior."""
+    """Apresentação comparando o mês escolhido com o mês anterior.
+
+    Mostra a variação percentual de receitas, despesas, saldo e margem
+    entre o mês selecionado e o mês imediatamente anterior, além da
+    evolução mensal e do comparativo de despesas planejado x realizado.
+    """
     mes = validar_mes(mes)
     anterior = _mes_anterior(mes)
     atual = analise.resumo_mes(mes)
