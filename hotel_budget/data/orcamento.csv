@@ -1,181 +1,181 @@
 ﻿mes,tipo,categoria,valor_planejado
-2026-01,receita,Diárias de Apartamentos,520000.00
-2026-01,receita,Restaurante e Bar,90000.00
-2026-01,receita,Eventos,40000.00
-2026-01,receita,Estacionamento,15000.00
-2026-01,receita,Outras Receitas,5000.00
-2026-01,despesa,Folha de Pagamento,180000.00
+2026-01,despesa,Alimentação e Bebidas,35000.00
 2026-01,despesa,Energia Elétrica,45000.00
-2026-01,despesa,Água e Esgoto,20000.00
+2026-01,despesa,Folha de Pagamento,180000.00
 2026-01,despesa,Gás,12000.00
+2026-01,despesa,Impostos e Taxas,60000.00
+2026-01,despesa,Limpeza e Higiene,15000.00
 2026-01,despesa,Manutenção e Reparos,30000.00
 2026-01,despesa,Marketing e Vendas,25000.00
-2026-01,despesa,Impostos e Taxas,60000.00
-2026-01,despesa,Alimentação e Bebidas,35000.00
-2026-01,despesa,Limpeza e Higiene,15000.00
 2026-01,despesa,Outras Despesas,10000.00
-2026-02,receita,Diárias de Apartamentos,520000.00
-2026-02,receita,Restaurante e Bar,90000.00
-2026-02,receita,Eventos,40000.00
-2026-02,receita,Estacionamento,15000.00
-2026-02,receita,Outras Receitas,5000.00
-2026-02,despesa,Folha de Pagamento,180000.00
+2026-01,despesa,Água e Esgoto,20000.00
+2026-01,receita,Diárias de Apartamentos,520000.00
+2026-01,receita,Estacionamento,15000.00
+2026-01,receita,Eventos,40000.00
+2026-01,receita,Outras Receitas,5000.00
+2026-01,receita,Restaurante e Bar,90000.00
+2026-02,despesa,Alimentação e Bebidas,35000.00
 2026-02,despesa,Energia Elétrica,45000.00
-2026-02,despesa,Água e Esgoto,20000.00
+2026-02,despesa,Folha de Pagamento,180000.00
 2026-02,despesa,Gás,12000.00
+2026-02,despesa,Impostos e Taxas,60000.00
+2026-02,despesa,Limpeza e Higiene,15000.00
 2026-02,despesa,Manutenção e Reparos,30000.00
 2026-02,despesa,Marketing e Vendas,25000.00
-2026-02,despesa,Impostos e Taxas,60000.00
-2026-02,despesa,Alimentação e Bebidas,35000.00
-2026-02,despesa,Limpeza e Higiene,15000.00
 2026-02,despesa,Outras Despesas,10000.00
-2026-03,receita,Diárias de Apartamentos,520000.00
-2026-03,receita,Restaurante e Bar,90000.00
-2026-03,receita,Eventos,40000.00
-2026-03,receita,Estacionamento,15000.00
-2026-03,receita,Outras Receitas,5000.00
-2026-03,despesa,Folha de Pagamento,180000.00
+2026-02,despesa,Água e Esgoto,20000.00
+2026-02,receita,Diárias de Apartamentos,520000.00
+2026-02,receita,Estacionamento,15000.00
+2026-02,receita,Eventos,40000.00
+2026-02,receita,Outras Receitas,5000.00
+2026-02,receita,Restaurante e Bar,90000.00
+2026-03,despesa,Alimentação e Bebidas,35000.00
 2026-03,despesa,Energia Elétrica,45000.00
-2026-03,despesa,Água e Esgoto,20000.00
+2026-03,despesa,Folha de Pagamento,180000.00
 2026-03,despesa,Gás,12000.00
+2026-03,despesa,Impostos e Taxas,60000.00
+2026-03,despesa,Limpeza e Higiene,15000.00
 2026-03,despesa,Manutenção e Reparos,30000.00
 2026-03,despesa,Marketing e Vendas,25000.00
-2026-03,despesa,Impostos e Taxas,60000.00
-2026-03,despesa,Alimentação e Bebidas,35000.00
-2026-03,despesa,Limpeza e Higiene,15000.00
 2026-03,despesa,Outras Despesas,10000.00
-2026-04,receita,Diárias de Apartamentos,520000.00
-2026-04,receita,Restaurante e Bar,90000.00
-2026-04,receita,Eventos,40000.00
-2026-04,receita,Estacionamento,15000.00
-2026-04,receita,Outras Receitas,5000.00
-2026-04,despesa,Folha de Pagamento,180000.00
+2026-03,despesa,Água e Esgoto,20000.00
+2026-03,receita,Diárias de Apartamentos,520000.00
+2026-03,receita,Estacionamento,15000.00
+2026-03,receita,Eventos,40000.00
+2026-03,receita,Outras Receitas,5000.00
+2026-03,receita,Restaurante e Bar,90000.00
+2026-04,despesa,Alimentação e Bebidas,35000.00
 2026-04,despesa,Energia Elétrica,45000.00
-2026-04,despesa,Água e Esgoto,20000.00
+2026-04,despesa,Folha de Pagamento,180000.00
 2026-04,despesa,Gás,12000.00
+2026-04,despesa,Impostos e Taxas,60000.00
+2026-04,despesa,Limpeza e Higiene,15000.00
 2026-04,despesa,Manutenção e Reparos,30000.00
 2026-04,despesa,Marketing e Vendas,25000.00
-2026-04,despesa,Impostos e Taxas,60000.00
-2026-04,despesa,Alimentação e Bebidas,35000.00
-2026-04,despesa,Limpeza e Higiene,15000.00
 2026-04,despesa,Outras Despesas,10000.00
-2026-05,receita,Diárias de Apartamentos,520000.00
-2026-05,receita,Restaurante e Bar,90000.00
-2026-05,receita,Eventos,40000.00
-2026-05,receita,Estacionamento,15000.00
-2026-05,receita,Outras Receitas,5000.00
-2026-05,despesa,Folha de Pagamento,180000.00
+2026-04,despesa,Água e Esgoto,20000.00
+2026-04,receita,Diárias de Apartamentos,520000.00
+2026-04,receita,Estacionamento,15000.00
+2026-04,receita,Eventos,40000.00
+2026-04,receita,Outras Receitas,5000.00
+2026-04,receita,Restaurante e Bar,90000.00
+2026-05,despesa,Alimentação e Bebidas,35000.00
 2026-05,despesa,Energia Elétrica,45000.00
-2026-05,despesa,Água e Esgoto,20000.00
+2026-05,despesa,Folha de Pagamento,180000.00
 2026-05,despesa,Gás,12000.00
+2026-05,despesa,Impostos e Taxas,60000.00
+2026-05,despesa,Limpeza e Higiene,15000.00
 2026-05,despesa,Manutenção e Reparos,30000.00
 2026-05,despesa,Marketing e Vendas,25000.00
-2026-05,despesa,Impostos e Taxas,60000.00
-2026-05,despesa,Alimentação e Bebidas,35000.00
-2026-05,despesa,Limpeza e Higiene,15000.00
 2026-05,despesa,Outras Despesas,10000.00
-2026-06,receita,Diárias de Apartamentos,520000.00
-2026-06,receita,Restaurante e Bar,90000.00
-2026-06,receita,Eventos,40000.00
-2026-06,receita,Estacionamento,15000.00
-2026-06,receita,Outras Receitas,5000.00
-2026-06,despesa,Folha de Pagamento,180000.00
+2026-05,despesa,Água e Esgoto,20000.00
+2026-05,receita,Diárias de Apartamentos,520000.00
+2026-05,receita,Estacionamento,15000.00
+2026-05,receita,Eventos,40000.00
+2026-05,receita,Outras Receitas,5000.00
+2026-05,receita,Restaurante e Bar,90000.00
+2026-06,despesa,Alimentação e Bebidas,35000.00
 2026-06,despesa,Energia Elétrica,45000.00
-2026-06,despesa,Água e Esgoto,20000.00
+2026-06,despesa,Folha de Pagamento,180000.00
 2026-06,despesa,Gás,12000.00
+2026-06,despesa,Impostos e Taxas,60000.00
+2026-06,despesa,Limpeza e Higiene,15000.00
 2026-06,despesa,Manutenção e Reparos,30000.00
 2026-06,despesa,Marketing e Vendas,25000.00
-2026-06,despesa,Impostos e Taxas,60000.00
-2026-06,despesa,Alimentação e Bebidas,35000.00
-2026-06,despesa,Limpeza e Higiene,15000.00
 2026-06,despesa,Outras Despesas,10000.00
-2026-07,receita,Diárias de Apartamentos,520000.00
-2026-07,receita,Restaurante e Bar,90000.00
-2026-07,receita,Eventos,40000.00
-2026-07,receita,Estacionamento,15000.00
-2026-07,receita,Outras Receitas,5000.00
-2026-07,despesa,Folha de Pagamento,180000.00
+2026-06,despesa,Água e Esgoto,20000.00
+2026-06,receita,Diárias de Apartamentos,520000.00
+2026-06,receita,Estacionamento,15000.00
+2026-06,receita,Eventos,40000.00
+2026-06,receita,Outras Receitas,5000.00
+2026-06,receita,Restaurante e Bar,90000.00
+2026-07,despesa,Alimentação e Bebidas,35000.00
 2026-07,despesa,Energia Elétrica,45000.00
-2026-07,despesa,Água e Esgoto,20000.00
+2026-07,despesa,Folha de Pagamento,180000.00
 2026-07,despesa,Gás,12000.00
+2026-07,despesa,Impostos e Taxas,60000.00
+2026-07,despesa,Limpeza e Higiene,15000.00
 2026-07,despesa,Manutenção e Reparos,30000.00
 2026-07,despesa,Marketing e Vendas,25000.00
-2026-07,despesa,Impostos e Taxas,60000.00
-2026-07,despesa,Alimentação e Bebidas,35000.00
-2026-07,despesa,Limpeza e Higiene,15000.00
 2026-07,despesa,Outras Despesas,10000.00
-2026-08,receita,Diárias de Apartamentos,520000.00
-2026-08,receita,Restaurante e Bar,90000.00
-2026-08,receita,Eventos,40000.00
-2026-08,receita,Estacionamento,15000.00
-2026-08,receita,Outras Receitas,5000.00
-2026-08,despesa,Folha de Pagamento,180000.00
+2026-07,despesa,Água e Esgoto,20000.00
+2026-07,receita,Diárias de Apartamentos,520000.00
+2026-07,receita,Estacionamento,15000.00
+2026-07,receita,Eventos,40000.00
+2026-07,receita,Outras Receitas,5000.00
+2026-07,receita,Restaurante e Bar,90000.00
+2026-08,despesa,Alimentação e Bebidas,35000.00
 2026-08,despesa,Energia Elétrica,45000.00
-2026-08,despesa,Água e Esgoto,20000.00
+2026-08,despesa,Folha de Pagamento,180000.00
 2026-08,despesa,Gás,12000.00
+2026-08,despesa,Impostos e Taxas,60000.00
+2026-08,despesa,Limpeza e Higiene,15000.00
 2026-08,despesa,Manutenção e Reparos,30000.00
 2026-08,despesa,Marketing e Vendas,25000.00
-2026-08,despesa,Impostos e Taxas,60000.00
-2026-08,despesa,Alimentação e Bebidas,35000.00
-2026-08,despesa,Limpeza e Higiene,15000.00
 2026-08,despesa,Outras Despesas,10000.00
-2026-09,receita,Diárias de Apartamentos,520000.00
-2026-09,receita,Restaurante e Bar,90000.00
-2026-09,receita,Eventos,40000.00
-2026-09,receita,Estacionamento,15000.00
-2026-09,receita,Outras Receitas,5000.00
-2026-09,despesa,Folha de Pagamento,180000.00
+2026-08,despesa,Água e Esgoto,20000.00
+2026-08,receita,Diárias de Apartamentos,520000.00
+2026-08,receita,Estacionamento,15000.00
+2026-08,receita,Eventos,40000.00
+2026-08,receita,Outras Receitas,5000.00
+2026-08,receita,Restaurante e Bar,90000.00
+2026-09,despesa,Alimentação e Bebidas,35000.00
 2026-09,despesa,Energia Elétrica,45000.00
-2026-09,despesa,Água e Esgoto,20000.00
+2026-09,despesa,Folha de Pagamento,180000.00
 2026-09,despesa,Gás,12000.00
+2026-09,despesa,Impostos e Taxas,60000.00
+2026-09,despesa,Limpeza e Higiene,15000.00
 2026-09,despesa,Manutenção e Reparos,30000.00
 2026-09,despesa,Marketing e Vendas,25000.00
-2026-09,despesa,Impostos e Taxas,60000.00
-2026-09,despesa,Alimentação e Bebidas,35000.00
-2026-09,despesa,Limpeza e Higiene,15000.00
 2026-09,despesa,Outras Despesas,10000.00
-2026-10,receita,Diárias de Apartamentos,520000.00
-2026-10,receita,Restaurante e Bar,90000.00
-2026-10,receita,Eventos,40000.00
-2026-10,receita,Estacionamento,15000.00
-2026-10,receita,Outras Receitas,5000.00
-2026-10,despesa,Folha de Pagamento,180000.00
+2026-09,despesa,Água e Esgoto,20000.00
+2026-09,receita,Diárias de Apartamentos,520000.00
+2026-09,receita,Estacionamento,15000.00
+2026-09,receita,Eventos,40000.00
+2026-09,receita,Outras Receitas,5000.00
+2026-09,receita,Restaurante e Bar,90000.00
+2026-10,despesa,Alimentação e Bebidas,35000.00
 2026-10,despesa,Energia Elétrica,45000.00
-2026-10,despesa,Água e Esgoto,20000.00
+2026-10,despesa,Folha de Pagamento,180000.00
 2026-10,despesa,Gás,12000.00
+2026-10,despesa,Impostos e Taxas,60000.00
+2026-10,despesa,Limpeza e Higiene,15000.00
 2026-10,despesa,Manutenção e Reparos,30000.00
 2026-10,despesa,Marketing e Vendas,25000.00
-2026-10,despesa,Impostos e Taxas,60000.00
-2026-10,despesa,Alimentação e Bebidas,35000.00
-2026-10,despesa,Limpeza e Higiene,15000.00
 2026-10,despesa,Outras Despesas,10000.00
-2026-11,receita,Diárias de Apartamentos,520000.00
-2026-11,receita,Restaurante e Bar,90000.00
-2026-11,receita,Eventos,40000.00
-2026-11,receita,Estacionamento,15000.00
-2026-11,receita,Outras Receitas,5000.00
-2026-11,despesa,Folha de Pagamento,180000.00
+2026-10,despesa,Água e Esgoto,20000.00
+2026-10,receita,Diárias de Apartamentos,520000.00
+2026-10,receita,Estacionamento,15000.00
+2026-10,receita,Eventos,40000.00
+2026-10,receita,Outras Receitas,5000.00
+2026-10,receita,Restaurante e Bar,90000.00
+2026-11,despesa,Alimentação e Bebidas,35000.00
 2026-11,despesa,Energia Elétrica,45000.00
-2026-11,despesa,Água e Esgoto,20000.00
+2026-11,despesa,Folha de Pagamento,180000.00
 2026-11,despesa,Gás,12000.00
+2026-11,despesa,Impostos e Taxas,60000.00
+2026-11,despesa,Limpeza e Higiene,15000.00
 2026-11,despesa,Manutenção e Reparos,30000.00
 2026-11,despesa,Marketing e Vendas,25000.00
-2026-11,despesa,Impostos e Taxas,60000.00
-2026-11,despesa,Alimentação e Bebidas,35000.00
-2026-11,despesa,Limpeza e Higiene,15000.00
 2026-11,despesa,Outras Despesas,10000.00
-2026-12,receita,Diárias de Apartamentos,520000.00
-2026-12,receita,Restaurante e Bar,90000.00
-2026-12,receita,Eventos,40000.00
-2026-12,receita,Estacionamento,15000.00
-2026-12,receita,Outras Receitas,5000.00
-2026-12,despesa,Folha de Pagamento,180000.00
+2026-11,despesa,Água e Esgoto,20000.00
+2026-11,receita,Diárias de Apartamentos,520000.00
+2026-11,receita,Estacionamento,15000.00
+2026-11,receita,Eventos,40000.00
+2026-11,receita,Outras Receitas,5000.00
+2026-11,receita,Restaurante e Bar,90000.00
+2026-12,despesa,Alimentação e Bebidas,35000.00
 2026-12,despesa,Energia Elétrica,45000.00
-2026-12,despesa,Água e Esgoto,20000.00
+2026-12,despesa,Folha de Pagamento,180000.00
 2026-12,despesa,Gás,12000.00
+2026-12,despesa,Impostos e Taxas,60000.00
+2026-12,despesa,Limpeza e Higiene,15000.00
 2026-12,despesa,Manutenção e Reparos,30000.00
 2026-12,despesa,Marketing e Vendas,25000.00
-2026-12,despesa,Impostos e Taxas,60000.00
-2026-12,despesa,Alimentação e Bebidas,35000.00
-2026-12,despesa,Limpeza e Higiene,15000.00
 2026-12,despesa,Outras Despesas,10000.00
+2026-12,despesa,Água e Esgoto,20000.00
+2026-12,receita,Diárias de Apartamentos,520000.00
+2026-12,receita,Estacionamento,15000.00
+2026-12,receita,Eventos,40000.00
+2026-12,receita,Outras Receitas,5000.00
+2026-12,receita,Restaurante e Bar,90000.00

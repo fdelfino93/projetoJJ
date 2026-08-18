@@ -259,6 +259,9 @@ def pagina_movimentacoes() -> None:
 
 def _aba_movimentacoes(tipo: str) -> None:
     """Conteúdo de uma aba de movimentações."""
+    with st.expander("Importar CSV"):
+        _uploader_csv(tipo)
+
     filtro, _ = st.columns([1, 2])
     with filtro:
         mes = seletor_de_mes(f"mov_mes_{tipo}", rotulo="Período")
@@ -280,6 +283,75 @@ def _aba_movimentacoes(tipo: str) -> None:
             lambda: exports.gerar_pdf_movimentacoes(tipo, mes),
             f"{tipo}s_{sufixo}.pdf", "application/pdf",
         )
+
+
+def _uploader_csv(tipo: str) -> None:
+    """Área de upload de CSV com pré-visualização e confirmação."""
+    import pandas as pd
+    from config import categorias_de
+
+    st.caption(
+        f"Envie um CSV com as colunas: **data, categoria, descricao, valor** "
+        f"(coluna `id` é gerada automaticamente)."
+    )
+    arquivo = st.file_uploader(
+        f"Arquivo CSV de {ROTULO[tipo]}",
+        type=["csv"],
+        key=f"upload_{tipo}",
+        label_visibility="collapsed",
+    )
+    if arquivo is None:
+        return
+
+    try:
+        df_upload = pd.read_csv(arquivo)
+    except Exception:
+        st.error("Não foi possível ler o arquivo. Verifique se é um CSV válido.")
+        return
+
+    colunas_esperadas = {"data", "categoria", "descricao", "valor"}
+    colunas_faltando = colunas_esperadas - set(df_upload.columns)
+    if colunas_faltando:
+        st.error(f"Colunas faltando: {', '.join(sorted(colunas_faltando))}")
+        return
+
+    if df_upload.empty:
+        st.warning("O arquivo está vazio.")
+        return
+
+    st.caption(f"{len(df_upload)} registro(s) encontrado(s). Pré-visualização:")
+    st.dataframe(df_upload, width="stretch", hide_index=True)
+
+    categorias_validas = categorias_de(tipo)
+    categorias_invalidas = set(df_upload["categoria"].dropna().unique()) - set(categorias_validas)
+    if categorias_invalidas:
+        st.warning(
+            f"Categorias não reconhecidas (serão ignoradas): "
+            f"{', '.join(sorted(categorias_invalidas))}"
+        )
+
+    if st.button(f"Importar {len(df_upload)} registro(s)", key=f"btn_importar_{tipo}", type="primary"):
+        incluidos = 0
+        erros = []
+        for idx, linha in df_upload.iterrows():
+            try:
+                cadastro.adicionar_movimentacao(
+                    tipo,
+                    linha.get("data"),
+                    linha.get("categoria"),
+                    linha.get("descricao", ""),
+                    linha.get("valor"),
+                )
+                incluidos += 1
+            except (ValueError, TypeError) as erro:
+                erros.append(f"Linha {idx + 2}: {erro}")
+
+        if incluidos:
+            st.success(f"{incluidos} registro(s) importado(s) com sucesso.")
+        for erro in erros:
+            st.error(erro)
+        if incluidos:
+            st.rerun()
 
 
 def _editor_lancamentos(tipo: str, mes, df) -> None:
